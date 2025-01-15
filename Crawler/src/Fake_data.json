@@ -1,0 +1,22 @@
+[
+    {
+      "course_number": "01001",
+      "course_name": "Matematik 1a (Polyteknisk grundlag)",
+      "schedule_placement": "E1A"
+    },
+    {
+      "course_number": "01002",
+      "course_name": "Matematik 1b (polyteknisk grundlag)",
+      "schedule_placement": "F1A"
+    },
+    {
+      "course_number": "01003",
+      "course_name": "Matematik 1a (Polyteknisk grundlag)",
+      "schedule_placement": "E3B"
+    },
+    {
+      "course_number": "01004",
+      "course_name": "Matematik 1b: (Polyteknisk grundlag)",
+      "schedule_placement": "F3B"
+    }
+]
