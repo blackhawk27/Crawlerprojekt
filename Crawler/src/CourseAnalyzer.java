@@ -1,3 +1,11 @@
+/*
+
+Venligst opdater class og metode navne, men test metoder og classes er inkluderet i src mappen :)
+
+*/
+
+
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
