@@ -1,0 +1,44 @@
+[
+    {
+      "course_number": "01001",
+      "course_name": "Matematik 1a (Polyteknisk grundlag)",
+      "schedule_placement": "E1A",
+      "ECTS": "10",
+      "Institute": "01 Institut for Matematik og Computer Science"
+    },
+    {
+      "course_number": "01002",
+      "course_name": "Matematik 1b (polyteknisk grundlag)",
+      "schedule_placement": "F1A",
+      "ECTS": "10",
+      "Institute": "01 Institut for Matematik og Computer Science"
+    },
+    {
+      "course_number": "01003",
+      "course_name": "Matematik 1a (Polyteknisk grundlag)",
+      "schedule_placement": "E3B",
+      "ECTS": "10",
+      "Institute": "01 Institut for Matematik og Computer Science"
+    },
+    {
+      "course_number": "01004",
+      "course_name": "Matematik 1b: (Polyteknisk grundlag)",
+      "schedule_placement": "F3B",
+      "ECTS": "10",
+      "Institute": "01 Institut for Matematik og Computer Science"
+    },
+    {
+      "course_number": "11111",
+      "course_name": "Videregående håndtering af fulde gæster, der tisser i en cafe",
+      "schedule_placement": "E1A",
+      "ECTS": "1.72",
+      "Institute": "03 Institut for gæster og mad"
+    },
+    {
+        "course_number": "11222",
+        "course_name": "Avanceret bearnaisesovslavning",
+        "schedule_placement": "E1A",
+        "ECTS": "2.08",
+        "Institute": "03 Institut for gæster og mad"
+    }
+]
