@@ -1,4 +1,8 @@
+/*
 
+Kun til test af dummy tekst til CourseAnalyzer
+
+*/
 public class Sorter_Test {
 
     public String[][] getCoursesByPlacement() {
