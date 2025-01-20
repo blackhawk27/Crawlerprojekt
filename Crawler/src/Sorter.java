@@ -23,7 +23,7 @@ public class Sorter {
         //String[][] allData = sorter.getTable();
         //System.out.println(allData); 
 
-        //String[][] results = sorter.searchCourses("10060");
+        //String[][] results = sorter.searchCourses("11222");
         //System.out.println(results);
 
         //ArrayList<String> courseWithPlacement = sorter.search("F3B");
@@ -35,9 +35,9 @@ public class Sorter {
         //ArrayList<String> courseDetails = sorter.getAll("Matematik 1a (Polyteknisk grundlag)");
         //System.out.println(courseDetails);
 
-        //String[][] table = sorter.getTable();
-        //table = sorter.sortTable(table, 0, true); // Den kan åbenbart ikke sortere ordenligt efter ECTS
-        //sorter.printMatrix(table);
+        String[][] table = sorter.getTable();
+        table = sorter.sortTable(table, 0, true); // Den kan åbenbart ikke sortere ordenligt efter ECTS
+        sorter.printMatrix(table);
     }
 
     ////////////////////////////////////////////////////////getDATA()/////////////////////////////////////////////////
@@ -108,12 +108,12 @@ public class Sorter {
                 List<HashMap<String, String>> data = getData();
                 Matrix = new String[data.size() + 1][6];
                 
-                Matrix[0][0] = "Coursenumber";
-                Matrix[0][1] = "Coursename";
-                Matrix[0][2] = "Schedule placement";
+                Matrix[0][0] = "Kursusnavn";
+                Matrix[0][1] = "Kursusn nr.";
+                Matrix[0][2] = "Skemaplacering";
                 Matrix[0][3] = "ECTS";
                 Matrix[0][4] = "Type";
-                Matrix[0][5] = "Institute";
+                Matrix[0][5] = "Institut";
 
                 for (int i = 0; i < data.size(); i++) {
                     HashMap<String, String> course = data.get(i);
@@ -170,7 +170,7 @@ public class Sorter {
             List<String[]> results = new ArrayList<>();
             String[][] result = null;
 
-            results.add(new String[]{"Coursenumber", "Coursename", "Scheduleplacement", "ECTS", "Type", "Institute"});
+            results.add(new String[]{"Kursusnavn", "Kursus nr.", "Skemaplacering", "ECTS", "Type", "Institut"});
 
             for (HashMap<String, String> course : data) {
                 for (String value : course.values()){
