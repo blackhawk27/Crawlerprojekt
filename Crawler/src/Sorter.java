@@ -35,9 +35,9 @@ public class Sorter {
         //ArrayList<String> courseDetails = sorter.getAll("Matematik 1a (Polyteknisk grundlag)");
         //System.out.println(courseDetails);
 
-        //String[][] table = sorter.getTable();
-        //table = sorter.sortTable(table, 0, true); // Den kan åbenbart ikke sortere ordenligt efter ECTS
-        //sorter.printMatrix(table);
+        String[][] table = sorter.getTable();
+        table = sorter.sortTable(table, 0, true); // Den kan åbenbart ikke sortere ordenligt efter ECTS
+        sorter.printMatrix(table);
     }
 
     ////////////////////////////////////////////////////////getDATA()/////////////////////////////////////////////////
@@ -151,11 +151,13 @@ public class Sorter {
             Arrays.sort(table, 1, table.length, new Comparator<String[]>() {
                 @Override
                 public int compare(String[] row1, String[] row2) {
-                    if (ascending) {
-                        return row1[columnIndex].compareTo(row2[columnIndex]);
+                    if (columnIndex == 3) {
+                        Double value1 = Double.parseDouble(row1[columnIndex].replace(",","."));
+                        Double value2 = Double.parseDouble(row2[columnIndex].replace(",","."));
+                        return ascending ? value1.compareTo(value2) : value2.compareTo(value1);
                     }
                     else {
-                        return row2[columnIndex].compareTo(row1[columnIndex]);
+                        return ascending ? row1[columnIndex].compareTo(row2[columnIndex]) : row2[columnIndex].compareTo(row1[columnIndex]);
                     }
                 }
             });
