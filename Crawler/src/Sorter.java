@@ -23,7 +23,7 @@ public class Sorter {
         //String[][] allData = sorter.getTable();
         //System.out.println(allData); 
 
-        //String[][] results = sorter.searchCourses("11222");
+        //String[][] results = sorter.searchCourses("mat");
         //System.out.println(results);
 
         //ArrayList<String> courseWithPlacement = sorter.search("F3B");
@@ -35,9 +35,9 @@ public class Sorter {
         //ArrayList<String> courseDetails = sorter.getAll("Matematik 1a (Polyteknisk grundlag)");
         //System.out.println(courseDetails);
 
-        String[][] table = sorter.getTable();
-        table = sorter.sortTable(table, 0, true); // Den kan åbenbart ikke sortere ordenligt efter ECTS
-        sorter.printMatrix(table);
+        //String[][] table = sorter.getTable();
+        //table = sorter.sortTable(table, 0, true); // Den kan åbenbart ikke sortere ordenligt efter ECTS
+        //sorter.printMatrix(table);
     }
 
     ////////////////////////////////////////////////////////getDATA()/////////////////////////////////////////////////
@@ -46,7 +46,7 @@ public class Sorter {
         Gson gson = new Gson();
         List<HashMap<String, String>> data = null;
         
-        try (FileReader reader = new FileReader("Fake_data.json")) {
+        try (FileReader reader = new FileReader("courses.json")) {
             //PArse JSON til list of HashMaps
             Type listType = new TypeToken<List<HashMap<String, String>>>(){}.getType();
             data = gson.fromJson(reader, listType);
@@ -168,7 +168,7 @@ public class Sorter {
         public String[][] searchCourses(String searchTerm) {
             List<HashMap<String, String>> data = getData();
             List<String[]> results = new ArrayList<>();
-            String[][] result = null;
+            String[][] result;
 
             results.add(new String[]{"Kursusnavn", "Kursus nr.", "Skemaplacering", "ECTS", "Type", "Institut"});
 
@@ -178,7 +178,7 @@ public class Sorter {
                         String[] courseArray = {
                             course.get("number"), //course_number
                             course.get("name"), //course_name
-                            course.get("placement").substring(1).replace("-", ", "), //schedule_placement
+                            placementHelper(course.get("placement")), //schedule_placement
                             course.get("ECTS"), // ECTS
                             course.get("type"), // Type
                             course.get("institute") // Institute
@@ -222,6 +222,17 @@ public class Sorter {
             for (String[] row : Matrix) {
                 System.out.println(String.join(", ", row));
             }
+        }
+
+        public String placementHelper(String placement) {
+            if (placement != null && placement.startsWith("-")) {
+                placement = placement.substring(1);
+                placement = placement.replace("-", ", ");
+            }
+            else {
+                placement = ""; //schedule_placement
+            }
+            return placement;
         }
 
         
