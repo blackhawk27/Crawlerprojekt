@@ -1,0 +1,5682 @@
+[
+  {
+    "course_number": "01001",
+    "course_name": "Matematik 1a (Polyteknisk grundlag)"
+  },
+  {
+    "course_number": "01002",
+    "course_name": "Matematik 1b (polyteknisk grundlag)"
+  },
+  {
+    "course_number": "01003",
+    "course_name": "Matematik 1a (Polyteknisk grundlag)"
+  },
+  {
+    "course_number": "01004",
+    "course_name": "Matematik 1b: (Polyteknisk grundlag)"
+  },
+  {
+    "course_number": "01017",
+    "course_name": "Diskret matematik"
+  },
+  {
+    "course_number": "01018",
+    "course_name": "Diskret matematik 2: algebra"
+  },
+  {
+    "course_number": "01019",
+    "course_name": "Diskret matematik"
+  },
+  {
+    "course_number": "01020",
+    "course_name": "Videregående Lineær Algebra"
+  },
+  {
+    "course_number": "01025",
+    "course_name": "Matematik 2 for Matematik og Teknologi"
+  },
+  {
+    "course_number": "01034",
+    "course_name": "Matematik 2"
+  },
+  {
+    "course_number": "01035",
+    "course_name": "Matematik 2"
+  },
+  {
+    "course_number": "01037",
+    "course_name": "Matematik 2 (sommeruniversitet)"
+  },
+  {
+    "course_number": "01125",
+    "course_name": "Topologiske grundbegreber og metriske rum"
+  },
+  {
+    "course_number": "01227",
+    "course_name": "Grafteori"
+  },
+  {
+    "course_number": "01237",
+    "course_name": "Differentialgeometri og parametrisk design"
+  },
+  {
+    "course_number": "01238",
+    "course_name": "Differentialgeometri"
+  },
+  {
+    "course_number": "01405",
+    "course_name": "Algebraiske Fejlrettende Koder"
+  },
+  {
+    "course_number": "01410",
+    "course_name": "Kryptografi 1"
+  },
+  {
+    "course_number": "01415",
+    "course_name": "Computational Discrete Mathematics"
+  },
+  {
+    "course_number": "01418",
+    "course_name": "Introduktion til partielle differentialligninger"
+  },
+  {
+    "course_number": "01426",
+    "course_name": "Kryptografi 2"
+  },
+  {
+    "course_number": "01527",
+    "course_name": "Videregående grafteori"
+  },
+  {
+    "course_number": "01617",
+    "course_name": "Introduktion til Dynamiske Systemer"
+  },
+  {
+    "course_number": "01621",
+    "course_name": "Videregående dynamiske systemer: Global teori"
+  },
+  {
+    "course_number": "01622",
+    "course_name": "Videregående dynamiske systemer med teknologiske anvendelser"
+  },
+  {
+    "course_number": "01715",
+    "course_name": "Funktionalanalyse"
+  },
+  {
+    "course_number": "01716",
+    "course_name": "Videregående emner i anvendt funktionalanalyse"
+  },
+  {
+    "course_number": "01904",
+    "course_name": "Diskret matematik"
+  },
+  {
+    "course_number": "01911",
+    "course_name": "Matematisk Analyse og Modellering"
+  },
+  {
+    "course_number": "01922",
+    "course_name": "Lineær Algebra og Modellering"
+  },
+  {
+    "course_number": "02002",
+    "course_name": "Programmering (Polyteknisk grundlag)"
+  },
+  {
+    "course_number": "02003",
+    "course_name": "Programmering (Polyteknisk grundlag)"
+  },
+  {
+    "course_number": "02100",
+    "course_name": "Indledende programmering og softwareteknologi"
+  },
+  {
+    "course_number": "02104",
+    "course_name": "Indledende programmeringsprojekt på Softwareteknologi"
+  },
+  {
+    "course_number": "02105",
+    "course_name": "Algoritmer og datastrukturer 1"
+  },
+  {
+    "course_number": "02110",
+    "course_name": "Algoritmer og datastrukturer 2"
+  },
+  {
+    "course_number": "02112",
+    "course_name": "Programmering af Indlejrede Systemer"
+  },
+  {
+    "course_number": "02113",
+    "course_name": "Projekt i Design af Digitale Systemer"
+  },
+  {
+    "course_number": "02114",
+    "course_name": "Design af en RISC-V mikroprocessor"
+  },
+  {
+    "course_number": "02116",
+    "course_name": "Netværksforbundne indlejrede systemer"
+  },
+  {
+    "course_number": "02118",
+    "course_name": "Introduktion til Chip Design"
+  },
+  {
+    "course_number": "02123",
+    "course_name": "Fagprojekt – Bachelor i Computer Engineering"
+  },
+  {
+    "course_number": "02132",
+    "course_name": "Computersystemer"
+  },
+  {
+    "course_number": "02135",
+    "course_name": "Introduktion til Cyber Systemer"
+  },
+  {
+    "course_number": "02138",
+    "course_name": "Digital elektronik 1"
+  },
+  {
+    "course_number": "02139",
+    "course_name": "Digital Elektronik 2"
+  },
+  {
+    "course_number": "02141",
+    "course_name": "Datalogisk modellering"
+  },
+  {
+    "course_number": "02143",
+    "course_name": "Formelle sprog og semantik"
+  },
+  {
+    "course_number": "02148",
+    "course_name": "Introduktion til koordinering af fordelte applikationer"
+  },
+  {
+    "course_number": "02155",
+    "course_name": "Computerarkitektur"
+  },
+  {
+    "course_number": "02156",
+    "course_name": "Logiske Systemer og Logikprogrammering"
+  },
+  {
+    "course_number": "02157",
+    "course_name": "Funktionsprogrammering"
+  },
+  {
+    "course_number": "02158",
+    "course_name": "Parallelprogrammering"
+  },
+  {
+    "course_number": "02159",
+    "course_name": "Operativsystemer"
+  },
+  {
+    "course_number": "02160",
+    "course_name": "Agil objektorienteret softwareudvikling"
+  },
+  {
+    "course_number": "02161",
+    "course_name": "Software Engineering 1"
+  },
+  {
+    "course_number": "02162",
+    "course_name": "Software Engineering 2"
+  },
+  {
+    "course_number": "02170",
+    "course_name": "Databasesystemer"
+  },
+  {
+    "course_number": "02180",
+    "course_name": "Introduktion til kunstig intelligens"
+  },
+  {
+    "course_number": "02182",
+    "course_name": "Symbolsk kunstig intelligens"
+  },
+  {
+    "course_number": "02191",
+    "course_name": "Computersikkerhedsundersøgelser"
+  },
+  {
+    "course_number": "02192",
+    "course_name": "Computersikkerhedshændelseshåndtering"
+  },
+  {
+    "course_number": "02193",
+    "course_name": "Etisk hacking"
+  },
+  {
+    "course_number": "02195",
+    "course_name": "Kvantealgoritmer og Maskinlæring"
+  },
+  {
+    "course_number": "02196",
+    "course_name": "Kvante kompilatorer"
+  },
+  {
+    "course_number": "02201",
+    "course_name": "Agil hardwareudvikling"
+  },
+  {
+    "course_number": "02203",
+    "course_name": "Design af Digitale Systemer"
+  },
+  {
+    "course_number": "02205",
+    "course_name": "VLSI Design"
+  },
+  {
+    "course_number": "02209",
+    "course_name": "Test af digitale systemer"
+  },
+  {
+    "course_number": "02211",
+    "course_name": "Forskningsemner i computerarkitektur"
+  },
+  {
+    "course_number": "02214",
+    "course_name": "Hardware/Software Codesign"
+  },
+  {
+    "course_number": "02225",
+    "course_name": "Distribuerede realtidssystemer"
+  },
+  {
+    "course_number": "02226",
+    "course_name": "Netværksforbundne indlejrede systemer"
+  },
+  {
+    "course_number": "02232",
+    "course_name": "Anvendt Kryptografi"
+  },
+  {
+    "course_number": "02233",
+    "course_name": "Netværkssikkerhed"
+  },
+  {
+    "course_number": "02234",
+    "course_name": "Forskningsemner i cybersikkerhed"
+  },
+  {
+    "course_number": "02238",
+    "course_name": "Biometriske systemer"
+  },
+  {
+    "course_number": "02239",
+    "course_name": "Datasikkerhed"
+  },
+  {
+    "course_number": "02242",
+    "course_name": "Programanalyse"
+  },
+  {
+    "course_number": "02244",
+    "course_name": "Logik for sikkerhed"
+  },
+  {
+    "course_number": "02245",
+    "course_name": "Programverifikation"
+  },
+  {
+    "course_number": "02246",
+    "course_name": "Model tjek"
+  },
+  {
+    "course_number": "02247",
+    "course_name": "Oversætterkonstruktion"
+  },
+  {
+    "course_number": "02249",
+    "course_name": "Beregningsmæssigt hårde problemer"
+  },
+  {
+    "course_number": "02255",
+    "course_name": "Moderne kryptografi"
+  },
+  {
+    "course_number": "02256",
+    "course_name": "Automatiseret Ræsonnering"
+  },
+  {
+    "course_number": "02258",
+    "course_name": "Parallelle computersystemer"
+  },
+  {
+    "course_number": "02263",
+    "course_name": "Formelle aspekter af software engineering"
+  },
+  {
+    "course_number": "02266",
+    "course_name": "User Experience Engineering"
+  },
+  {
+    "course_number": "02267",
+    "course_name": "Software-udvikling af Webtjenester"
+  },
+  {
+    "course_number": "02268",
+    "course_name": "Procesorienterede og event-drevne softwaresystemer"
+  },
+  {
+    "course_number": "02269",
+    "course_name": "Process Mining"
+  },
+  {
+    "course_number": "02282",
+    "course_name": "Algoritmer for store datamængder"
+  },
+  {
+    "course_number": "02285",
+    "course_name": "Kunstig intelligens og multiagent-systemer"
+  },
+  {
+    "course_number": "02287",
+    "course_name": "Logiske teorier for usikkerhed og læring"
+  },
+  {
+    "course_number": "02289",
+    "course_name": "Algoritmiske teknikker for moderne datamodeller"
+  },
+  {
+    "course_number": "02291",
+    "course_name": "Systemintegration"
+  },
+  {
+    "course_number": "02311",
+    "course_name": "Introduktion til indlejrede systemer"
+  },
+  {
+    "course_number": "02312",
+    "course_name": "Indledende programmering"
+  },
+  {
+    "course_number": "02321",
+    "course_name": "Hardware/Software Programmering"
+  },
+  {
+    "course_number": "02322",
+    "course_name": "Maskinnær programmering"
+  },
+  {
+    "course_number": "02323",
+    "course_name": "Introduktion til statistik"
+  },
+  {
+    "course_number": "02324",
+    "course_name": "Videregående programmering"
+  },
+  {
+    "course_number": "02325",
+    "course_name": "Programmeringsprojekt"
+  },
+  {
+    "course_number": "02326",
+    "course_name": "Algoritmer og datastrukturer"
+  },
+  {
+    "course_number": "02327",
+    "course_name": "Indledende databaser og database programmering"
+  },
+  {
+    "course_number": "02328",
+    "course_name": "Digital elektronik"
+  },
+  {
+    "course_number": "02329",
+    "course_name": "Digitale systemer CDIO projekt"
+  },
+  {
+    "course_number": "02332",
+    "course_name": "Compilerteknik"
+  },
+  {
+    "course_number": "02335",
+    "course_name": "Operativsystemer"
+  },
+  {
+    "course_number": "02346",
+    "course_name": "Distribuerede og parallelle systemer"
+  },
+  {
+    "course_number": "02369",
+    "course_name": "Software processer og mønstre"
+  },
+  {
+    "course_number": "02393",
+    "course_name": "Programmering i C++"
+  },
+  {
+    "course_number": "02402",
+    "course_name": "Statistik (Polyteknisk grundlag)"
+  },
+  {
+    "course_number": "02403",
+    "course_name": "Introduktion til matematisk statistik"
+  },
+  {
+    "course_number": "02405",
+    "course_name": "Sandsynlighedsregning"
+  },
+  {
+    "course_number": "02409",
+    "course_name": "Multivariat statistik"
+  },
+  {
+    "course_number": "02411",
+    "course_name": "Statistisk forsøgsplanlægning"
+  },
+  {
+    "course_number": "02413",
+    "course_name": "Statistisk kvalitetskontrol"
+  },
+  {
+    "course_number": "02417",
+    "course_name": "Tidsrækkeanalyse"
+  },
+  {
+    "course_number": "02418",
+    "course_name": "Statistisk modellering: teori og anvendelser"
+  },
+  {
+    "course_number": "02421",
+    "course_name": "Stokastisk adaptiv regulering"
+  },
+  {
+    "course_number": "02425",
+    "course_name": "Diffusioner og stokastiske differentialligninger"
+  },
+  {
+    "course_number": "02426",
+    "course_name": "Ikke-lineære random effekt modeller: tidsuafhængige og dynamiske modeller"
+  },
+  {
+    "course_number": "02427",
+    "course_name": "Videregående tidsrækkeanalyse"
+  },
+  {
+    "course_number": "02428",
+    "course_name": "Dynamisk Optimering"
+  },
+  {
+    "course_number": "02429",
+    "course_name": "Analyse af korrelerede data: Mixede lineære modeller"
+  },
+  {
+    "course_number": "02431",
+    "course_name": "Risikomanagement"
+  },
+  {
+    "course_number": "02435",
+    "course_name": "Beslutningstagen under usikkerhed"
+  },
+  {
+    "course_number": "02441",
+    "course_name": "Anvendt statistik og statistisk programmel"
+  },
+  {
+    "course_number": "02443",
+    "course_name": "Stokastisk simulation"
+  },
+  {
+    "course_number": "02445",
+    "course_name": "Projekt i statistisk evaluering for Kunstig intelligens og Data"
+  },
+  {
+    "course_number": "02450",
+    "course_name": "Introduktion til machine learning og data mining"
+  },
+  {
+    "course_number": "02455",
+    "course_name": "Eksperimenter i kognitionsvidenskab"
+  },
+  {
+    "course_number": "02456",
+    "course_name": "Dyb læring"
+  },
+  {
+    "course_number": "02458",
+    "course_name": "Kognitiv modellering"
+  },
+  {
+    "course_number": "02460",
+    "course_name": "Avanceret machine learning"
+  },
+  {
+    "course_number": "02461",
+    "course_name": "Introduktion til intelligente systemer"
+  },
+  {
+    "course_number": "02462",
+    "course_name": "Signaler og data"
+  },
+  {
+    "course_number": "02463",
+    "course_name": "Aktiv machine learning og agency"
+  },
+  {
+    "course_number": "02464",
+    "course_name": "Kunstig Intelligens og Menneskelig Kognition"
+  },
+  {
+    "course_number": "02465",
+    "course_name": "Introduktion til reinforcement learning og kontrol"
+  },
+  {
+    "course_number": "02467",
+    "course_name": "Social informatik"
+  },
+  {
+    "course_number": "02471",
+    "course_name": "Machine learning til signalbehandling"
+  },
+  {
+    "course_number": "02476",
+    "course_name": "Machine Learning Operations"
+  },
+  {
+    "course_number": "02477",
+    "course_name": "Bayesiansk machine learning"
+  },
+  {
+    "course_number": "02492",
+    "course_name": "Digital Learning Technology and Entrepreneurship"
+  },
+  {
+    "course_number": "02501",
+    "course_name": "Videregående Deep Learning i Computer Vision"
+  },
+  {
+    "course_number": "02502",
+    "course_name": "Billedanalyse"
+  },
+  {
+    "course_number": "02504",
+    "course_name": "Computer Vision"
+  },
+  {
+    "course_number": "02506",
+    "course_name": "Videregående billedanalyse"
+  },
+  {
+    "course_number": "02509",
+    "course_name": "Computational 3D-billeddannelse og analyse"
+  },
+  {
+    "course_number": "02510",
+    "course_name": "Deep learning for eksperimentel 3D billedanalyse"
+  },
+  {
+    "course_number": "02516",
+    "course_name": "Introduktion til Deep Learning i Computer Vision"
+  },
+  {
+    "course_number": "02517",
+    "course_name": "Ansvarlig AI: ALgoritmisk fairness og forklarbarhed"
+  },
+  {
+    "course_number": "02525",
+    "course_name": "Introduktion til Matematik og Teknologi"
+  },
+  {
+    "course_number": "02526",
+    "course_name": "Matematisk modellering"
+  },
+  {
+    "course_number": "02561",
+    "course_name": "Computergrafik"
+  },
+  {
+    "course_number": "02563",
+    "course_name": "Generative metoder til computergrafik"
+  },
+  {
+    "course_number": "02566",
+    "course_name": "Modellering af digitale visuelle oplevelser"
+  },
+  {
+    "course_number": "02580",
+    "course_name": "Analyse og beregninger på geometriske data"
+  },
+  {
+    "course_number": "02582",
+    "course_name": "Computerintensiv dataanalyse"
+  },
+  {
+    "course_number": "02586",
+    "course_name": "Statistisk Genetik"
+  },
+  {
+    "course_number": "02601",
+    "course_name": "Introduktion til numeriske algoritmer"
+  },
+  {
+    "course_number": "02610",
+    "course_name": "Optimering og datafitting"
+  },
+  {
+    "course_number": "02611",
+    "course_name": "Optimering til datavidenskab"
+  },
+  {
+    "course_number": "02612",
+    "course_name": "Optimering med bibetingelser"
+  },
+  {
+    "course_number": "02613",
+    "course_name": "Python og High-Performance Computing"
+  },
+  {
+    "course_number": "02614",
+    "course_name": "High-Performance Computing"
+  },
+  {
+    "course_number": "02616",
+    "course_name": "Storskala modellering"
+  },
+  {
+    "course_number": "02619",
+    "course_name": "Model prædiktiv regulering"
+  },
+  {
+    "course_number": "02623",
+    "course_name": "Finite Element Metoden for partielle differentialligninger"
+  },
+  {
+    "course_number": "02624",
+    "course_name": "Inverse Problemer og Billeddannelse"
+  },
+  {
+    "course_number": "02635",
+    "course_name": "Programmering af matematisk software"
+  },
+  {
+    "course_number": "02686",
+    "course_name": "Scientific computing for differentialligninger"
+  },
+  {
+    "course_number": "02687",
+    "course_name": "Scientific Computing for ordinary and partial differential equations"
+  },
+  {
+    "course_number": "02689",
+    "course_name": "Videregående numeriske metoder til løsning af differentialligninger"
+  },
+  {
+    "course_number": "02805",
+    "course_name": "Sociale grafer og interaktioner"
+  },
+  {
+    "course_number": "02806",
+    "course_name": "Social data analyse og visualisering"
+  },
+  {
+    "course_number": "02807",
+    "course_name": "Beregningsmæssige Værktøjer til Datavidenskab"
+  },
+  {
+    "course_number": "02808",
+    "course_name": "Personal Data Interaction for Mobile and Wearables"
+  },
+  {
+    "course_number": "02809",
+    "course_name": "UX Design Prototypeudviking"
+  },
+  {
+    "course_number": "02830",
+    "course_name": "Avanceret projekt i digitale medieteknologier"
+  },
+  {
+    "course_number": "02840",
+    "course_name": "Grundlæggende computerspilprogrammering (DADIU)"
+  },
+  {
+    "course_number": "02841",
+    "course_name": "Computerspilprogramering i en produktion (DADIU)"
+  },
+  {
+    "course_number": "02901",
+    "course_name": "Avancerede emner indenfor machine learning"
+  },
+  {
+    "course_number": "02910",
+    "course_name": "Applied computerintensiv dataanalyse"
+  },
+  {
+    "course_number": "02913",
+    "course_name": "Avancerede Analyseteknikker"
+  },
+  {
+    "course_number": "02935",
+    "course_name": "Introduktion til anvendt statistik og R for Ph.d. studerende"
+  },
+  {
+    "course_number": "02941",
+    "course_name": "Fysisk baseret rendering og modellering af materialers udseende"
+  },
+  {
+    "course_number": "02946",
+    "course_name": "Scientific computing for røntgen-tomografi"
+  },
+  {
+    "course_number": "02949",
+    "course_name": "DTU Compute ph.d.-seminar"
+  },
+  {
+    "course_number": "02953",
+    "course_name": "Konveks optimering"
+  },
+  {
+    "course_number": "02955",
+    "course_name": "Pseudodifferentielle operatorer for randværdiproblemer"
+  },
+  {
+    "course_number": "02975",
+    "course_name": "Introduktion til Bayesianske inverse problemer"
+  },
+  {
+    "course_number": "02980",
+    "course_name": "Young Researcher Entrepreneurship Bootcamp"
+  },
+  {
+    "course_number": "02981",
+    "course_name": "Generativ Modellering Sommer Skole (GeMMS)"
+  },
+  {
+    "course_number": "02982",
+    "course_name": "DTU Compute Academic Writing Bootcamp"
+  },
+  {
+    "course_number": "02983",
+    "course_name": "Algebraisk Grafteori"
+  },
+  {
+    "course_number": "10031",
+    "course_name": "Introduktion til Fysik og Ingeniørvidenskab"
+  },
+  {
+    "course_number": "10033",
+    "course_name": "Mekanik og fysisk modellering"
+  },
+  {
+    "course_number": "10034",
+    "course_name": "Termodynamik og statistisk fysik"
+  },
+  {
+    "course_number": "10035",
+    "course_name": "Laboratoriearbejde i fysik og ingeniørvidenskab"
+  },
+  {
+    "course_number": "10036",
+    "course_name": "Elektromagnetisme for fysikere"
+  },
+  {
+    "course_number": "10037",
+    "course_name": "Kontinuumsfysik og modellering"
+  },
+  {
+    "course_number": "10054",
+    "course_name": "Modelfysik"
+  },
+  {
+    "course_number": "10060",
+    "course_name": "Fysik (Polyteknisk grundlag)"
+  },
+  {
+    "course_number": "10063",
+    "course_name": "Fysik (Polyteknisk grundlag)"
+  },
+  {
+    "course_number": "10065",
+    "course_name": "Fysik (Polyteknisk grundlag)"
+  },
+  {
+    "course_number": "10080",
+    "course_name": "Fysik for materialer og energi"
+  },
+  {
+    "course_number": "10102",
+    "course_name": "Kvantemekanik"
+  },
+  {
+    "course_number": "10104",
+    "course_name": "Introduktion til kvantemekanik"
+  },
+  {
+    "course_number": "10112",
+    "course_name": "Videregående kvantemekanik"
+  },
+  {
+    "course_number": "10122",
+    "course_name": "Statistisk fysik"
+  },
+  {
+    "course_number": "10200",
+    "course_name": "Materialers struktur og dynamik studeret med røntgen og neutroner"
+  },
+  {
+    "course_number": "10208",
+    "course_name": "Diffraktion, spektroskopi og imaging af materialer"
+  },
+  {
+    "course_number": "10209",
+    "course_name": "Røntgen- og neutroneksperimenter ved internationale forskningsanlæg"
+  },
+  {
+    "course_number": "10240",
+    "course_name": "Design-Build 2: Rational catalyst design for General Engineering"
+  },
+  {
+    "course_number": "10255",
+    "course_name": "Avanceret 3D Røntgen imaging"
+  },
+  {
+    "course_number": "10260",
+    "course_name": "Fysikken bag solenergi og energilagring"
+  },
+  {
+    "course_number": "10302",
+    "course_name": "Elektronstrukturmetoder i materialefysik, kemi og biologi"
+  },
+  {
+    "course_number": "10304",
+    "course_name": "Eksperimentel overfladefysik"
+  },
+  {
+    "course_number": "10306",
+    "course_name": "Teori for 2D materialer og stærk lys-stof vekselvirkning"
+  },
+  {
+    "course_number": "10314",
+    "course_name": "Magnetisme og magnetiske materialer"
+  },
+  {
+    "course_number": "10316",
+    "course_name": "Materialedesign med maskinlæring og kunstig intelligens"
+  },
+  {
+    "course_number": "10317",
+    "course_name": "Faststoffysik"
+  },
+  {
+    "course_number": "10319",
+    "course_name": "Videregående faststoffysik"
+  },
+  {
+    "course_number": "10321",
+    "course_name": "Nanosystemteknologi"
+  },
+  {
+    "course_number": "10325",
+    "course_name": "Kvantemekanisk modellering af nanoelektronik"
+  },
+  {
+    "course_number": "10326",
+    "course_name": "Elektronisk karakterisering af nanomaterialer: principper og praksis"
+  },
+  {
+    "course_number": "10331",
+    "course_name": "Eksperimentel introduktion til fysikken bag bæredygtig energi"
+  },
+  {
+    "course_number": "10333",
+    "course_name": "Fysikken i vedvarende energi"
+  },
+  {
+    "course_number": "10337",
+    "course_name": "Teoretisk mikrofluidik"
+  },
+  {
+    "course_number": "10339",
+    "course_name": "Begreber i heterogen katalyse og anvendelser indenfor energikonvertering"
+  },
+  {
+    "course_number": "10346",
+    "course_name": "Videregående Kontinuumsfysik"
+  },
+  {
+    "course_number": "10350",
+    "course_name": "Numeriske studier i fysik"
+  },
+  {
+    "course_number": "10380",
+    "course_name": "Kvanteoptik"
+  },
+  {
+    "course_number": "10384",
+    "course_name": "Kvanteinformation"
+  },
+  {
+    "course_number": "10385",
+    "course_name": "Kvanteinformationsteknologi"
+  },
+  {
+    "course_number": "10386",
+    "course_name": "Eksperimentelle Teknikker i Kvanteteknologi"
+  },
+  {
+    "course_number": "10387",
+    "course_name": "Scientific computing i kvanteinformationsvidenskab"
+  },
+  {
+    "course_number": "10400",
+    "course_name": "Plasmafysik"
+  },
+  {
+    "course_number": "10401",
+    "course_name": "Eksperimentel plasmafysik"
+  },
+  {
+    "course_number": "10402",
+    "course_name": "Fusionsenergi – teknologi og fysik"
+  },
+  {
+    "course_number": "10405",
+    "course_name": "Relativitetsteori"
+  },
+  {
+    "course_number": "10411",
+    "course_name": "Atomreaktorfysik"
+  },
+  {
+    "course_number": "10413",
+    "course_name": "Defekter i faste stoffer"
+  },
+  {
+    "course_number": "10420",
+    "course_name": "Sportsfysik"
+  },
+  {
+    "course_number": "10506",
+    "course_name": "Journal club om nanostrukturer og reaktivitet"
+  },
+  {
+    "course_number": "10507",
+    "course_name": "Overfladefysik og katalyse"
+  },
+  {
+    "course_number": "10508",
+    "course_name": "Journal club om elektronstruktur"
+  },
+  {
+    "course_number": "10509",
+    "course_name": "Journal club om atomare strukturer og dynamik studeret med elektronstråler"
+  },
+  {
+    "course_number": "10512",
+    "course_name": "Journal club om Kvanteoptik"
+  },
+  {
+    "course_number": "10515",
+    "course_name": "FLUIDS Journal Club"
+  },
+  {
+    "course_number": "10519",
+    "course_name": "Avanceret elektronmikroskopifysik"
+  },
+  {
+    "course_number": "10520",
+    "course_name": "Journal club om plasmafysik og fusionsenergi"
+  },
+  {
+    "course_number": "10521",
+    "course_name": "To-dimensionale materialers fysik og teknologi"
+  },
+  {
+    "course_number": "10530",
+    "course_name": "SURFCAT Summer School: The Science of Sustainable Fuels and Chemicals"
+  },
+  {
+    "course_number": "10540",
+    "course_name": "CAMD Summer School on Electronic Structure Theory and Materials Design"
+  },
+  {
+    "course_number": "10590",
+    "course_name": "Illustration af videnskabeligt indhold relateret til katalyse"
+  },
+  {
+    "course_number": "10605",
+    "course_name": "Teknologihistorie"
+  },
+  {
+    "course_number": "10610",
+    "course_name": "Teknologihistorie"
+  },
+  {
+    "course_number": "10750",
+    "course_name": "Innovationsprojekter på DTU Fysik"
+  },
+  {
+    "course_number": "10850",
+    "course_name": "Avanceret mikro- og nano-fabrikationsteknologi"
+  },
+  {
+    "course_number": "10851",
+    "course_name": "Introduktion til renrumsbaseret mikrofabrikation"
+  },
+  {
+    "course_number": "10852",
+    "course_name": "Introduktion til renrums-baseret mikrofabrikation"
+  },
+  {
+    "course_number": "10855",
+    "course_name": "Videregående fabrikation af mikro- og nanostrukturer"
+  },
+  {
+    "course_number": "10862",
+    "course_name": "Polymer mikrofabrikation"
+  },
+  {
+    "course_number": "10870",
+    "course_name": "Eksperimentelle Metoder og Instrumenter i Fysik"
+  },
+  {
+    "course_number": "10871",
+    "course_name": "Avanceret design og simulering af solceller"
+  },
+  {
+    "course_number": "10916",
+    "course_name": "Fysik 1"
+  },
+  {
+    "course_number": "10935",
+    "course_name": "Fysik 1"
+  },
+  {
+    "course_number": "12000",
+    "course_name": "Introduktion til miljøteknologi- og management"
+  },
+  {
+    "course_number": "12003",
+    "course_name": "Miljøteknisk Laboratorie- og Feltkursus"
+  },
+  {
+    "course_number": "12100",
+    "course_name": "Kvantitativ Bæredygtighed (Polyteknisk grundlag)"
+  },
+  {
+    "course_number": "12101",
+    "course_name": "Kvantitativ Bæredygtighed (Polyteknisk grundlag)"
+  },
+  {
+    "course_number": "12102",
+    "course_name": "Miljøtekniske processer"
+  },
+  {
+    "course_number": "12104",
+    "course_name": "Modellering af miljøtekniske processer"
+  },
+  {
+    "course_number": "12105",
+    "course_name": "Kvantitativ Bæredygtighed (Polyteknisk grundlag)"
+  },
+  {
+    "course_number": "12106",
+    "course_name": "Kvantitativ Bæredygtighed (Polyteknisk grundlag)"
+  },
+  {
+    "course_number": "12109",
+    "course_name": "Fysisk-kemiske vandbehandlingsteknologier"
+  },
+  {
+    "course_number": "12111",
+    "course_name": "Miljøtekniske processer for kandidater"
+  },
+  {
+    "course_number": "12115",
+    "course_name": "Wastewater treatment and valorization"
+  },
+  {
+    "course_number": "12121",
+    "course_name": "Vandforsyning"
+  },
+  {
+    "course_number": "12122",
+    "course_name": "Afløbssystemer og urban regnvandshåndtering"
+  },
+  {
+    "course_number": "12124",
+    "course_name": "Analyse af oversvømmelsesrisiko i byer"
+  },
+  {
+    "course_number": "12130",
+    "course_name": "Affaldssystemer og affaldsteknologi"
+  },
+  {
+    "course_number": "12132",
+    "course_name": "LCA-modellering af affaldssystemer"
+  },
+  {
+    "course_number": "12134",
+    "course_name": "Miljøteknisk Mikrobiologi"
+  },
+  {
+    "course_number": "12139",
+    "course_name": "Resource Engineering"
+  },
+  {
+    "course_number": "12143",
+    "course_name": "Bioresources"
+  },
+  {
+    "course_number": "12145",
+    "course_name": "Terrestrial Ecology for Engineers"
+  },
+  {
+    "course_number": "12202",
+    "course_name": "Miljø og bæredygtighed"
+  },
+  {
+    "course_number": "12203",
+    "course_name": "Miljøfagprojekt"
+  },
+  {
+    "course_number": "12205",
+    "course_name": "Klimaændringer – effekter, imødegåelse og tilpasning"
+  },
+  {
+    "course_number": "12211",
+    "course_name": "Miljømæssige løsninger indenfor vand, sanitet og affald målrettet lavindkomstlande"
+  },
+  {
+    "course_number": "12227",
+    "course_name": "Regionale og globale luftforureningseffekter"
+  },
+  {
+    "course_number": "12228",
+    "course_name": "Urban luftforurening"
+  },
+  {
+    "course_number": "12231",
+    "course_name": "Anvendt miljøkemisk analyseteknik"
+  },
+  {
+    "course_number": "12237",
+    "course_name": "Kemikalier i miljøet"
+  },
+  {
+    "course_number": "12240",
+    "course_name": "Miljømanagement, innovation og etik"
+  },
+  {
+    "course_number": "12245",
+    "course_name": "Vandforurening"
+  },
+  {
+    "course_number": "12320",
+    "course_name": "Hydrologi"
+  },
+  {
+    "course_number": "12330",
+    "course_name": "Forurenede grunde"
+  },
+  {
+    "course_number": "12331",
+    "course_name": "Feltundersøgelser af forurenede grunde"
+  },
+  {
+    "course_number": "12336",
+    "course_name": "Grundvandskvalitet"
+  },
+  {
+    "course_number": "12345",
+    "course_name": "Måling, modellering og forvaltning af vandsystemer"
+  },
+  {
+    "course_number": "12350",
+    "course_name": "Introduktion til indeklima"
+  },
+  {
+    "course_number": "12360",
+    "course_name": "Indeklima"
+  },
+  {
+    "course_number": "12361",
+    "course_name": "Ventilation og klimateknik"
+  },
+  {
+    "course_number": "12362",
+    "course_name": "Dagslys og Belysning"
+  },
+  {
+    "course_number": "12363",
+    "course_name": "Simulering af indeklima og energiforbrug med IDA ICE"
+  },
+  {
+    "course_number": "12410",
+    "course_name": "Ingeniørgeologisk grundkursus"
+  },
+  {
+    "course_number": "12412",
+    "course_name": "Almindelige konstruktioner i jord"
+  },
+  {
+    "course_number": "12415",
+    "course_name": "Vejbelægningsteknik"
+  },
+  {
+    "course_number": "12423",
+    "course_name": "Numerisk modellering i jordmekanik"
+  },
+  {
+    "course_number": "12430",
+    "course_name": "Mineralske råstoffer"
+  },
+  {
+    "course_number": "12431",
+    "course_name": "Bjergartsmekaniks principper"
+  },
+  {
+    "course_number": "12451",
+    "course_name": "Vejbelægningsmekanik"
+  },
+  {
+    "course_number": "12452",
+    "course_name": "Baneprojektering og vedligeholdelse"
+  },
+  {
+    "course_number": "12551",
+    "course_name": "Materialelære, materialefysik"
+  },
+  {
+    "course_number": "12552",
+    "course_name": "Geoteknik og anlægskonstruktioner"
+  },
+  {
+    "course_number": "12601",
+    "course_name": "Termisk bygningsfysik"
+  },
+  {
+    "course_number": "12603",
+    "course_name": "Materialefysik for bygningsingeniører"
+  },
+  {
+    "course_number": "12605",
+    "course_name": "Bæredygtighed og livscyklusvurdering i det byggede miljø"
+  },
+  {
+    "course_number": "12611",
+    "course_name": "Varme- og stoftransport i bygninger"
+  },
+  {
+    "course_number": "12612",
+    "course_name": "Betonteknologi"
+  },
+  {
+    "course_number": "12614",
+    "course_name": "Tegl og murværkskonstruktioner"
+  },
+  {
+    "course_number": "12616",
+    "course_name": "Byggematerialer og den grønne omstilling"
+  },
+  {
+    "course_number": "12701",
+    "course_name": "Introduction to Living systems"
+  },
+  {
+    "course_number": "12772",
+    "course_name": "Livscyklusvurdering af produkter og systemer"
+  },
+  {
+    "course_number": "12773",
+    "course_name": "Avancerede livscyklusvurderingsmetoder"
+  },
+  {
+    "course_number": "12774",
+    "course_name": "Evaluering af sundheds-, miljø- og livscykluspåvirkninger"
+  },
+  {
+    "course_number": "12775",
+    "course_name": "Modellering af livscykluspåvirkninger i kontekst af planetære grænser"
+  },
+  {
+    "course_number": "12821",
+    "course_name": "Forundersøgelser"
+  },
+  {
+    "course_number": "12831",
+    "course_name": "Anlæg"
+  },
+  {
+    "course_number": "12832",
+    "course_name": "Ingeniør i Grønland"
+  },
+  {
+    "course_number": "12836",
+    "course_name": "Grønlandsk Forsyning \u0026 Miljøteknik"
+  },
+  {
+    "course_number": "12854",
+    "course_name": "Infrastrukturanlæg i Arktis"
+  },
+  {
+    "course_number": "12859",
+    "course_name": "Miljøteknologi i Arktis"
+  },
+  {
+    "course_number": "12902",
+    "course_name": "Livscyklusmodellering af affaldssystemer"
+  },
+  {
+    "course_number": "12919",
+    "course_name": "Introduction to Urban Water Technology"
+  },
+  {
+    "course_number": "12920",
+    "course_name": "Introduction to Urban Water Technology"
+  },
+  {
+    "course_number": "12936",
+    "course_name": "Numeriske beregningsmetoder i bygningsenergiteknik"
+  },
+  {
+    "course_number": "12950",
+    "course_name": "Bæredygtighedsvurdering og kommunikation"
+  },
+  {
+    "course_number": "12951",
+    "course_name": "Bæredygtighedsvurdering og kommunikation"
+  },
+  {
+    "course_number": "12952",
+    "course_name": "Bæredygtighedsvurdering og kommunikation"
+  },
+  {
+    "course_number": "12953",
+    "course_name": "Absolut miljømæssig bæredygtighedsvurdering af produktion og forbrug i et systemperspektiv"
+  },
+  {
+    "course_number": "12954",
+    "course_name": "Assessing human \u0026 ecosystems impacts with the scientific consensus model USEtox"
+  },
+  {
+    "course_number": "22001",
+    "course_name": "Akustisk signalbehandling"
+  },
+  {
+    "course_number": "22002",
+    "course_name": "Eksperimenterende hørevidenskab"
+  },
+  {
+    "course_number": "22003",
+    "course_name": "Lydopfattelse og hørelsens signalbehandling"
+  },
+  {
+    "course_number": "22005",
+    "course_name": "Videregående høreforskningsemner"
+  },
+  {
+    "course_number": "22006",
+    "course_name": "Akustisk kommunikation"
+  },
+  {
+    "course_number": "22007",
+    "course_name": "Audiologi og høreapparater"
+  },
+  {
+    "course_number": "22050",
+    "course_name": "Signaler og lineære systemer i kontinuert tid"
+  },
+  {
+    "course_number": "22051",
+    "course_name": "Signaler og lineære systemer i diskret tid"
+  },
+  {
+    "course_number": "22052",
+    "course_name": "Anvendt signalbehandling"
+  },
+  {
+    "course_number": "22053",
+    "course_name": "Principper for hjerne-computer interface"
+  },
+  {
+    "course_number": "22054",
+    "course_name": "Litteraturstudie i medikoteknisk signalanalyse"
+  },
+  {
+    "course_number": "22058",
+    "course_name": "Bærbare Sensorer: Design og Prototyping"
+  },
+  {
+    "course_number": "22059",
+    "course_name": "Laboratoriekursus i avanceret design og prototyping af bærbare sensorer"
+  },
+  {
+    "course_number": "22060",
+    "course_name": "Mobil sundhedsteknologi"
+  },
+  {
+    "course_number": "22061",
+    "course_name": "Introduktion til digital sundhedsteknologi"
+  },
+  {
+    "course_number": "22100",
+    "course_name": "R for Bio Data Science"
+  },
+  {
+    "course_number": "22101",
+    "course_name": "Introduktion til programmering i Life Science via Python"
+  },
+  {
+    "course_number": "22102",
+    "course_name": "Anvendt Single Cell Bioinformatik"
+  },
+  {
+    "course_number": "22107",
+    "course_name": "Forskningsfordybelse, Life Science"
+  },
+  {
+    "course_number": "22111",
+    "course_name": "Introduktion til bioinformatik"
+  },
+  {
+    "course_number": "22112",
+    "course_name": "High Performance Computing i Life Science"
+  },
+  {
+    "course_number": "22113",
+    "course_name": "Unix \u0026 Python Programming for bioinformatikere"
+  },
+  {
+    "course_number": "22115",
+    "course_name": "Molekylær evolution"
+  },
+  {
+    "course_number": "22117",
+    "course_name": "Proteinstruktur: Modeller, analyser og beregninger"
+  },
+  {
+    "course_number": "22123",
+    "course_name": "Computational Precision medicine"
+  },
+  {
+    "course_number": "22125",
+    "course_name": "Algoritmer i bioinformatik"
+  },
+  {
+    "course_number": "22126",
+    "course_name": "Next-Generation-Sequencing Analyse"
+  },
+  {
+    "course_number": "22140",
+    "course_name": "Introduktion til Systembiologi, BSc"
+  },
+  {
+    "course_number": "22145",
+    "course_name": "Immunologisk bioinformatik"
+  },
+  {
+    "course_number": "22150",
+    "course_name": "Introduktion til Systembiologi; MSc"
+  },
+  {
+    "course_number": "22160",
+    "course_name": "R for Bio Data Science"
+  },
+  {
+    "course_number": "22161",
+    "course_name": "Introduktion til programmering i Life Science via Python, MSc"
+  },
+  {
+    "course_number": "22163",
+    "course_name": "Unix \u0026 Python Programming for bioinformatikere, MSc"
+  },
+  {
+    "course_number": "22172",
+    "course_name": "Anvendt Single-Cell Bioinformatik, Ph.d."
+  },
+  {
+    "course_number": "22175",
+    "course_name": "Algoritmer i bioinformatik, Ph.d."
+  },
+  {
+    "course_number": "22179",
+    "course_name": "Modul 3: Værdiskabelse i farma- og bioteknologi"
+  },
+  {
+    "course_number": "22180",
+    "course_name": "Design-build i Life Science"
+  },
+  {
+    "course_number": "22201",
+    "course_name": "Immunsystem, anatomi og udvikling"
+  },
+  {
+    "course_number": "22202",
+    "course_name": "Molekylær diagnostik og præcisionsmedicin"
+  },
+  {
+    "course_number": "22203",
+    "course_name": "Udvikle, designe, implementere og betjene et sundhedsprodukt"
+  },
+  {
+    "course_number": "22205",
+    "course_name": "Projekt i Sundhedsteknologi, juni"
+  },
+  {
+    "course_number": "22206",
+    "course_name": "Projekt i Sundhedsteknologi, august"
+  },
+  {
+    "course_number": "22207",
+    "course_name": "Projekt i Sundhedsteknologi, januar"
+  },
+  {
+    "course_number": "22208",
+    "course_name": "Human fysiologi"
+  },
+  {
+    "course_number": "22210",
+    "course_name": "Immunsystemet ved sundhed og sygdom"
+  },
+  {
+    "course_number": "22230",
+    "course_name": "Udvikling og produktion af vacciner"
+  },
+  {
+    "course_number": "22231",
+    "course_name": "Modul 1: Fra ide til projektplan i biotek- og farmaforskning"
+  },
+  {
+    "course_number": "22235",
+    "course_name": "Drug delivery"
+  },
+  {
+    "course_number": "22236",
+    "course_name": "Immunterapi"
+  },
+  {
+    "course_number": "22237",
+    "course_name": "Præklinisk lægemiddeludvikling"
+  },
+  {
+    "course_number": "22238",
+    "course_name": "Modul 2: Pilotprojekt i Farmateknologi"
+  },
+  {
+    "course_number": "22239",
+    "course_name": "Modul 2: Pilotprojekt i Farmateknologi (3-uger)"
+  },
+  {
+    "course_number": "22281",
+    "course_name": "Biomaterialer"
+  },
+  {
+    "course_number": "22283",
+    "course_name": "Molekylær termodynamik, transport og analyse"
+  },
+  {
+    "course_number": "22284",
+    "course_name": "Levende modeller af kropsbarrierer og organer"
+  },
+  {
+    "course_number": "22285",
+    "course_name": "Anvendte Biomaterialer"
+  },
+  {
+    "course_number": "22400",
+    "course_name": "Design-build 4: Autonome komponenter til styring af og studier i levende systemer"
+  },
+  {
+    "course_number": "22403",
+    "course_name": "Mikro- og Nanosensorer"
+  },
+  {
+    "course_number": "22437",
+    "course_name": "Rapid prototyping af AC sensorsystemer med Arduino teknologi"
+  },
+  {
+    "course_number": "22438",
+    "course_name": "Rapid prototyping af analoge DC sensorsystemer"
+  },
+  {
+    "course_number": "22439",
+    "course_name": "Rapid prototyping af digitale sensorsystemer"
+  },
+  {
+    "course_number": "22449",
+    "course_name": "Introduktion til medikoteknisk produktudvikling"
+  },
+  {
+    "course_number": "22450",
+    "course_name": "Anvendt medikoteknisk produktudvikling"
+  },
+  {
+    "course_number": "22475",
+    "course_name": "Vævs- og bevægeapparatets biomekanik DTU"
+  },
+  {
+    "course_number": "22476",
+    "course_name": "Elektromagnetisme for sundhedsteknologi"
+  },
+  {
+    "course_number": "22481",
+    "course_name": "Indledende medicinsk billeddannelse"
+  },
+  {
+    "course_number": "22485",
+    "course_name": "Medicinske billedsystemer"
+  },
+  {
+    "course_number": "22486",
+    "course_name": "Litteraturstudie i medicinsk ultralyd"
+  },
+  {
+    "course_number": "22490",
+    "course_name": "Avanceret ultralydsbilleddannelse"
+  },
+  {
+    "course_number": "22506",
+    "course_name": "Magnetisk resonans i medicinsk billeddannelse"
+  },
+  {
+    "course_number": "22507",
+    "course_name": "Avancerede emner indenfor Magnetisk Resonans billeddannelse"
+  },
+  {
+    "course_number": "22508",
+    "course_name": "Praktisk NMR spektroskopi: Synliggør reaktioner i (bio)kemiske systemer"
+  },
+  {
+    "course_number": "22510",
+    "course_name": "Medikoteknisk prototyping"
+  },
+  {
+    "course_number": "22511",
+    "course_name": "Bio-medicinsk optik"
+  },
+  {
+    "course_number": "22513",
+    "course_name": "Biofotonik"
+  },
+  {
+    "course_number": "22525",
+    "course_name": "Medicinsk billedanalyse"
+  },
+  {
+    "course_number": "22530",
+    "course_name": "Computerintensiv strålingsdosimetri"
+  },
+  {
+    "course_number": "22600",
+    "course_name": "Fabrikation af mikro- og nanostrukturer"
+  },
+  {
+    "course_number": "22602",
+    "course_name": "Visualisering af mikro- og nanostrukturer"
+  },
+  {
+    "course_number": "22603",
+    "course_name": "Lysmikroskopi for life science"
+  },
+  {
+    "course_number": "22610",
+    "course_name": "Fysik i Sundhedsteknologi"
+  },
+  {
+    "course_number": "22680",
+    "course_name": "Computer-baseret introduktion til dataanalyse for Fysik, Nano- og Sundhedsteknologi"
+  },
+  {
+    "course_number": "22800",
+    "course_name": "DTU Health Tech Ph.d. Introduktionskursus"
+  },
+  {
+    "course_number": "23101",
+    "course_name": "Introduktion til fødevareproduktionskæder"
+  },
+  {
+    "course_number": "23102",
+    "course_name": "Fødevaresikkerhed i produktionskæder"
+  },
+  {
+    "course_number": "23205",
+    "course_name": "Bekæmpelse af infektionssygdomme"
+  },
+  {
+    "course_number": "23210",
+    "course_name": "Prædiktiv fødevaremikrobiologi og konservering"
+  },
+  {
+    "course_number": "23212",
+    "course_name": "Øvelser i fødevarefermenteringer"
+  },
+  {
+    "course_number": "23214",
+    "course_name": "Eksperimentel mikrobiologi"
+  },
+  {
+    "course_number": "23216",
+    "course_name": "Fremstilling af nye bæredygtige fødevareingredienser – processer og anvendelser"
+  },
+  {
+    "course_number": "23220",
+    "course_name": "Fødevaremikrobiologi"
+  },
+  {
+    "course_number": "23255",
+    "course_name": "Truslen fra antibiotikaresistens"
+  },
+  {
+    "course_number": "23257",
+    "course_name": "Kompositionel analyse af genomiske data"
+  },
+  {
+    "course_number": "23258",
+    "course_name": "Generel medicinsk mikrobiologi"
+  },
+  {
+    "course_number": "23260",
+    "course_name": "Anvendte metoder indenfor metagenomics"
+  },
+  {
+    "course_number": "23261",
+    "course_name": "Epidemiologiske metoder til overvågning af smitsomme sygdomme"
+  },
+  {
+    "course_number": "23262",
+    "course_name": "Bioinformatik for smitsomme sygdomme"
+  },
+  {
+    "course_number": "23263",
+    "course_name": "Avanceret modellering af infektionssygdomme"
+  },
+  {
+    "course_number": "23272",
+    "course_name": "Risikoanalyse i fødevaresikkerhed"
+  },
+  {
+    "course_number": "23301",
+    "course_name": "Praktisk kemisk fødevareanalyse"
+  },
+  {
+    "course_number": "23302",
+    "course_name": "Fødevarekemi"
+  },
+  {
+    "course_number": "23360",
+    "course_name": "Grønne udvindings- og forarbejdningsteknologier i praksis."
+  },
+  {
+    "course_number": "23511",
+    "course_name": "Grundlæggende fødevareproduktionsteknologi"
+  },
+  {
+    "course_number": "23520",
+    "course_name": "Design af fødevareproduktionssystemer"
+  },
+  {
+    "course_number": "23521",
+    "course_name": "Hygiejnisk design i fødevareindustrien"
+  },
+  {
+    "course_number": "23522",
+    "course_name": "Reologi af fødevarer og biologiskematerialer"
+  },
+  {
+    "course_number": "23531",
+    "course_name": "Entrepreneurship in food and bio engineering"
+  },
+  {
+    "course_number": "23532",
+    "course_name": "Ølbrygning og egenkontrol kursus"
+  },
+  {
+    "course_number": "23552",
+    "course_name": "Development of innovative future food: Ecotrophelia and Blue Dot course"
+  },
+  {
+    "course_number": "23564",
+    "course_name": "Integreret produktinnovation i fødevareindustrien"
+  },
+  {
+    "course_number": "23662",
+    "course_name": "Introduktion til molekylær- og reproduktionstoksikologi"
+  },
+  {
+    "course_number": "23711",
+    "course_name": "Fødevareteknologi"
+  },
+  {
+    "course_number": "23732",
+    "course_name": "Human ernæring"
+  },
+  {
+    "course_number": "23832",
+    "course_name": "Lipid biokemi, teknologi, applikationer og analyser"
+  },
+  {
+    "course_number": "23837",
+    "course_name": "Introductory course for PhD students at DTU Food"
+  },
+  {
+    "course_number": "23839",
+    "course_name": "Risk-benefit assessment of foods: methods for quantifying health effects"
+  },
+  {
+    "course_number": "23841",
+    "course_name": "Whole genome sequencing analysis for microbial diagnostic, identification and cluster analysis"
+  },
+  {
+    "course_number": "23842",
+    "course_name": "Mastering Whole genome Sequencing and Metagenomics using Oxford Nanopore Long Read Sequencing. Bench-lab training"
+  },
+  {
+    "course_number": "23900",
+    "course_name": "Projektkursus i fødevarer"
+  },
+  {
+    "course_number": "23902",
+    "course_name": "Introduktion til fødevarer"
+  },
+  {
+    "course_number": "23903",
+    "course_name": "Grundkursus i fødevareanalyse"
+  },
+  {
+    "course_number": "23925",
+    "course_name": "Fødevaremikrobiologi"
+  },
+  {
+    "course_number": "23926",
+    "course_name": "Anvendt Fødevaremikrobiologi"
+  },
+  {
+    "course_number": "23932",
+    "course_name": "Biologisk kemi"
+  },
+  {
+    "course_number": "23936",
+    "course_name": "Kemisk fødevareanalyse I"
+  },
+  {
+    "course_number": "23937",
+    "course_name": "Kemisk fødevareanalyse II"
+  },
+  {
+    "course_number": "23952",
+    "course_name": "Fødevareteknologi for diplom"
+  },
+  {
+    "course_number": "23953",
+    "course_name": "Anvendt statistisk proceskontrol og kvalitetsstyring"
+  },
+  {
+    "course_number": "23963",
+    "course_name": "Råvarer, hygiejne og HACCP"
+  },
+  {
+    "course_number": "23982",
+    "course_name": "Kemisk risikoanalyse"
+  },
+  {
+    "course_number": "23F11",
+    "course_name": "Kemisk fødevaresikkerhed"
+  },
+  {
+    "course_number": "23F12",
+    "course_name": "Mikrobiologisk fødevaresikkerhed i et globalt perspektiv"
+  },
+  {
+    "course_number": "23F13",
+    "course_name": "Fødevaresikkerhed i relation til globale fødevaresystemer"
+  },
+  {
+    "course_number": "23F14",
+    "course_name": "Risikoanalyse af fødevarebårne kontaminanter"
+  },
+  {
+    "course_number": "23F15",
+    "course_name": "Bæredygtig fødevareproduktion og processering"
+  },
+  {
+    "course_number": "25102",
+    "course_name": "Oceanografi"
+  },
+  {
+    "course_number": "25104",
+    "course_name": "Introduktion til havforskning og -teknologi"
+  },
+  {
+    "course_number": "25105",
+    "course_name": "Økologi"
+  },
+  {
+    "course_number": "25106",
+    "course_name": "Introduktion til genetiske metoder for ingeniører"
+  },
+  {
+    "course_number": "25107",
+    "course_name": "Fiskeri og akvakultur"
+  },
+  {
+    "course_number": "25108",
+    "course_name": "Praktisk anvendelse af molekylære teknikker"
+  },
+  {
+    "course_number": "25201",
+    "course_name": "Introduktion til søsikkerhed og feltarbejde i Grønland"
+  },
+  {
+    "course_number": "25202",
+    "course_name": "Fiskeriingeniør I: Beskrivelse af udnyttelse og forvaltning af fisk"
+  },
+  {
+    "course_number": "25203",
+    "course_name": "Fiskeriingeniør II: Sammenligning af udnyttelse og forvaltning af forskellige fiske- og skaldyrsarter"
+  },
+  {
+    "course_number": "25204",
+    "course_name": "Fiskeriingeniør III: Forbedring af udnyttelse og forvaltning af udvalgte fiske- og skaldyrsarter"
+  },
+  {
+    "course_number": "25205",
+    "course_name": "Elementære modeller og statistik i R"
+  },
+  {
+    "course_number": "25206",
+    "course_name": "Forberedende Kemi og Fysik"
+  },
+  {
+    "course_number": "25208",
+    "course_name": "Løsninger for Bæredygtighed"
+  },
+  {
+    "course_number": "25209",
+    "course_name": "Fangstteknologi II"
+  },
+  {
+    "course_number": "25210",
+    "course_name": "Forvaltning af akvatiske økosystemer – for fiskeri-ingeniører"
+  },
+  {
+    "course_number": "25211",
+    "course_name": "Anvendt genetik for forbedret fiskeriforvaltning med særlig fokus på det rekreative fiskeri"
+  },
+  {
+    "course_number": "25212",
+    "course_name": "Fiskeriingeniør-Projekt i Grønland I"
+  },
+  {
+    "course_number": "25302",
+    "course_name": "Fysisk Oceanografi"
+  },
+  {
+    "course_number": "25303",
+    "course_name": "Matematisk biologi"
+  },
+  {
+    "course_number": "25310",
+    "course_name": "Biologisk oceanografi"
+  },
+  {
+    "course_number": "25311",
+    "course_name": "Fiskerioceanografi"
+  },
+  {
+    "course_number": "25312",
+    "course_name": "Fiskerisystemer – forvaltning og modellering"
+  },
+  {
+    "course_number": "25313",
+    "course_name": "Fiskerigenetik og conservation af akvatisk biodiversitet"
+  },
+  {
+    "course_number": "25314",
+    "course_name": "Numerisk marinbiologisk modellering"
+  },
+  {
+    "course_number": "25315",
+    "course_name": "Genetiske metoder inden for akvakultur"
+  },
+  {
+    "course_number": "25316",
+    "course_name": "Recirkulationssystemer til fiskeopdræt"
+  },
+  {
+    "course_number": "25317",
+    "course_name": "Sygdomme og veterinære aspekter relaterede til akvakultur"
+  },
+  {
+    "course_number": "25318",
+    "course_name": "Forvaltning, biodiversitet og konservation af akvatiske økosystemer"
+  },
+  {
+    "course_number": "25321",
+    "course_name": "Fiskeernæring og bioenergetik"
+  },
+  {
+    "course_number": "25322",
+    "course_name": "Design og anvendelse af Recirkulationssystemer til fiskeopdræt"
+  },
+  {
+    "course_number": "25323",
+    "course_name": "Emner i akvatisk videnskab og teknologi"
+  },
+  {
+    "course_number": "25324",
+    "course_name": "Anvendte havobservationsteknologier"
+  },
+  {
+    "course_number": "25325",
+    "course_name": "Marine økosystemer under klimaforandring"
+  },
+  {
+    "course_number": "25326",
+    "course_name": "Fiskefysiologi og velfærd"
+  },
+  {
+    "course_number": "25327",
+    "course_name": "Kemisk Oceanografi"
+  },
+  {
+    "course_number": "25328",
+    "course_name": "Matematisk økologisk modellering"
+  },
+  {
+    "course_number": "25331",
+    "course_name": "Øvelser i recirkulationssystemer"
+  },
+  {
+    "course_number": "25335",
+    "course_name": "Fiskerimetodernes bæredygtighed"
+  },
+  {
+    "course_number": "25336",
+    "course_name": "Fangstteknologi"
+  },
+  {
+    "course_number": "25340",
+    "course_name": "Digital Ocean"
+  },
+  {
+    "course_number": "25341",
+    "course_name": "Dynamisk Oceanografi"
+  },
+  {
+    "course_number": "25342",
+    "course_name": "Evidensbaseret Rådgivning om Akvatisk Systemer"
+  },
+  {
+    "course_number": "25343",
+    "course_name": "Kvantitativ modellering af naturressourcer"
+  },
+  {
+    "course_number": "25344",
+    "course_name": "Miljøeffekter af maritime aktiviteter"
+  },
+  {
+    "course_number": "25345",
+    "course_name": "Introduktion til modellering af observationer af naturressourcer"
+  },
+  {
+    "course_number": "25346",
+    "course_name": "Vandkvalitet i Akvakultur"
+  },
+  {
+    "course_number": "25347",
+    "course_name": "Grundlæggende viden om akustiske og optiske undervandssystemer"
+  },
+  {
+    "course_number": "25348",
+    "course_name": "Lavtrofisk akvakultur"
+  },
+  {
+    "course_number": "25349",
+    "course_name": "Anvendt fiskeriøkologi"
+  },
+  {
+    "course_number": "25350",
+    "course_name": "Introduktion til akvatiske økosystemer og deres organismer"
+  },
+  {
+    "course_number": "25351",
+    "course_name": "Akvakultur End-of-pipe behandling med fokus på rest ressourcer"
+  },
+  {
+    "course_number": "25352",
+    "course_name": "Blå bioøkonomi innovation"
+  },
+  {
+    "course_number": "25353",
+    "course_name": "Rekreativt fiskeri; Biologi, forvaltning og human dimensions"
+  },
+  {
+    "course_number": "25354",
+    "course_name": "Anvendte metoder i fiskeriteknologier"
+  },
+  {
+    "course_number": "25355",
+    "course_name": "Genomiske metoder til avl og forvaltning af vandlevende ressourcer"
+  },
+  {
+    "course_number": "25619",
+    "course_name": "Funding your research career"
+  },
+  {
+    "course_number": "25621",
+    "course_name": "Studiegruppe i Fiskeri Teknologi"
+  },
+  {
+    "course_number": "25809",
+    "course_name": "Journal club i præsentation og dechiffrering af nylige akvakulturstudier"
+  },
+  {
+    "course_number": "25814",
+    "course_name": "Ocean Life Meeting Series"
+  },
+  {
+    "course_number": "25815",
+    "course_name": "Ocean Life Meeting Series"
+  },
+  {
+    "course_number": "25816",
+    "course_name": "Ocean Life Meeting Series"
+  },
+  {
+    "course_number": "25820",
+    "course_name": "Studiegruppe i fiskeribiologi"
+  },
+  {
+    "course_number": "25821",
+    "course_name": "Studiegruppe i fiskeribiologi"
+  },
+  {
+    "course_number": "25822",
+    "course_name": "Studiegruppe i fiskeribiologi"
+  },
+  {
+    "course_number": "25823",
+    "course_name": "Studiegruppe i populationsøkologi og genetik"
+  },
+  {
+    "course_number": "25824",
+    "course_name": "Studiegruppe i populationsøkologi og genetik"
+  },
+  {
+    "course_number": "25825",
+    "course_name": "Studiegruppe i populationsøkologi og genetik"
+  },
+  {
+    "course_number": "25826",
+    "course_name": "Studiegruppe i fiskesygdomme"
+  },
+  {
+    "course_number": "25827",
+    "course_name": "Studiegruppe i fiskesygdomme"
+  },
+  {
+    "course_number": "25829",
+    "course_name": "Studiegruppe i fiskesygdomme"
+  },
+  {
+    "course_number": "25830",
+    "course_name": "Studiegruppe i fiskesygdomme"
+  },
+  {
+    "course_number": "25831",
+    "course_name": "Studiegruppe i fiskesygdomme"
+  },
+  {
+    "course_number": "25832",
+    "course_name": "Studiegruppe i fiskesygdomme"
+  },
+  {
+    "course_number": "26001",
+    "course_name": "Almen og uorganisk kemi"
+  },
+  {
+    "course_number": "26002",
+    "course_name": "Kemisk syntese"
+  },
+  {
+    "course_number": "26003",
+    "course_name": "Kemisk syntese"
+  },
+  {
+    "course_number": "26004",
+    "course_name": "Kemisk syntese"
+  },
+  {
+    "course_number": "26008",
+    "course_name": "Øvelser i uorganisk kemi"
+  },
+  {
+    "course_number": "26010",
+    "course_name": "Kemisk fagprojekt"
+  },
+  {
+    "course_number": "26020",
+    "course_name": "Kemi (Polyteknisk grundlag)"
+  },
+  {
+    "course_number": "26021",
+    "course_name": "Kemi (Polyteknisk grundlag)"
+  },
+  {
+    "course_number": "26022",
+    "course_name": "Kemi (Polyteknisk grundlag)"
+  },
+  {
+    "course_number": "26050",
+    "course_name": "Kemi for biovidenskaberne"
+  },
+  {
+    "course_number": "26124",
+    "course_name": "Koordinationskemi (Uorganisk Kemi 2)"
+  },
+  {
+    "course_number": "26125",
+    "course_name": "Kromatografisk (HPLC) oprensning af biologiske makromolekyler (proteiner) i laboratorieskala"
+  },
+  {
+    "course_number": "26127",
+    "course_name": "Eksperimentel uorganisk kemi"
+  },
+  {
+    "course_number": "26130",
+    "course_name": "Spektroskopiske metoder"
+  },
+  {
+    "course_number": "26134",
+    "course_name": "Videregående uorganisk kemi (Uorganisk kemi 3)"
+  },
+  {
+    "course_number": "26171",
+    "course_name": "Almen kemi"
+  },
+  {
+    "course_number": "26173",
+    "course_name": "Uorganisk kemi"
+  },
+  {
+    "course_number": "26174",
+    "course_name": "Laboratoriekursus for diplomingeniører i fødevaresikkerhed og -kvalitet"
+  },
+  {
+    "course_number": "26200",
+    "course_name": "Fysisk kemi 1"
+  },
+  {
+    "course_number": "26211",
+    "course_name": "Biofysik og biofysisk kemi"
+  },
+  {
+    "course_number": "26220",
+    "course_name": "Fysisk kemi 2"
+  },
+  {
+    "course_number": "26225",
+    "course_name": "Kvantitative eksperimenter og modellering i kemi"
+  },
+  {
+    "course_number": "26231",
+    "course_name": "Fysisk Kemi 3"
+  },
+  {
+    "course_number": "26236",
+    "course_name": "Statistisk termodynamik og reaktionsdynamik"
+  },
+  {
+    "course_number": "26245",
+    "course_name": "Computerbaserede metoder i kemi og biologi"
+  },
+  {
+    "course_number": "26255",
+    "course_name": "Molekylær dynamik simulering og machine learning"
+  },
+  {
+    "course_number": "26261",
+    "course_name": "Introduktion til kvantekemi"
+  },
+  {
+    "course_number": "26263",
+    "course_name": "Molekylære elektronstrukturmetoder"
+  },
+  {
+    "course_number": "26271",
+    "course_name": "Fysisk kemi"
+  },
+  {
+    "course_number": "26280",
+    "course_name": "Kemi og fysik i CO2-lagring"
+  },
+  {
+    "course_number": "26290",
+    "course_name": "Kemi i Nanoskala"
+  },
+  {
+    "course_number": "26300",
+    "course_name": "Analytisk Kemi"
+  },
+  {
+    "course_number": "26317",
+    "course_name": "Instrumentel kemisk analyse"
+  },
+  {
+    "course_number": "26371",
+    "course_name": "Uorganisk kvalitativ analyse (Laboratorieøvelser)"
+  },
+  {
+    "course_number": "26374",
+    "course_name": "Anvendelse af analytisk kemi i uorganisk og fysisk kemi, laboratoriekursus"
+  },
+  {
+    "course_number": "26400",
+    "course_name": "Organisk kemi 1"
+  },
+  {
+    "course_number": "26407",
+    "course_name": "Øvelser i organisk kemi"
+  },
+  {
+    "course_number": "26411",
+    "course_name": "Organisk kemi 2"
+  },
+  {
+    "course_number": "26416",
+    "course_name": "Øvelser i syntese af organiske stoffer"
+  },
+  {
+    "course_number": "26422",
+    "course_name": "Biomolekylær kemi"
+  },
+  {
+    "course_number": "26426",
+    "course_name": "Introduktion til medicinalkemi"
+  },
+  {
+    "course_number": "26428",
+    "course_name": "Spektroskopi af organiske stoffer"
+  },
+  {
+    "course_number": "26433",
+    "course_name": "Organisk kemi 3"
+  },
+  {
+    "course_number": "26436",
+    "course_name": "Lægemiddeludviklingsprocessen"
+  },
+  {
+    "course_number": "26438",
+    "course_name": "NMR spektroskopi"
+  },
+  {
+    "course_number": "26444",
+    "course_name": "Organisk kemi 4"
+  },
+  {
+    "course_number": "26446",
+    "course_name": "Videregående medicinalkemi"
+  },
+  {
+    "course_number": "26455",
+    "course_name": "Fysisk organisk kemi og reaktionsmekanismer"
+  },
+  {
+    "course_number": "26471",
+    "course_name": "Organisk kemi"
+  },
+  {
+    "course_number": "26474",
+    "course_name": "Organisk og uorganisk syntese"
+  },
+  {
+    "course_number": "26510",
+    "course_name": "Katalyse og bæredygtig kemi"
+  },
+  {
+    "course_number": "26620",
+    "course_name": "Kemi og Innovation"
+  },
+  {
+    "course_number": "26800",
+    "course_name": "Almen og uorganisk kemi (online)"
+  },
+  {
+    "course_number": "26805",
+    "course_name": "Øvelser i kemi"
+  },
+  {
+    "course_number": "26820",
+    "course_name": "Fysisk kemi"
+  },
+  {
+    "course_number": "26840",
+    "course_name": "Organisk kemi"
+  },
+  {
+    "course_number": "26932",
+    "course_name": "Præsentation og diskussion af organisk kemisk forskning"
+  },
+  {
+    "course_number": "26933",
+    "course_name": "Studie af naturstoffers organiske kemi"
+  },
+  {
+    "course_number": "26944",
+    "course_name": "Videregående NMR spektroskopi"
+  },
+  {
+    "course_number": "26970",
+    "course_name": "Præsentation og diskussion af forskning og litteratur indenfor uorganisk- og materialekemi"
+  },
+  {
+    "course_number": "26991",
+    "course_name": "Emner i moderne polymerkemi og -fysik"
+  },
+  {
+    "course_number": "27002",
+    "course_name": "Life Science"
+  },
+  {
+    "course_number": "27003",
+    "course_name": "Bioteknologiske løsninger"
+  },
+  {
+    "course_number": "27016",
+    "course_name": "Design-Build 1: Instrumenter til måling af cellevækst"
+  },
+  {
+    "course_number": "27020",
+    "course_name": "Bioengineering (Polyteknisk grundlag)"
+  },
+  {
+    "course_number": "27022",
+    "course_name": "Biokemi"
+  },
+  {
+    "course_number": "27023",
+    "course_name": "Eksperimentel biokemi"
+  },
+  {
+    "course_number": "27026",
+    "course_name": "Molekylærbiologi"
+  },
+  {
+    "course_number": "27027",
+    "course_name": "Eksperimentel molekylær mikrobiologi"
+  },
+  {
+    "course_number": "27034",
+    "course_name": "Fermenteringsteknologi"
+  },
+  {
+    "course_number": "27035",
+    "course_name": "Eksperimentel fermenteringsteknologi"
+  },
+  {
+    "course_number": "27051",
+    "course_name": "Mikroorganismers diversitet og anvendelse"
+  },
+  {
+    "course_number": "27062",
+    "course_name": "Proteinvidenskab: Struktur, vekselvirkninger og molekylære egenskaber"
+  },
+  {
+    "course_number": "27070",
+    "course_name": "Immunologi"
+  },
+  {
+    "course_number": "27075",
+    "course_name": "Discovery og design af biologiske lægemidler"
+  },
+  {
+    "course_number": "27101",
+    "course_name": "Assayteknologi"
+  },
+  {
+    "course_number": "27220",
+    "course_name": "Avanceret prokaryot bioteknologi"
+  },
+  {
+    "course_number": "27230",
+    "course_name": "Prokaryot cellebiologi"
+  },
+  {
+    "course_number": "27246",
+    "course_name": "Anvendt enzymteknologi og kinetik"
+  },
+  {
+    "course_number": "27247",
+    "course_name": "Eksperimentel enzymteknologi"
+  },
+  {
+    "course_number": "27255",
+    "course_name": "Avanceret eksperimentel prokaryot molekylærbiologi og –økologi"
+  },
+  {
+    "course_number": "27325",
+    "course_name": "Avanceret proteinstruktur engineering og analyse"
+  },
+  {
+    "course_number": "27330",
+    "course_name": "Kvantitativ analyse og modellering af proteinreaktioner"
+  },
+  {
+    "course_number": "27419",
+    "course_name": "Skimmelsvampe: Biologi og Bioteknologi"
+  },
+  {
+    "course_number": "27422",
+    "course_name": "Biosyntese af naturstoffer"
+  },
+  {
+    "course_number": "27423",
+    "course_name": "Metabolom- og proteomanalyse"
+  },
+  {
+    "course_number": "27430",
+    "course_name": "Eukaryot cellebiologi"
+  },
+  {
+    "course_number": "27432",
+    "course_name": "Eksperimentel eukaryot molekylærbiologi"
+  },
+  {
+    "course_number": "27455",
+    "course_name": "Mikrobiel adaptation til industrielle processer"
+  },
+  {
+    "course_number": "27460",
+    "course_name": "Syntesebiologi"
+  },
+  {
+    "course_number": "27470",
+    "course_name": "Mammal celleteknologi til produktion af biologics"
+  },
+  {
+    "course_number": "27472",
+    "course_name": "Praktisk biofarmaceutisk proteinproduktion i mammale celler"
+  },
+  {
+    "course_number": "27510",
+    "course_name": "Biosensorer og bioanalyse"
+  },
+  {
+    "course_number": "27665",
+    "course_name": "LabChip: Design af Lab-on-a-Chip systemer"
+  },
+  {
+    "course_number": "27666",
+    "course_name": "AI-drevet proteinvidenskab: Fra design til engineering"
+  },
+  {
+    "course_number": "27800",
+    "course_name": "Ph.d.-introduktionskursus (februar)"
+  },
+  {
+    "course_number": "27802",
+    "course_name": "Ph.d.-introduktionskursus (april)"
+  },
+  {
+    "course_number": "27803",
+    "course_name": "Ph.d.-introduktionskursus (juni)"
+  },
+  {
+    "course_number": "27804",
+    "course_name": "Ph.d.-introduktionskursus (oktober)"
+  },
+  {
+    "course_number": "27805",
+    "course_name": "Ph.d.-introduktionskursus (december)"
+  },
+  {
+    "course_number": "27823",
+    "course_name": "Industriel mykologi"
+  },
+  {
+    "course_number": "27828",
+    "course_name": "Upstream procesudvikling"
+  },
+  {
+    "course_number": "27832",
+    "course_name": "Biosyntese af naturstoffer"
+  },
+  {
+    "course_number": "27833",
+    "course_name": "Metabolom- og proteomanalyse"
+  },
+  {
+    "course_number": "27838",
+    "course_name": "Ph.d.-sommerskole i Bioteknologi og Biomedicin (studieår 1)"
+  },
+  {
+    "course_number": "27839",
+    "course_name": "Ph.d.-sommerskole i Bioteknologi og Biomedicin (studieår 2)"
+  },
+  {
+    "course_number": "27840",
+    "course_name": "Ph.d.-sommerskole i Bioteknologi og Biomedicin (studieår 3)"
+  },
+  {
+    "course_number": "27845",
+    "course_name": "Avanceret proteinstruktur engineering og analyse"
+  },
+  {
+    "course_number": "28012",
+    "course_name": "Kemisk og bioteknologisk produktion"
+  },
+  {
+    "course_number": "28016",
+    "course_name": "Matematiske modeller for kemiske og biokemiske systemer"
+  },
+  {
+    "course_number": "28020",
+    "course_name": "Kemisk og biokemisk procesteknik"
+  },
+  {
+    "course_number": "28021",
+    "course_name": "Kemisk og biokemisk procesteknik online"
+  },
+  {
+    "course_number": "28022",
+    "course_name": "Kemisk og bioteknologisk procesteknik"
+  },
+  {
+    "course_number": "28025",
+    "course_name": "Bio-procesteknik"
+  },
+  {
+    "course_number": "28121",
+    "course_name": "Øvelser i kemiske enhedsoperationer"
+  },
+  {
+    "course_number": "28125",
+    "course_name": "Øvelser i kemiske enhedsoperationer"
+  },
+  {
+    "course_number": "28140",
+    "course_name": "Introduktion til reaktionsteknik"
+  },
+  {
+    "course_number": "28150",
+    "course_name": "Introduktion til procesregulering"
+  },
+  {
+    "course_number": "28157",
+    "course_name": "Procesdesign"
+  },
+  {
+    "course_number": "28160",
+    "course_name": "Matematiske modeller for kemiske systemer"
+  },
+  {
+    "course_number": "28165",
+    "course_name": "Matematiske modeller for kemiske systemer"
+  },
+  {
+    "course_number": "28212",
+    "course_name": "Polymerkemi"
+  },
+  {
+    "course_number": "28213",
+    "course_name": "Polymerteknologi"
+  },
+  {
+    "course_number": "28214",
+    "course_name": "Polymer syntese og karakterisering"
+  },
+  {
+    "course_number": "28216",
+    "course_name": "Organiske coatings: Science og teknologi"
+  },
+  {
+    "course_number": "28221",
+    "course_name": "Teknisk Termodynamik"
+  },
+  {
+    "course_number": "28233",
+    "course_name": "Bioteknologiske oprensningsprocesser"
+  },
+  {
+    "course_number": "28242",
+    "course_name": "Reaktionskinetik og katalyse"
+  },
+  {
+    "course_number": "28244",
+    "course_name": "Forbrænding og højtemperaturprocesser"
+  },
+  {
+    "course_number": "28271",
+    "course_name": "Termisk forgasning, pyrolyse og bæredygtighed"
+  },
+  {
+    "course_number": "28311",
+    "course_name": "Kemisk og biokemisk produktdesign"
+  },
+  {
+    "course_number": "28315",
+    "course_name": "Anvendt kolloid- og grænsefladekemi"
+  },
+  {
+    "course_number": "28316",
+    "course_name": "Øvelser i kolloid- og grænsefladekemi"
+  },
+  {
+    "course_number": "28322",
+    "course_name": "Teknisk termodynamik"
+  },
+  {
+    "course_number": "28342",
+    "course_name": "Reaktionsteknik"
+  },
+  {
+    "course_number": "28344",
+    "course_name": "Bioteknologi og procesdesign"
+  },
+  {
+    "course_number": "28345",
+    "course_name": "Bioindustriel reaktionsteknik"
+  },
+  {
+    "course_number": "28346",
+    "course_name": "Øvelser i avanceret fermenteringsteknologi"
+  },
+  {
+    "course_number": "28350",
+    "course_name": "Procesdesign: Principper og metoder"
+  },
+  {
+    "course_number": "28352",
+    "course_name": "Regulering og styring af kemiske processer"
+  },
+  {
+    "course_number": "28361",
+    "course_name": "Modelanalyse for kemiingeniører"
+  },
+  {
+    "course_number": "28412",
+    "course_name": "Avanceret Kemisk produktdesign"
+  },
+  {
+    "course_number": "28420",
+    "course_name": "Separationsprocesser"
+  },
+  {
+    "course_number": "28423",
+    "course_name": "Faseligevægte i ikke-ideelle opløsninger"
+  },
+  {
+    "course_number": "28434",
+    "course_name": "Membranteknologi"
+  },
+  {
+    "course_number": "28443",
+    "course_name": "Industriel reaktionsteknik"
+  },
+  {
+    "course_number": "28451",
+    "course_name": "Optimerende drift af procesanlæg"
+  },
+  {
+    "course_number": "28455",
+    "course_name": "Procesadaptering i Fermenteringsbaseret Bioproduktion"
+  },
+  {
+    "course_number": "28485",
+    "course_name": "Biobusiness og procesinnovation"
+  },
+  {
+    "course_number": "28530",
+    "course_name": "Transportprocesser"
+  },
+  {
+    "course_number": "28720",
+    "course_name": "Oprensningsprocesser"
+  },
+  {
+    "course_number": "28730",
+    "course_name": "Transportfænomener (med Fluid Dynamik)"
+  },
+  {
+    "course_number": "28737",
+    "course_name": "Projekt om anvendt kromatografi"
+  },
+  {
+    "course_number": "28745",
+    "course_name": "Industriel cellebaseret reaktionsteknik"
+  },
+  {
+    "course_number": "28747",
+    "course_name": "Projekt om anvendt procesdesign og intensification"
+  },
+  {
+    "course_number": "28750",
+    "course_name": "Systematiske metoder til procesdesign og analyse"
+  },
+  {
+    "course_number": "28751",
+    "course_name": "Procesregulering og instrumentering i bioprocesindustrien"
+  },
+  {
+    "course_number": "28761",
+    "course_name": "Matematisk modellering til industrielle anvendelser"
+  },
+  {
+    "course_number": "28811",
+    "course_name": "Polymerer i processer og produkter"
+  },
+  {
+    "course_number": "28831",
+    "course_name": "Computational Fluid Dynamics in Chemical Engineering"
+  },
+  {
+    "course_number": "28845",
+    "course_name": "Øvelser i reaktionsteknik"
+  },
+  {
+    "course_number": "28850",
+    "course_name": "Pharmaceutical Process Development"
+  },
+  {
+    "course_number": "28852",
+    "course_name": "Risikovurdering i kemisk og biokemisk industri"
+  },
+  {
+    "course_number": "28870",
+    "course_name": "Energi og bæredygtighed"
+  },
+  {
+    "course_number": "28871",
+    "course_name": "Produktion af biobrændstoffer"
+  },
+  {
+    "course_number": "28872",
+    "course_name": "Bioraffinaderi"
+  },
+  {
+    "course_number": "28908",
+    "course_name": "Reologi af væsker med mikrostruktur (udvidet)"
+  },
+  {
+    "course_number": "28909",
+    "course_name": "Fundamentale og beregningsmæssige aspekter ved termodynamiske modeller"
+  },
+  {
+    "course_number": "28917",
+    "course_name": "Statistical Thermodynamics for Chemical Engineering"
+  },
+  {
+    "course_number": "28923",
+    "course_name": "Usikkerhed og sensitivitetsanalyse af numeriske modeller"
+  },
+  {
+    "course_number": "28928",
+    "course_name": "Elektrolytopløsningers termodynamik"
+  },
+  {
+    "course_number": "28932",
+    "course_name": "Procestekniske øvelser i pilot plant"
+  },
+  {
+    "course_number": "29902",
+    "course_name": "Videregående Eksperimentel Syntetisk Biologi for Cellefabrikker"
+  },
+  {
+    "course_number": "29905",
+    "course_name": "Introduction to Python for Data Analysis and Automation in Biology"
+  },
+  {
+    "course_number": "29907",
+    "course_name": "Practical Phylogenetics"
+  },
+  {
+    "course_number": "30010",
+    "course_name": "Programmeringsprojekt"
+  },
+  {
+    "course_number": "30015",
+    "course_name": "Indledende elektronik til instrumentering"
+  },
+  {
+    "course_number": "30020",
+    "course_name": "Elektronisk måling og instrumentering"
+  },
+  {
+    "course_number": "30021",
+    "course_name": "Digital instrumentering"
+  },
+  {
+    "course_number": "30032",
+    "course_name": "Elektroteknik"
+  },
+  {
+    "course_number": "30035",
+    "course_name": "Anvendt elektromagnetisme"
+  },
+  {
+    "course_number": "30081",
+    "course_name": "Digitalteknik"
+  },
+  {
+    "course_number": "30082",
+    "course_name": "Projektarbejde i Digitaldesign"
+  },
+  {
+    "course_number": "30101",
+    "course_name": "Introduktion til GeoRum 1"
+  },
+  {
+    "course_number": "30102",
+    "course_name": "Introduktion til GeoRum 2"
+  },
+  {
+    "course_number": "30121",
+    "course_name": "Astrofysik"
+  },
+  {
+    "course_number": "30131",
+    "course_name": "Geo- og planetfysik I"
+  },
+  {
+    "course_number": "30142",
+    "course_name": "Geo- og planetfysik ll"
+  },
+  {
+    "course_number": "30150",
+    "course_name": "Matematiske og numeriske metoder i den faste jords fysik"
+  },
+  {
+    "course_number": "30160",
+    "course_name": "Signaler i kontinuert og diskret tid"
+  },
+  {
+    "course_number": "30202",
+    "course_name": "Måleteknologi inden for rum- og geofysik"
+  },
+  {
+    "course_number": "30220",
+    "course_name": "Syntese i Rum- og Geofysik"
+  },
+  {
+    "course_number": "30221",
+    "course_name": "Projekter i ESPE"
+  },
+  {
+    "course_number": "30230",
+    "course_name": "Dataanalyse og -modellering i rum- og geofysik"
+  },
+  {
+    "course_number": "30300",
+    "course_name": "Introduktion til satellitsystemer"
+  },
+  {
+    "course_number": "30310",
+    "course_name": "Space Systems Engineering"
+  },
+  {
+    "course_number": "30320",
+    "course_name": "Rumfartsinstrumentering"
+  },
+  {
+    "course_number": "30330",
+    "course_name": "Billedanalyse på mikrocomputer"
+  },
+  {
+    "course_number": "30340",
+    "course_name": "Radar- og radiometersystemer"
+  },
+  {
+    "course_number": "30350",
+    "course_name": "Telemåling"
+  },
+  {
+    "course_number": "30400",
+    "course_name": "Elektromagnetisme"
+  },
+  {
+    "course_number": "30405",
+    "course_name": "Introduktion til trådløse teknologier"
+  },
+  {
+    "course_number": "30415",
+    "course_name": "HF-kommunikationskredsløb"
+  },
+  {
+    "course_number": "30421",
+    "course_name": "Videregående mikrobølgeteknik og højhastighedselektronik"
+  },
+  {
+    "course_number": "30428",
+    "course_name": "Videregående elektromagnetisme"
+  },
+  {
+    "course_number": "30430",
+    "course_name": "Videregående antenneteknik og målinger"
+  },
+  {
+    "course_number": "30510",
+    "course_name": "GPS, GIS og afsætning"
+  },
+  {
+    "course_number": "30530",
+    "course_name": "Introduktion til GIS"
+  },
+  {
+    "course_number": "30531",
+    "course_name": "GIS for diplomingeniører"
+  },
+  {
+    "course_number": "30540",
+    "course_name": "Kortlægning fra fly- og satellitbilleder"
+  },
+  {
+    "course_number": "30545",
+    "course_name": "Analyse af rumligt og temporalt data inden for geovidenskab"
+  },
+  {
+    "course_number": "30552",
+    "course_name": "Satellitgeodæsi"
+  },
+  {
+    "course_number": "30554",
+    "course_name": "Globale navigationssatellitsystemer"
+  },
+  {
+    "course_number": "30555",
+    "course_name": "Mikrobølge telemålingsmodeller og data"
+  },
+  {
+    "course_number": "30561",
+    "course_name": "Fysisk Geodæsi"
+  },
+  {
+    "course_number": "30564",
+    "course_name": "Sommerskole i Fysisk Geodæsi og Jordobservation"
+  },
+  {
+    "course_number": "30574",
+    "course_name": "Jordobservation for monitorering (EO4Change)"
+  },
+  {
+    "course_number": "30720",
+    "course_name": "Rumfysik"
+  },
+  {
+    "course_number": "30742",
+    "course_name": "Exoplaneter"
+  },
+  {
+    "course_number": "30745",
+    "course_name": "Jordens og Planeters Magnetisme"
+  },
+  {
+    "course_number": "30752",
+    "course_name": "Kryosfæren"
+  },
+  {
+    "course_number": "30757",
+    "course_name": "Atmosfæriske plasmaer"
+  },
+  {
+    "course_number": "30760",
+    "course_name": "Inverse problemer og machine learning i rum- og geofysik"
+  },
+  {
+    "course_number": "30784",
+    "course_name": "Strålingsdetektorer til ruminstrumentering"
+  },
+  {
+    "course_number": "30785",
+    "course_name": "Videnskabelig instrumentering til Astronomisk Teleskoper"
+  },
+  {
+    "course_number": "30791",
+    "course_name": "Fysiske processer i astronomi"
+  },
+  {
+    "course_number": "30794",
+    "course_name": "Analyseteknikker af astrofysiske data"
+  },
+  {
+    "course_number": "30911",
+    "course_name": "Journal Club in Geophysics, Astrophysics and Space Physics"
+  },
+  {
+    "course_number": "34019",
+    "course_name": "Fagprojekt (Fysik og nanoteknologi)"
+  },
+  {
+    "course_number": "34020",
+    "course_name": "Optik og fotonik"
+  },
+  {
+    "course_number": "34021",
+    "course_name": "Introduktion til optik og fotonik"
+  },
+  {
+    "course_number": "34023",
+    "course_name": "Projekter i kvante- og nano-optik"
+  },
+  {
+    "course_number": "34024",
+    "course_name": "Materialernes optiske egenskaber"
+  },
+  {
+    "course_number": "34029",
+    "course_name": "Fagprojekt (fysik og nanoteknologi)"
+  },
+  {
+    "course_number": "34031",
+    "course_name": "Anvendt matematik for fysikere"
+  },
+  {
+    "course_number": "34032",
+    "course_name": "Faststofoptik"
+  },
+  {
+    "course_number": "34034",
+    "course_name": "Lasere og fotoniske systemer"
+  },
+  {
+    "course_number": "34038",
+    "course_name": "Optisk design og modellering"
+  },
+  {
+    "course_number": "34041",
+    "course_name": "Bølgelederoptik"
+  },
+  {
+    "course_number": "34042",
+    "course_name": "Kvantefotonisk kommunikation"
+  },
+  {
+    "course_number": "34043",
+    "course_name": "Projekter i Optik og Fotonik"
+  },
+  {
+    "course_number": "34046",
+    "course_name": "Experimental methods in photonics"
+  },
+  {
+    "course_number": "34051",
+    "course_name": "Nanofotonik"
+  },
+  {
+    "course_number": "34052",
+    "course_name": "Ikke-lineær optik"
+  },
+  {
+    "course_number": "34053",
+    "course_name": "Numeriske metoder i fotonik"
+  },
+  {
+    "course_number": "34060",
+    "course_name": "Ultrahurtig optik: fundament og anvendelser"
+  },
+  {
+    "course_number": "34061",
+    "course_name": "Optiske målemetoder og signal analyse"
+  },
+  {
+    "course_number": "34062",
+    "course_name": "Fotonisk integrerede kredsløb"
+  },
+  {
+    "course_number": "34120",
+    "course_name": "Elektromagnetisme for kommunikation"
+  },
+  {
+    "course_number": "34121",
+    "course_name": "Introduktion til fiberoptisk kommunikation"
+  },
+  {
+    "course_number": "34126",
+    "course_name": "Eksperimentelt kursus i optisk kommunikation"
+  },
+  {
+    "course_number": "34127",
+    "course_name": "Eksperimentel optik og fotonik"
+  },
+  {
+    "course_number": "34129",
+    "course_name": "Eksperimentelt kursus i optisk kommunikation"
+  },
+  {
+    "course_number": "34130",
+    "course_name": "Grundkursus i fiber-optiske kommunikationssystemer"
+  },
+  {
+    "course_number": "34153",
+    "course_name": "Fysiske koncepter i optisk kommunikation"
+  },
+  {
+    "course_number": "34156",
+    "course_name": "Avancerede optiske kommunikationssystemer"
+  },
+  {
+    "course_number": "34192",
+    "course_name": "Optical Communications Journal Club"
+  },
+  {
+    "course_number": "34210",
+    "course_name": "Introduktion til digital kommunikation"
+  },
+  {
+    "course_number": "34220",
+    "course_name": "Kodning i kommunikationssystemer"
+  },
+  {
+    "course_number": "34229",
+    "course_name": "Fagprojekt – Bachelor i Cyberteknologi"
+  },
+  {
+    "course_number": "34231",
+    "course_name": "Digital kommunikation 1"
+  },
+  {
+    "course_number": "34240",
+    "course_name": "Data science, kompression og billedkommunikation"
+  },
+  {
+    "course_number": "34241",
+    "course_name": "Digital videoteknologi"
+  },
+  {
+    "course_number": "34242",
+    "course_name": "Maskinlæringstekniker til design og optimering af kommunikationssystemer"
+  },
+  {
+    "course_number": "34249",
+    "course_name": "Synteseprojekt for Kommunikationsteknologier"
+  },
+  {
+    "course_number": "34250",
+    "course_name": "Avanceret billed- og videokodning"
+  },
+  {
+    "course_number": "34251",
+    "course_name": "Avancerede kodningssystemer med iterative dekodningsmetoder"
+  },
+  {
+    "course_number": "34269",
+    "course_name": "Computational billedbehandling og spektroskopi"
+  },
+  {
+    "course_number": "34302",
+    "course_name": "Introduktion til Cyberteknologi"
+  },
+  {
+    "course_number": "34313",
+    "course_name": "Introduktion til datanet"
+  },
+  {
+    "course_number": "34315",
+    "course_name": "Internet of things – applikation og infrastruktur udvikling"
+  },
+  {
+    "course_number": "34318",
+    "course_name": "Programmeringsprojekt for Cyberteknologi"
+  },
+  {
+    "course_number": "34322",
+    "course_name": "Kommunikationsnetværk til styring og dataopsamling"
+  },
+  {
+    "course_number": "34323",
+    "course_name": "Modellering og simulering af kommunikationsnetværk og –protokoller"
+  },
+  {
+    "course_number": "34325",
+    "course_name": "Kommunikationsteknologier og anvendelsesmuligheder til Internet of Things (IoT)"
+  },
+  {
+    "course_number": "34331",
+    "course_name": "Digital hardwaredesign til kommunikation"
+  },
+  {
+    "course_number": "34332",
+    "course_name": "Projekter i digital hardwaredesign til kommunikation"
+  },
+  {
+    "course_number": "34333",
+    "course_name": "Teknologier til mobilkommunikation og cellular IoT"
+  },
+  {
+    "course_number": "34334",
+    "course_name": "Avancerede datanet og cybersikkerhed"
+  },
+  {
+    "course_number": "34338",
+    "course_name": "Telekommunikations programmerings projekter med Arduino"
+  },
+  {
+    "course_number": "34343",
+    "course_name": "Mobile backhaul networks"
+  },
+  {
+    "course_number": "34345",
+    "course_name": "Signalsystemer og teknologi for jernbaner"
+  },
+  {
+    "course_number": "34346",
+    "course_name": "Netværksteknologier og applikationsudvikling til Internet of Things (IoT)"
+  },
+  {
+    "course_number": "34349",
+    "course_name": "FPGA design til kommunikationssystemer"
+  },
+  {
+    "course_number": "34351",
+    "course_name": "Access- og hjemmenet"
+  },
+  {
+    "course_number": "34359",
+    "course_name": "SDN: software-defineret netværk"
+  },
+  {
+    "course_number": "34365",
+    "course_name": "Prototyper for internet of things"
+  },
+  {
+    "course_number": "34366",
+    "course_name": "Intelligente systemer"
+  },
+  {
+    "course_number": "34367",
+    "course_name": "Projekt i Intelligente Systemer"
+  },
+  {
+    "course_number": "34368",
+    "course_name": "Infrastruktur og design af globale kommunikationsnetværk"
+  },
+  {
+    "course_number": "34369",
+    "course_name": "Projektarbejde om infrastruktur og design af globale kommunikationsnetværk"
+  },
+  {
+    "course_number": "34370",
+    "course_name": "Cloud-netværk"
+  },
+  {
+    "course_number": "34371",
+    "course_name": "Communication Network Security"
+  },
+  {
+    "course_number": "34373",
+    "course_name": "Introduktion til mikrokontroller-programmering til IoT med embedded C"
+  },
+  {
+    "course_number": "34430",
+    "course_name": "Introduktion til biofotonik"
+  },
+  {
+    "course_number": "34431",
+    "course_name": "Optiske biosensorer"
+  },
+  {
+    "course_number": "34440",
+    "course_name": "Nye typer optiske fibre til anvendelse i life sciences"
+  },
+  {
+    "course_number": "34451",
+    "course_name": "Ikke-lineær matematisk fysik"
+  },
+  {
+    "course_number": "34492",
+    "course_name": "Ph.d.-kursus i ikke-lineær optik"
+  },
+  {
+    "course_number": "34539",
+    "course_name": "Design, fremstilling og karakterisering af optisk plane bølgeleder komponenter"
+  },
+  {
+    "course_number": "34540",
+    "course_name": "Lysemitterende dioder og solceller til energianvendelser"
+  },
+  {
+    "course_number": "34541",
+    "course_name": "Entrepreneurship in photonics and communications"
+  },
+  {
+    "course_number": "34542",
+    "course_name": "Kunstig belysning, videnskab og praktik"
+  },
+  {
+    "course_number": "34551",
+    "course_name": "Tyndfilmssolceller"
+  },
+  {
+    "course_number": "34552",
+    "course_name": "Solcellesystemer"
+  },
+  {
+    "course_number": "34553",
+    "course_name": "Anvendt solcelleteknologi"
+  },
+  {
+    "course_number": "34554",
+    "course_name": "Design af store Landbaserede Solcelle Anlæg"
+  },
+  {
+    "course_number": "34600",
+    "course_name": "Elektriske kredsløb 1"
+  },
+  {
+    "course_number": "34601",
+    "course_name": "Elektriske kredsløb 2"
+  },
+  {
+    "course_number": "34620",
+    "course_name": "Grundlæggende effektelektronik i energisystemer"
+  },
+  {
+    "course_number": "34621",
+    "course_name": "Elektromagnetiske sensorer og digital signalbehandling"
+  },
+  {
+    "course_number": "34630",
+    "course_name": "Integreret analog elektronik 1"
+  },
+  {
+    "course_number": "34652",
+    "course_name": "Power Electronics 1"
+  },
+  {
+    "course_number": "34653",
+    "course_name": "Power Electronics 2. Laboratoriekursus"
+  },
+  {
+    "course_number": "34654",
+    "course_name": "Kredsløbsteknologi og EMC"
+  },
+  {
+    "course_number": "34655",
+    "course_name": "Integreret analog elektronik 2"
+  },
+  {
+    "course_number": "34656",
+    "course_name": "Design og layout af integreret CMOS kredsløb"
+  },
+  {
+    "course_number": "34657",
+    "course_name": "Integreret kredsløbsdesign på systemniveau"
+  },
+  {
+    "course_number": "34721",
+    "course_name": "Reguleringsteknik 1"
+  },
+  {
+    "course_number": "34722",
+    "course_name": "Reguleringsteknik 1"
+  },
+  {
+    "course_number": "34723",
+    "course_name": "Introduktion til Programmerbare Logiske Kontrollere"
+  },
+  {
+    "course_number": "34745",
+    "course_name": "Reguleringsteknik 2"
+  },
+  {
+    "course_number": "34746",
+    "course_name": "Robust og fejltolerant regulering"
+  },
+  {
+    "course_number": "34748",
+    "course_name": "Modellering for drift og overvågning af komplekse industrielle processer"
+  },
+  {
+    "course_number": "34752",
+    "course_name": "Bio-inspireret styring af robotter"
+  },
+  {
+    "course_number": "34753",
+    "course_name": "Robotteknik"
+  },
+  {
+    "course_number": "34755",
+    "course_name": "Design af pålidelige robotsystemer"
+  },
+  {
+    "course_number": "34757",
+    "course_name": "Ubemandede autonome systemer"
+  },
+  {
+    "course_number": "34759",
+    "course_name": "Perception for Autonome Systemer"
+  },
+  {
+    "course_number": "34760",
+    "course_name": "Sikkerhed og pålidelighed for robotter og autonome systemer"
+  },
+  {
+    "course_number": "34761",
+    "course_name": "Robot Autonomi"
+  },
+  {
+    "course_number": "34763",
+    "course_name": "Autonome marine robotter"
+  },
+  {
+    "course_number": "34764",
+    "course_name": "Robotteknologi og Automation i Farmaceutisk Produktion"
+  },
+  {
+    "course_number": "34840",
+    "course_name": "Grundkursus i akustik og støj"
+  },
+  {
+    "course_number": "34844",
+    "course_name": "Bygningsakustik"
+  },
+  {
+    "course_number": "34846",
+    "course_name": "Miljøakustik"
+  },
+  {
+    "course_number": "34847",
+    "course_name": "Innovation Camp"
+  },
+  {
+    "course_number": "34848",
+    "course_name": "Udfordringer i akustiske mikrosystemer"
+  },
+  {
+    "course_number": "34850",
+    "course_name": "Bygnings- og rumakustik"
+  },
+  {
+    "course_number": "34860",
+    "course_name": "Videregående akustik"
+  },
+  {
+    "course_number": "34865",
+    "course_name": "Numerisk Akustik"
+  },
+  {
+    "course_number": "34867",
+    "course_name": "Akustiske forhold på Roskilde festival"
+  },
+  {
+    "course_number": "34870",
+    "course_name": "Elektroakustiske transducere og systemer"
+  },
+  {
+    "course_number": "34871",
+    "course_name": "Ulineære transducere"
+  },
+  {
+    "course_number": "34880",
+    "course_name": "Strukturlyd"
+  },
+  {
+    "course_number": "41000",
+    "course_name": "Ingeniørarbejde"
+  },
+  {
+    "course_number": "41011",
+    "course_name": "Brugerorienteret design"
+  },
+  {
+    "course_number": "41012",
+    "course_name": "Visuel kommunikation"
+  },
+  {
+    "course_number": "41013",
+    "course_name": "Introduktion til Prototyping"
+  },
+  {
+    "course_number": "41020",
+    "course_name": "Produktanalyse og redesign"
+  },
+  {
+    "course_number": "41028",
+    "course_name": "Design af mekatroniske systemer 1"
+  },
+  {
+    "course_number": "41029",
+    "course_name": "Design af mekatroniske systemer 2"
+  },
+  {
+    "course_number": "41031",
+    "course_name": "Industriel design 1"
+  },
+  {
+    "course_number": "41045",
+    "course_name": "Termodynamisk modellering"
+  },
+  {
+    "course_number": "41046",
+    "course_name": "Materialer og mekanik"
+  },
+  {
+    "course_number": "41051",
+    "course_name": "Produktliv og miljøforhold"
+  },
+  {
+    "course_number": "41073",
+    "course_name": "Udvikling og drift af produkt/service-systemer"
+  },
+  {
+    "course_number": "41083",
+    "course_name": "Teknologiske platforme og arkitekturer"
+  },
+  {
+    "course_number": "41084",
+    "course_name": "Biologisk inspireret design"
+  },
+  {
+    "course_number": "41102",
+    "course_name": "Strømningsmekanik 1"
+  },
+  {
+    "course_number": "41107",
+    "course_name": "Marin- og havteknik"
+  },
+  {
+    "course_number": "41111",
+    "course_name": "Strømningsmekanik 2"
+  },
+  {
+    "course_number": "41113",
+    "course_name": "Computer modellering af marine og kystnære problemer"
+  },
+  {
+    "course_number": "41117",
+    "course_name": "Marin og Kystkonstruktioner"
+  },
+  {
+    "course_number": "41126",
+    "course_name": "Sedimenttransport i vandløb og langs kyster"
+  },
+  {
+    "course_number": "41129",
+    "course_name": "Turbulente strømninger"
+  },
+  {
+    "course_number": "41201",
+    "course_name": "Introduktion til skibe og andre flydende konstruktioner"
+  },
+  {
+    "course_number": "41204",
+    "course_name": "Grundlæggende bygningsmekanik"
+  },
+  {
+    "course_number": "41216",
+    "course_name": "Styrkeberegning af skibe"
+  },
+  {
+    "course_number": "41222",
+    "course_name": "Bølgebelastninger på skibe og offshore konstruktioner"
+  },
+  {
+    "course_number": "41226",
+    "course_name": "Avanceret bølgehydrodynamik"
+  },
+  {
+    "course_number": "41236",
+    "course_name": "Bygningsmekanik"
+  },
+  {
+    "course_number": "41237",
+    "course_name": "Konstruktioners dynamik: Teori og analyse"
+  },
+  {
+    "course_number": "41263",
+    "course_name": "Eksperimentel og numerisk bestemmelse af skibsmodstand og fremdrivning"
+  },
+  {
+    "course_number": "41270",
+    "course_name": "Grøn Skibsfart"
+  },
+  {
+    "course_number": "41271",
+    "course_name": "Skibsprojektering"
+  },
+  {
+    "course_number": "41275",
+    "course_name": "Skibsoperationer"
+  },
+  {
+    "course_number": "41280",
+    "course_name": "Medsejlads"
+  },
+  {
+    "course_number": "41292",
+    "course_name": "Avancerede emner inden for maritimteknik"
+  },
+  {
+    "course_number": "41312",
+    "course_name": "Fluid Mekanik"
+  },
+  {
+    "course_number": "41315",
+    "course_name": "Anvendt CFD"
+  },
+  {
+    "course_number": "41316",
+    "course_name": "Videregående CFD"
+  },
+  {
+    "course_number": "41317",
+    "course_name": "Numerisk fluid mekanik"
+  },
+  {
+    "course_number": "41320",
+    "course_name": "Videregående fluidmekanik"
+  },
+  {
+    "course_number": "41321",
+    "course_name": "Komplekse strømninger"
+  },
+  {
+    "course_number": "41341",
+    "course_name": "Økobil"
+  },
+  {
+    "course_number": "41342",
+    "course_name": "Økobil"
+  },
+  {
+    "course_number": "41343",
+    "course_name": "Brændstoffer og emissioner fra aktuel og fremtidig transport"
+  },
+  {
+    "course_number": "41391",
+    "course_name": "High Performance Computing: FORTRAN, OpenMP and MPI"
+  },
+  {
+    "course_number": "41392",
+    "course_name": "Journal club i fluid mekanik"
+  },
+  {
+    "course_number": "41401",
+    "course_name": "Energiteknik"
+  },
+  {
+    "course_number": "41402",
+    "course_name": "Simulering af termiske energisystemer"
+  },
+  {
+    "course_number": "41417",
+    "course_name": "Digitalisering af Termiske Energiteknologier – Modellerings- og Simuleringsmetoder"
+  },
+  {
+    "course_number": "41418",
+    "course_name": "Grønne brændstoffer og power-to-x"
+  },
+  {
+    "course_number": "41420",
+    "course_name": "Køle- og varmepumpeteknologi"
+  },
+  {
+    "course_number": "41451",
+    "course_name": "Ventilation og indeklima"
+  },
+  {
+    "course_number": "41452",
+    "course_name": "Grundlæggende indeklima-, installations- og energidesign"
+  },
+  {
+    "course_number": "41458",
+    "course_name": "Bygningsinstallationer"
+  },
+  {
+    "course_number": "41459",
+    "course_name": "Energi og indeklima"
+  },
+  {
+    "course_number": "41461",
+    "course_name": "Bygningsintegrerede solcellesystemer"
+  },
+  {
+    "course_number": "41462",
+    "course_name": "Bygningssimulering"
+  },
+  {
+    "course_number": "41463",
+    "course_name": "Høj-effektive bygninger"
+  },
+  {
+    "course_number": "41464",
+    "course_name": "Solvarmeanlæg"
+  },
+  {
+    "course_number": "41465",
+    "course_name": "Computational Fluid Dynamics vedrørende bygninger"
+  },
+  {
+    "course_number": "41466",
+    "course_name": "Bæredygtig opvarmning og køling af bygninger"
+  },
+  {
+    "course_number": "41467",
+    "course_name": "Udvikling af solenergianlæg"
+  },
+  {
+    "course_number": "41468",
+    "course_name": "Bæredygtig fjernvarme"
+  },
+  {
+    "course_number": "41490",
+    "course_name": "Journal klub om forbrændingsmotorer"
+  },
+  {
+    "course_number": "41491",
+    "course_name": "Anvendt termodynamik på videregående niveau"
+  },
+  {
+    "course_number": "41501",
+    "course_name": "Styrkelære 1"
+  },
+  {
+    "course_number": "41502",
+    "course_name": "Styrkelære 2 (materialers styrkeforhold)"
+  },
+  {
+    "course_number": "41514",
+    "course_name": "Maskindynamik"
+  },
+  {
+    "course_number": "41515",
+    "course_name": "Computerbaseret mekanismedynamik"
+  },
+  {
+    "course_number": "41516",
+    "course_name": "Anisotropi og fiberkompositter"
+  },
+  {
+    "course_number": "41517",
+    "course_name": "Afstivede plader og sandwich-konstruktioner"
+  },
+  {
+    "course_number": "41522",
+    "course_name": "Videregående dynamik og svingninger"
+  },
+  {
+    "course_number": "41524",
+    "course_name": "Smøringsmekanik"
+  },
+  {
+    "course_number": "41525",
+    "course_name": "Finite Element Metoder"
+  },
+  {
+    "course_number": "41526",
+    "course_name": "Brudmekanik"
+  },
+  {
+    "course_number": "41528",
+    "course_name": "Videregående materialemekanik"
+  },
+  {
+    "course_number": "41533",
+    "course_name": "Dimensionering og styrke 1"
+  },
+  {
+    "course_number": "41534",
+    "course_name": "Dimensionering og styrke 2"
+  },
+  {
+    "course_number": "41561",
+    "course_name": "Strukturel optimering"
+  },
+  {
+    "course_number": "41563",
+    "course_name": "Fluid Power \u0026 Motion Control"
+  },
+  {
+    "course_number": "41564",
+    "course_name": "Dynamik og svingninger"
+  },
+  {
+    "course_number": "41603",
+    "course_name": "Konstruktion og problemløsning"
+  },
+  {
+    "course_number": "41612",
+    "course_name": "Produktkonstruktion og dokumentation"
+  },
+  {
+    "course_number": "41615",
+    "course_name": "Mekanisk CAD"
+  },
+  {
+    "course_number": "41619",
+    "course_name": "Introduktion til produktion"
+  },
+  {
+    "course_number": "41635",
+    "course_name": "Robust Design af Produkter og mekanismer"
+  },
+  {
+    "course_number": "41636",
+    "course_name": "Design for en cirkulær økonomi"
+  },
+  {
+    "course_number": "41638",
+    "course_name": "Complexity Management"
+  },
+  {
+    "course_number": "41639",
+    "course_name": "Helhedsdesign af Engineering Systems"
+  },
+  {
+    "course_number": "41651",
+    "course_name": "Øvelseskursus i metallære"
+  },
+  {
+    "course_number": "41653",
+    "course_name": "Korrosion (teori og teknologi)"
+  },
+  {
+    "course_number": "41656",
+    "course_name": "Materialer i avancerede anvendelser of produkter"
+  },
+  {
+    "course_number": "41658",
+    "course_name": "Metoder for eksperimentel materialekarakterisering"
+  },
+  {
+    "course_number": "41659",
+    "course_name": "Materialelære for Produktion og Konstruktion"
+  },
+  {
+    "course_number": "41661",
+    "course_name": "Metallære"
+  },
+  {
+    "course_number": "41662",
+    "course_name": "Fysisk metallurgi"
+  },
+  {
+    "course_number": "41667",
+    "course_name": "Projektkursus i materialeteknologi"
+  },
+  {
+    "course_number": "41668",
+    "course_name": "Numeriske simuleringer i materialelære"
+  },
+  {
+    "course_number": "41669",
+    "course_name": "Avanceret overfladeteknologi"
+  },
+  {
+    "course_number": "41680",
+    "course_name": "Introduktion til avancerede materialer"
+  },
+  {
+    "course_number": "41681",
+    "course_name": "Materialelære"
+  },
+  {
+    "course_number": "41684",
+    "course_name": "Materialeteknologi"
+  },
+  {
+    "course_number": "41685",
+    "course_name": "Materialekarakterisering og -testning"
+  },
+  {
+    "course_number": "41686",
+    "course_name": "Materialelære"
+  },
+  {
+    "course_number": "41689",
+    "course_name": "Korrosion og materialer under krævende forhold"
+  },
+  {
+    "course_number": "41690",
+    "course_name": "Elektronmikroskopi og analyse for materialeforskning"
+  },
+  {
+    "course_number": "41691",
+    "course_name": "Ph.D. kursus om anvendelse af røntgendiffraktion i materialeforskning"
+  },
+  {
+    "course_number": "41714",
+    "course_name": "Produktionsteknologi og Produktionsstyring"
+  },
+  {
+    "course_number": "41730",
+    "course_name": "Industriel formgivning af metaller"
+  },
+  {
+    "course_number": "41733",
+    "course_name": "Metallurgi, design og fremstilling af støbte komponenter"
+  },
+  {
+    "course_number": "41734",
+    "course_name": "Geometrisk metrologi og maskintest"
+  },
+  {
+    "course_number": "41735",
+    "course_name": "Eksperimentelle metoder i 3D print (additiv fremstilling)"
+  },
+  {
+    "course_number": "41737",
+    "course_name": "Plastdesign"
+  },
+  {
+    "course_number": "41739",
+    "course_name": "Eksperimentel plast og metal procesteknologi"
+  },
+  {
+    "course_number": "41743",
+    "course_name": "Mikro produkt design, udvikling og produktion"
+  },
+  {
+    "course_number": "41749",
+    "course_name": "Præcisionsbearbejdning"
+  },
+  {
+    "course_number": "41784",
+    "course_name": "Procesteknik"
+  },
+  {
+    "course_number": "41787",
+    "course_name": "Produktionsteknologi"
+  },
+  {
+    "course_number": "41789",
+    "course_name": "Grundlæggende 3D-print: Processer og teori"
+  },
+  {
+    "course_number": "41791",
+    "course_name": "Nanotribologi: Teori og anvendelser"
+  },
+  {
+    "course_number": "41792",
+    "course_name": "Måleusikkerhedsevaluering ved brug af statistiske metoder"
+  },
+  {
+    "course_number": "41801",
+    "course_name": "Fagprojekt"
+  },
+  {
+    "course_number": "41808",
+    "course_name": "Eksperimentel faststofmekanik"
+  },
+  {
+    "course_number": "41813",
+    "course_name": "Finite Element Metoder for lyd og svingninger"
+  },
+  {
+    "course_number": "41814",
+    "course_name": "Varmetransmission"
+  },
+  {
+    "course_number": "41815",
+    "course_name": "Introduktion til Finite Element Analyse"
+  },
+  {
+    "course_number": "41822",
+    "course_name": "Eksperimentel fluid mekanik"
+  },
+  {
+    "course_number": "41832",
+    "course_name": "Eksperimentel strukturel mekanik"
+  },
+  {
+    "course_number": "41833",
+    "course_name": "Introduktion til Eksperimentel Dynamik"
+  },
+  {
+    "course_number": "41843",
+    "course_name": "Projektarbejde i køretøjsteknik"
+  },
+  {
+    "course_number": "41860",
+    "course_name": "Design af energianlæg"
+  },
+  {
+    "course_number": "41863",
+    "course_name": "Mekanisk dimensionering"
+  },
+  {
+    "course_number": "41864",
+    "course_name": "Procesteknik"
+  },
+  {
+    "course_number": "41871",
+    "course_name": "Bolig \u0026 Bygning 1"
+  },
+  {
+    "course_number": "41872",
+    "course_name": "Bolig \u0026 Bygning 2"
+  },
+  {
+    "course_number": "41873",
+    "course_name": "Bolig \u0026 Bygning 3"
+  },
+  {
+    "course_number": "41874",
+    "course_name": "Plan og udvikling"
+  },
+  {
+    "course_number": "41876",
+    "course_name": "Byggeriets praksis og administration i Grønland"
+  },
+  {
+    "course_number": "41881",
+    "course_name": "Bæredygtigt byggeri i ekstreme miljøer"
+  },
+  {
+    "course_number": "41882",
+    "course_name": "Infrastruktur og samfund i Arktis"
+  },
+  {
+    "course_number": "41903",
+    "course_name": "Introduktion til Byggeteknologi"
+  },
+  {
+    "course_number": "41911",
+    "course_name": "Introduktion til Bygningsinformationsmodellering (BIM)"
+  },
+  {
+    "course_number": "41919",
+    "course_name": "Digitale designværktøjer"
+  },
+  {
+    "course_number": "41925",
+    "course_name": "Introduktion til Bygningsinformationsmodellering (BIM)"
+  },
+  {
+    "course_number": "41927",
+    "course_name": "Åben Bygningsinformationsmodellering (OpenBIM)"
+  },
+  {
+    "course_number": "41928",
+    "course_name": "Bygningsdesign"
+  },
+  {
+    "course_number": "41929",
+    "course_name": "Digitale designværktøjer"
+  },
+  {
+    "course_number": "41931",
+    "course_name": "Brandsikkerhed i bygninger"
+  },
+  {
+    "course_number": "41932",
+    "course_name": "Branddynamik"
+  },
+  {
+    "course_number": "41933",
+    "course_name": "Konstruktionsbrandteknik"
+  },
+  {
+    "course_number": "41934",
+    "course_name": "Videregående Bygnings Informations Modellering (BIM)"
+  },
+  {
+    "course_number": "41935",
+    "course_name": "Superlette konstruktioner"
+  },
+  {
+    "course_number": "41936",
+    "course_name": "Videregående bygningsprojektering"
+  },
+  {
+    "course_number": "41937",
+    "course_name": "Konstruktionsdesign af betonelementbygninger"
+  },
+  {
+    "course_number": "41938",
+    "course_name": "Agil Prototyping"
+  },
+  {
+    "course_number": "41940",
+    "course_name": "Avancerede digitale teknologier i byggeprojekter"
+  },
+  {
+    "course_number": "41941",
+    "course_name": "Byggeteknik og arkitektur"
+  },
+  {
+    "course_number": "41942",
+    "course_name": "Bygningsdesign Projekt 1, Intro"
+  },
+  {
+    "course_number": "41943",
+    "course_name": "Indeklimadesign"
+  },
+  {
+    "course_number": "41944",
+    "course_name": "Bygningsdesign Projekt 2, Indeklimadesign"
+  },
+  {
+    "course_number": "41945",
+    "course_name": "Konstruktionsdesign"
+  },
+  {
+    "course_number": "41946",
+    "course_name": "Bygningsdesign Projekt 3, Konstruktionsdesign"
+  },
+  {
+    "course_number": "41947",
+    "course_name": "Renoverings- og transformationsdesign"
+  },
+  {
+    "course_number": "41948",
+    "course_name": "Bygningsdesign Projekt 4, Bygnings-transformationsdesign"
+  },
+  {
+    "course_number": "41950",
+    "course_name": "Trækonstruktioner"
+  },
+  {
+    "course_number": "41952",
+    "course_name": "Trækonstruktioner og udførelse"
+  },
+  {
+    "course_number": "41953",
+    "course_name": "Bærende konstruktioner 1"
+  },
+  {
+    "course_number": "41954",
+    "course_name": "Bærende konstruktioner 2"
+  },
+  {
+    "course_number": "41955",
+    "course_name": "Bærende konstruktioner 3: Ramme- og pladekonstruktioner"
+  },
+  {
+    "course_number": "41956",
+    "course_name": "Betonkonstruktioner"
+  },
+  {
+    "course_number": "41957",
+    "course_name": "Stålkonstruktioner"
+  },
+  {
+    "course_number": "41958",
+    "course_name": "Bærende Konstruktioners Numeriske Modellering 1: Elementmetoden"
+  },
+  {
+    "course_number": "41959",
+    "course_name": "Store trækonstruktioner"
+  },
+  {
+    "course_number": "41961",
+    "course_name": "Bærende Konstruktioners Numeriske Modellering 2: Ikke-lineær elementmetode"
+  },
+  {
+    "course_number": "41963",
+    "course_name": "Videregående betonstyrkelære"
+  },
+  {
+    "course_number": "41964",
+    "course_name": "Videregående stålkonstruktioner"
+  },
+  {
+    "course_number": "41967",
+    "course_name": "Jordskælvs- og vindteknik"
+  },
+  {
+    "course_number": "41968",
+    "course_name": "Brokonstruktioner"
+  },
+  {
+    "course_number": "41969",
+    "course_name": "Anvendelse af sandsynlighedsmodellering i byggeriet"
+  },
+  {
+    "course_number": "41970",
+    "course_name": "E-kursus Stokastisk dynamik"
+  },
+  {
+    "course_number": "41971",
+    "course_name": "Videregående trækonstruktioner"
+  },
+  {
+    "course_number": "41B24",
+    "course_name": "Bygningsbrandteknik"
+  },
+  {
+    "course_number": "41B25",
+    "course_name": "Branddynamik"
+  },
+  {
+    "course_number": "41MIB",
+    "course_name": "Brandteknisk projektopgave"
+  },
+  {
+    "course_number": "38001",
+    "course_name": "Bæredygtigt Iværksætteri"
+  },
+  {
+    "course_number": "38102",
+    "course_name": "Teknologisk Iværksætteri"
+  },
+  {
+    "course_number": "38103",
+    "course_name": "X-Tech Entreprenørskab"
+  },
+  {
+    "course_number": "38104",
+    "course_name": "Økonomi for Iværksættere"
+  },
+  {
+    "course_number": "38106",
+    "course_name": "Udvikling af iværksættermindset"
+  },
+  {
+    "course_number": "38108",
+    "course_name": "Teknologi og Innovationsledelse"
+  },
+  {
+    "course_number": "38109",
+    "course_name": "X-Tech+"
+  },
+  {
+    "course_number": "38110",
+    "course_name": "Iscenesættelse af co-creation og kreativitet"
+  },
+  {
+    "course_number": "38111",
+    "course_name": "Rådgivningspraksis"
+  },
+  {
+    "course_number": "38112",
+    "course_name": "Marketing i iværksætteri"
+  },
+  {
+    "course_number": "38113",
+    "course_name": "Anvendt AI for Entreprenører"
+  },
+  {
+    "course_number": "38201",
+    "course_name": "Entrepreneurial Life Skills"
+  },
+  {
+    "course_number": "38202",
+    "course_name": "Iværksætterens Ledelsesmæssige Udvikling"
+  },
+  {
+    "course_number": "38203",
+    "course_name": "Due Diligence of New Ventures"
+  },
+  {
+    "course_number": "38204",
+    "course_name": "Feasibility Studies"
+  },
+  {
+    "course_number": "38301",
+    "course_name": "Modul 1: Start-up Undersøgelse"
+  },
+  {
+    "course_number": "38302",
+    "course_name": "Modul 2: Start-up Inkubation"
+  },
+  {
+    "course_number": "38799",
+    "course_name": "Patentkursus"
+  },
+  {
+    "course_number": "42001",
+    "course_name": "Storskala energisystemanalyse med Balmorel"
+  },
+  {
+    "course_number": "42009",
+    "course_name": "Indledende økonomi"
+  },
+  {
+    "course_number": "42014",
+    "course_name": "Miljø-og resourceøkonomi"
+  },
+  {
+    "course_number": "42015",
+    "course_name": "Energiøkonomi"
+  },
+  {
+    "course_number": "42016",
+    "course_name": "Business Economics and Finance"
+  },
+  {
+    "course_number": "42101",
+    "course_name": "Introduktion til operationsanalyse"
+  },
+  {
+    "course_number": "42112",
+    "course_name": "Matematisk Programmering Modellering"
+  },
+  {
+    "course_number": "42114",
+    "course_name": "Heltalsprogrammering"
+  },
+  {
+    "course_number": "42115",
+    "course_name": "Netværksoptimering"
+  },
+  {
+    "course_number": "42117",
+    "course_name": "Transport Optimering"
+  },
+  {
+    "course_number": "42136",
+    "course_name": "Optimering af store problemer med dekomposition"
+  },
+  {
+    "course_number": "42137",
+    "course_name": "Optimering ved hjælp af metaheuristikker"
+  },
+  {
+    "course_number": "42142",
+    "course_name": "Recent Research Results in Management Science"
+  },
+  {
+    "course_number": "42180",
+    "course_name": "Kvantitativ modellering af adfærd"
+  },
+  {
+    "course_number": "42186",
+    "course_name": "Model-based machine learning"
+  },
+  {
+    "course_number": "42189",
+    "course_name": "Analyse af transportsystemer"
+  },
+  {
+    "course_number": "42380",
+    "course_name": "Supply Chain Analytics"
+  },
+  {
+    "course_number": "42402",
+    "course_name": "Bæredygtig operations og supply chain management (O\u0026SCM)"
+  },
+  {
+    "course_number": "42403",
+    "course_name": "Avanceret Operations Management til produktions- og servicesystemer"
+  },
+  {
+    "course_number": "42404",
+    "course_name": "Maritim logistik og ledelse"
+  },
+  {
+    "course_number": "42417",
+    "course_name": "Simulering i operations management"
+  },
+  {
+    "course_number": "42421",
+    "course_name": "Ledelse og organisation"
+  },
+  {
+    "course_number": "42500",
+    "course_name": "Innovation in Engineering (Polyteknisk grundlag)"
+  },
+  {
+    "course_number": "42501",
+    "course_name": "Innovation in Engineering (Polyteknisk grundfag)"
+  },
+  {
+    "course_number": "42502",
+    "course_name": "Facilitating Innovation in Multidisciplinary Teams"
+  },
+  {
+    "course_number": "42503",
+    "course_name": "Facilitating Innovation in Multidisciplinary Teams"
+  },
+  {
+    "course_number": "42504",
+    "course_name": "Innovation in Engineering (Polyteknisk grundfag)"
+  },
+  {
+    "course_number": "42505",
+    "course_name": "Facilitating Innovation in Multidisciplinary Teams"
+  },
+  {
+    "course_number": "42543",
+    "course_name": "Ledelse af organisatorisk forandring"
+  },
+  {
+    "course_number": "42576",
+    "course_name": "From Analytics to Action"
+  },
+  {
+    "course_number": "42577",
+    "course_name": "Introduktion til Business Analytics"
+  },
+  {
+    "course_number": "42578",
+    "course_name": "Advanced Business Analytics"
+  },
+  {
+    "course_number": "42580",
+    "course_name": "Introduktion til Data Science"
+  },
+  {
+    "course_number": "42586",
+    "course_name": "Beslutninger under usikkerhed"
+  },
+  {
+    "course_number": "42587",
+    "course_name": "Introduktion til Operations og Supply Chain Management"
+  },
+  {
+    "course_number": "42588",
+    "course_name": "Data og data science"
+  },
+  {
+    "course_number": "42620",
+    "course_name": "Videnskab, Teknologi og Samfund (polyteknisk grundlag)"
+  },
+  {
+    "course_number": "42622",
+    "course_name": "Videnskab, Teknologi og Samfund (polyteknisk grundlag)"
+  },
+  {
+    "course_number": "42879",
+    "course_name": "Beslutningsstøtte og strategisk vurdering"
+  },
+  {
+    "course_number": "42893",
+    "course_name": "Psykologi for ingeniører"
+  },
+  {
+    "course_number": "42S01",
+    "course_name": "Philosophical foundations of Sustainable Leadership"
+  },
+  {
+    "course_number": "42S02",
+    "course_name": "Leadership in Sustainability Strategy"
+  },
+  {
+    "course_number": "42S03",
+    "course_name": "Complex Problem Framing across Value Chains"
+  },
+  {
+    "course_number": "42S04",
+    "course_name": "Sustainability Oriented Organizations"
+  },
+  {
+    "course_number": "42S05",
+    "course_name": "Business Models for Sustainability"
+  },
+  {
+    "course_number": "42S06",
+    "course_name": "Sustainability-Driven Innovation"
+  },
+  {
+    "course_number": "42S07",
+    "course_name": "Data-Based Decision Making"
+  },
+  {
+    "course_number": "42S08",
+    "course_name": "Communicating Sustainability"
+  },
+  {
+    "course_number": "42S09",
+    "course_name": "Leading Change for Sustainability"
+  },
+  {
+    "course_number": "42S10",
+    "course_name": "Immersive Learning Project"
+  },
+  {
+    "course_number": "46000",
+    "course_name": "Introduktion til vindenergi"
+  },
+  {
+    "course_number": "46015",
+    "course_name": "Digitale energisamfund"
+  },
+  {
+    "course_number": "46020",
+    "course_name": "Designprojekt: Energikonvertering og lagring"
+  },
+  {
+    "course_number": "46025",
+    "course_name": "Introduktion til bæredygtige energiteknologier"
+  },
+  {
+    "course_number": "46030",
+    "course_name": "Elektriske energisystemer"
+  },
+  {
+    "course_number": "46035",
+    "course_name": "Energistyring med indlejrede systemer"
+  },
+  {
+    "course_number": "46040",
+    "course_name": "Introduktion til energianalyse"
+  },
+  {
+    "course_number": "46045",
+    "course_name": "Design og implementering af koordineret styring for distribuerede energisystemer"
+  },
+  {
+    "course_number": "46050",
+    "course_name": "Innovative energiløsninger"
+  },
+  {
+    "course_number": "46055",
+    "course_name": "Almen Elektroteknik"
+  },
+  {
+    "course_number": "46060",
+    "course_name": "Projekt i design af hybrid kraftværk"
+  },
+  {
+    "course_number": "46100",
+    "course_name": "Introduktion til mikrometeorologi for vindenergi"
+  },
+  {
+    "course_number": "46110",
+    "course_name": "Grundlæggende Aerodynamik"
+  },
+  {
+    "course_number": "46115",
+    "course_name": "Turbulensmodellering CFD"
+  },
+  {
+    "course_number": "46120",
+    "course_name": "Videnskabelig Programmering for Vindenergi"
+  },
+  {
+    "course_number": "46200",
+    "course_name": "Planlægning og udvikling af vindmølleparker"
+  },
+  {
+    "course_number": "46205",
+    "course_name": "Feasibility-studier af energiprojekter"
+  },
+  {
+    "course_number": "46211",
+    "course_name": "Offshore vindenergi"
+  },
+  {
+    "course_number": "46215",
+    "course_name": "Socio-tekniske dimensioner af bæredygtig energi"
+  },
+  {
+    "course_number": "46230",
+    "course_name": "Balancering af elsystemer med storskala vindkraft"
+  },
+  {
+    "course_number": "46300",
+    "course_name": "Vindkraft og aeroteknologi"
+  },
+  {
+    "course_number": "46310",
+    "course_name": "Aeroelasticitet for vindmøller"
+  },
+  {
+    "course_number": "46320",
+    "course_name": "Vindmøllelaster, -aerodynamik og -kontrol"
+  },
+  {
+    "course_number": "46400",
+    "course_name": "Vindmøller og måleteknik"
+  },
+  {
+    "course_number": "46411",
+    "course_name": "Design af store komposit konstruktioner"
+  },
+  {
+    "course_number": "46415",
+    "course_name": "Numerisk designoptimering af vindmøller"
+  },
+  {
+    "course_number": "46420",
+    "course_name": "Kompositmaterialer og fibre"
+  },
+  {
+    "course_number": "46440",
+    "course_name": "Fremstilling af avancerede fiberkompositter"
+  },
+  {
+    "course_number": "46500",
+    "course_name": "Probabilistiske Metoder i Vindenergi"
+  },
+  {
+    "course_number": "46550",
+    "course_name": "Nettilslutning af havvind og højspændingsjævnstrøms (HVDC) transmission"
+  },
+  {
+    "course_number": "46600",
+    "course_name": "Aeroakustik"
+  },
+  {
+    "course_number": "46700",
+    "course_name": "Introduktion til Elforsyningssystemer"
+  },
+  {
+    "course_number": "46705",
+    "course_name": "Analyse af elforsyningsnet"
+  },
+  {
+    "course_number": "46711",
+    "course_name": "Stabilitet og kontrol i elforsyningssystemer"
+  },
+  {
+    "course_number": "46715",
+    "course_name": "Transienter i elforsyningssystemer"
+  },
+  {
+    "course_number": "46720",
+    "course_name": "Højspændingsteknik"
+  },
+  {
+    "course_number": "46725",
+    "course_name": "Elektriske maskiner"
+  },
+  {
+    "course_number": "46735",
+    "course_name": "Vindmøller, PV og Elektriske Energilagring drivetrains"
+  },
+  {
+    "course_number": "46740",
+    "course_name": "Distribuerede energiteknologier, modellering og kontrol"
+  },
+  {
+    "course_number": "46745",
+    "course_name": "Integration af vindkraft i elsystemet"
+  },
+  {
+    "course_number": "46750",
+    "course_name": "Optimering i moderne power systemer"
+  },
+  {
+    "course_number": "46755",
+    "course_name": "Vedvarende energi i el-markederne"
+  },
+  {
+    "course_number": "46760",
+    "course_name": "Hands-on mikrokontroller programmering"
+  },
+  {
+    "course_number": "46765",
+    "course_name": "Maskinlæring til energisystemer"
+  },
+  {
+    "course_number": "46770",
+    "course_name": "Integrerede energinet"
+  },
+  {
+    "course_number": "46795",
+    "course_name": "Formula Student Electric: implementation, testing and design optimization (BlueDot)"
+  },
+  {
+    "course_number": "46797",
+    "course_name": "Formula Student Electric: implementering, test og designoptimering"
+  },
+  {
+    "course_number": "46910",
+    "course_name": "Avanceret finite element simulering ved brug af Abaqus"
+  },
+  {
+    "course_number": "46915",
+    "course_name": "Projektplanlægning for ph.d.-studerende ved DTU Vind og Energi Systemer"
+  },
+  {
+    "course_number": "46920",
+    "course_name": "Ph.d.-sommer skole: Remote Sensing for vindenergi"
+  },
+  {
+    "course_number": "46W44",
+    "course_name": "Offshore vindenergi planlægning"
+  },
+  {
+    "course_number": "46W47",
+    "course_name": "Hybride energianlæg"
+  },
+  {
+    "course_number": "47201",
+    "course_name": "Anvendt termodynamik"
+  },
+  {
+    "course_number": "47202",
+    "course_name": "Introduktion til fremtidens energi"
+  },
+  {
+    "course_number": "47203",
+    "course_name": "Design-Build 3: solovn"
+  },
+  {
+    "course_number": "47205",
+    "course_name": "Elektrokemiske energiteknologier"
+  },
+  {
+    "course_number": "47209",
+    "course_name": "3D imaging, analyse og modellering"
+  },
+  {
+    "course_number": "47211",
+    "course_name": "Elektrokemisk energilagring og Power2X"
+  },
+  {
+    "course_number": "47212",
+    "course_name": "Computersimulering af materialer"
+  },
+  {
+    "course_number": "47213",
+    "course_name": "Introduktion til Power-to-X (online)"
+  },
+  {
+    "course_number": "47214",
+    "course_name": "Introduktion til fremtidens energiteknologier (online)"
+  },
+  {
+    "course_number": "47215",
+    "course_name": "Rationel design af en varmeveksler til solceller (online)"
+  },
+  {
+    "course_number": "47216",
+    "course_name": "AI-orkestrerede selvkørende laboratorier (Online)"
+  },
+  {
+    "course_number": "47217",
+    "course_name": "Introduktion til elektrokemi (online)"
+  },
+  {
+    "course_number": "47301",
+    "course_name": "Brintenergi og brændselsceller"
+  },
+  {
+    "course_number": "47304",
+    "course_name": "Keramiske processer og materialer"
+  },
+  {
+    "course_number": "47305",
+    "course_name": "Elektrokemi"
+  },
+  {
+    "course_number": "47310",
+    "course_name": "Batterimaterialer og batterikemi: fra fundamentale mekanismer til battericeller"
+  },
+  {
+    "course_number": "47317",
+    "course_name": "Exergianalyse"
+  },
+  {
+    "course_number": "47319",
+    "course_name": "Funktionelle materialer"
+  },
+  {
+    "course_number": "47330",
+    "course_name": "Energilagring og -konvertering"
+  },
+  {
+    "course_number": "47332",
+    "course_name": "AI-orkestrerede selvkørende laboratorier"
+  },
+  {
+    "course_number": "47333",
+    "course_name": "Elektronmikroskopi til materialeforskning"
+  },
+  {
+    "course_number": "47334",
+    "course_name": "CO2-fangst, -anvendelse og -lagring"
+  },
+  {
+    "course_number": "47335",
+    "course_name": "Atomar-skala modellering af materialer til energiapplikationer (online)"
+  },
+  {
+    "course_number": "47336",
+    "course_name": "Anvendelse af røntgen- og neutronspredning i biologi, kemi og fysik"
+  },
+  {
+    "course_number": "47338",
+    "course_name": "Organiske energimaterialer"
+  },
+  {
+    "course_number": "47339",
+    "course_name": "Faststof- og strukturkemi"
+  },
+  {
+    "course_number": "47513",
+    "course_name": "Ph.d.-kursus om moderne energiforskning"
+  },
+  {
+    "course_number": "47514",
+    "course_name": "Ph.d.-kursus om avanceret elektrokemi"
+  },
+  {
+    "course_number": "47517",
+    "course_name": "PhD course in how to make a scientific poster"
+  },
+  {
+    "course_number": "47519",
+    "course_name": "PhD course in sustainable electrofuels and -chemicals"
+  },
+  {
+    "course_number": "KU002",
+    "course_name": "Humanbiologi"
+  },
+  {
+    "course_number": "KU003",
+    "course_name": "Sygdomslære for ikke-klinikere"
+  },
+  {
+    "course_number": "KU004",
+    "course_name": "Kliniske metoder i diagnostik og behandling"
+  },
+  {
+    "course_number": "KU005",
+    "course_name": "Modellering af fysiologiske systemer"
+  },
+  {
+    "course_number": "KU006",
+    "course_name": "Introduktion til klinisk praksis på hospital"
+  },
+  {
+    "course_number": "KU010",
+    "course_name": "Bevægeapparatets Biomekanik"
+  },
+  {
+    "course_number": "KU011",
+    "course_name": "Celle- og Vævsbiologi"
+  },
+  {
+    "course_number": "KU013",
+    "course_name": "Videnskabsteori"
+  },
+  {
+    "course_number": "KU101",
+    "course_name": "Patofysiologi"
+  },
+  {
+    "course_number": "KU103",
+    "course_name": "Biomechanics and Neural Control of Human Movement"
+  },
+  {
+    "course_number": "KU105",
+    "course_name": "Videregående fysiologisk modellering"
+  },
+  {
+    "course_number": "KU112",
+    "course_name": "Physics of Molecular Diseases"
+  },
+  {
+    "course_number": "KU115",
+    "course_name": "Farmakometrik"
+  },
+  {
+    "course_number": "KU180",
+    "course_name": "Medicinsk anvendelse af ioniserende stråling"
+  },
+  {
+    "course_number": "KU181",
+    "course_name": "Radioaktive isotoper og ioniserende stråling"
+  },
+  {
+    "course_number": "62000",
+    "course_name": "Erhvervsøkonomi"
+  },
+  {
+    "course_number": "62001",
+    "course_name": "Innovation, Design og Procesfacilitering"
+  },
+  {
+    "course_number": "62010",
+    "course_name": "Produktforståelse"
+  },
+  {
+    "course_number": "62014",
+    "course_name": "Grønt Entreprenørskab"
+  },
+  {
+    "course_number": "62019",
+    "course_name": "Interaktionsdesign"
+  },
+  {
+    "course_number": "62024",
+    "course_name": "Prototyping"
+  },
+  {
+    "course_number": "62030",
+    "course_name": "Fra ide til checkout (3.semester PI-projekt)"
+  },
+  {
+    "course_number": "62033",
+    "course_name": "Teknologi og Markedsføring"
+  },
+  {
+    "course_number": "62039",
+    "course_name": "Industriel Design"
+  },
+  {
+    "course_number": "62041",
+    "course_name": "Innovation i en Organisatorisk Kontekst"
+  },
+  {
+    "course_number": "62048",
+    "course_name": "Physical Computing"
+  },
+  {
+    "course_number": "62054",
+    "course_name": "Entreprenørskab i Grønland"
+  },
+  {
+    "course_number": "62079",
+    "course_name": "Operations Management"
+  },
+  {
+    "course_number": "62090",
+    "course_name": "Teknologi og Produktion"
+  },
+  {
+    "course_number": "62096",
+    "course_name": "Informationsteknologi i Produktion"
+  },
+  {
+    "course_number": "62101",
+    "course_name": "Operations Management 2"
+  },
+  {
+    "course_number": "62104",
+    "course_name": "Automation i Produktionen"
+  },
+  {
+    "course_number": "62107",
+    "course_name": "Kvalitetstyring og GMP"
+  },
+  {
+    "course_number": "62108",
+    "course_name": "Tværfaglig udvikling af teknologi og produktion"
+  },
+  {
+    "course_number": "62111",
+    "course_name": "Industri 4.0 i praksis"
+  },
+  {
+    "course_number": "62112",
+    "course_name": "Industri 4.0 i praksis"
+  },
+  {
+    "course_number": "62118",
+    "course_name": "Organisation og Ledelse"
+  },
+  {
+    "course_number": "62120",
+    "course_name": "Produktions- og forretningsudvikling (projekt 4)"
+  },
+  {
+    "course_number": "62121",
+    "course_name": "Produktionsudvikling og digitalisering (projekt 4)"
+  },
+  {
+    "course_number": "62133",
+    "course_name": "Supply Chain Management \u0026 Design"
+  },
+  {
+    "course_number": "62134",
+    "course_name": "Strategisk analyse og udvikling"
+  },
+  {
+    "course_number": "62139",
+    "course_name": "Videregående økonomistyring"
+  },
+  {
+    "course_number": "62142",
+    "course_name": "Digitalisering og Industri 4.0"
+  },
+  {
+    "course_number": "62143",
+    "course_name": "Mekanisk produktdokumentation og -analyse"
+  },
+  {
+    "course_number": "62150",
+    "course_name": "Grundlæggende matematik"
+  },
+  {
+    "course_number": "62174",
+    "course_name": "Erhvervsøkonomi 2"
+  },
+  {
+    "course_number": "62177",
+    "course_name": "Marketing Concepts and Strategies"
+  },
+  {
+    "course_number": "62191",
+    "course_name": "Vejtrafiksimulering"
+  },
+  {
+    "course_number": "62198",
+    "course_name": "Økonomi for ingeniører"
+  },
+  {
+    "course_number": "62199",
+    "course_name": "Vejprojektering og trafiksikkerhed"
+  },
+  {
+    "course_number": "62200",
+    "course_name": "Forretningspotentialet i Generative Artificial Intelligence (GAI)"
+  },
+  {
+    "course_number": "62202",
+    "course_name": "Life Cycle Assessment"
+  },
+  {
+    "course_number": "62205",
+    "course_name": "Bæredygtig og ansvarlig produktion"
+  },
+  {
+    "course_number": "62207",
+    "course_name": "Produktdokumentation og mekaniske fremstillingsmetoder"
+  },
+  {
+    "course_number": "62211",
+    "course_name": "Forretningsvidenskab og teknologiledelse"
+  },
+  {
+    "course_number": "62218",
+    "course_name": "Grundlæggende Naturvidenskab"
+  },
+  {
+    "course_number": "62223",
+    "course_name": "Erhvervsøkonomi 1"
+  },
+  {
+    "course_number": "62224",
+    "course_name": "Den engelsksprogede verden og akademisk skrivning på engelsk"
+  },
+  {
+    "course_number": "62225",
+    "course_name": "Engelsk i en global kontekst og akademisk skrivning på engelsk"
+  },
+  {
+    "course_number": "62229",
+    "course_name": "IT Forretning"
+  },
+  {
+    "course_number": "62231",
+    "course_name": "Interkulturel forretningskommunikation"
+  },
+  {
+    "course_number": "62233",
+    "course_name": "Makroøkonomi"
+  },
+  {
+    "course_number": "62234",
+    "course_name": "Industriel Programmering"
+  },
+  {
+    "course_number": "62235",
+    "course_name": "Internationale forretningsmiljøer og operationer"
+  },
+  {
+    "course_number": "62243",
+    "course_name": "Innovation, produktion og økonomi"
+  },
+  {
+    "course_number": "62249",
+    "course_name": "Tværdisciplinært udviklingsprojekt"
+  },
+  {
+    "course_number": "62261",
+    "course_name": "Bygningsinstallationer"
+  },
+  {
+    "course_number": "62263",
+    "course_name": "Betonkonstruktioner"
+  },
+  {
+    "course_number": "62265",
+    "course_name": "Trafik og veje i byområder"
+  },
+  {
+    "course_number": "62267",
+    "course_name": "SMART energiforsyning"
+  },
+  {
+    "course_number": "62268",
+    "course_name": "Jord- og Grundvandsforurening"
+  },
+  {
+    "course_number": "62271",
+    "course_name": "Bygningsenergi \u0026 varmeanlæg"
+  },
+  {
+    "course_number": "62272",
+    "course_name": "Projektbaseret produktion: Planlægning og styring af bygge og infrastrukturprojekter"
+  },
+  {
+    "course_number": "62273",
+    "course_name": "Stålkonstruktioner"
+  },
+  {
+    "course_number": "62276",
+    "course_name": "Vej- og baneprojektering"
+  },
+  {
+    "course_number": "62277",
+    "course_name": "Vand og klimatilpasning"
+  },
+  {
+    "course_number": "62279",
+    "course_name": "Bygnings- og Infrastrukturprojekt 2"
+  },
+  {
+    "course_number": "62280",
+    "course_name": "Det naturlige afløbssystem og vandforsyning"
+  },
+  {
+    "course_number": "62281",
+    "course_name": "Bygningsfornyelse med fokus på energi og mekaniske installationer"
+  },
+  {
+    "course_number": "62282",
+    "course_name": "Bygningsfornyelse med fokus på konstruktioner"
+  },
+  {
+    "course_number": "62283",
+    "course_name": "Digital Modellering og Tegne-teknisk Formidling"
+  },
+  {
+    "course_number": "62284",
+    "course_name": "Udbudsprojekt"
+  },
+  {
+    "course_number": "62285",
+    "course_name": "BIP 4. Udførelsesprojekt med internationalt element"
+  },
+  {
+    "course_number": "62286",
+    "course_name": "Drift og vedligeholdelse af vej- og afløbssystemer"
+  },
+  {
+    "course_number": "62319",
+    "course_name": "Husbygning"
+  },
+  {
+    "course_number": "62324",
+    "course_name": "Byplanlægning"
+  },
+  {
+    "course_number": "62329",
+    "course_name": "Vand og jords egenskaber"
+  },
+  {
+    "course_number": "62330",
+    "course_name": "Byers Vand og Veje"
+  },
+  {
+    "course_number": "62331",
+    "course_name": "Grundlæggende statik"
+  },
+  {
+    "course_number": "62362",
+    "course_name": "Etagebyggeri af beton"
+  },
+  {
+    "course_number": "62366",
+    "course_name": "Vejbygning med regnvandshåndtering"
+  },
+  {
+    "course_number": "62369",
+    "course_name": "Videregående bygningsinstallationer"
+  },
+  {
+    "course_number": "62381",
+    "course_name": "Trafik- og transportplanlægning"
+  },
+  {
+    "course_number": "62389",
+    "course_name": "Klimatilpasning og skybrudssikring"
+  },
+  {
+    "course_number": "62410",
+    "course_name": "CDIO-Projekt"
+  },
+  {
+    "course_number": "62413",
+    "course_name": "Avanceret objektorienteret programmering med C# og .NET"
+  },
+  {
+    "course_number": "62416",
+    "course_name": "Videregående mobilapplikationsudvikling"
+  },
+  {
+    "course_number": "62417",
+    "course_name": "Mobil applikationsudvikling med Swift"
+  },
+  {
+    "course_number": "62420",
+    "course_name": "Informationsteknologi 1"
+  },
+  {
+    "course_number": "62422",
+    "course_name": "Medicoteknik 1"
+  },
+  {
+    "course_number": "62424",
+    "course_name": "Projektarbejde i praksis"
+  },
+  {
+    "course_number": "62426",
+    "course_name": "Cyber defence og ledelsesansvar"
+  },
+  {
+    "course_number": "62427",
+    "course_name": "Netværksforsvar og angrebshåndtering"
+  },
+  {
+    "course_number": "62428",
+    "course_name": "Sikker implementation af systemer"
+  },
+  {
+    "course_number": "62443",
+    "course_name": "Datakommunikation"
+  },
+  {
+    "course_number": "62450",
+    "course_name": "Informationsteknologi 2"
+  },
+  {
+    "course_number": "62452",
+    "course_name": "Medicoteknik 2"
+  },
+  {
+    "course_number": "62453",
+    "course_name": "Semesterprojekt 2 Sundhedsteknologi"
+  },
+  {
+    "course_number": "62454",
+    "course_name": "Sundhedsvidenskab 2"
+  },
+  {
+    "course_number": "62484",
+    "course_name": "Semesterprojekt 3 Sundhedsteknologi"
+  },
+  {
+    "course_number": "62512",
+    "course_name": "Telemedicin 1"
+  },
+  {
+    "course_number": "62517",
+    "course_name": "Billeddannende modaliteter"
+  },
+  {
+    "course_number": "62521",
+    "course_name": "Design-build projekt"
+  },
+  {
+    "course_number": "62523",
+    "course_name": "Sundhedsvidenskab 1"
+  },
+  {
+    "course_number": "62525",
+    "course_name": "Digital Signalbehandling."
+  },
+  {
+    "course_number": "62531",
+    "course_name": "Udviklingsmetoder til IT-systemer"
+  },
+  {
+    "course_number": "62533",
+    "course_name": "Anvendt machine learning og big data"
+  },
+  {
+    "course_number": "62550",
+    "course_name": "Brugerinteraktion og udvikling på mobile enheder"
+  },
+  {
+    "course_number": "62560",
+    "course_name": "Standarder, sikkerhed og kvalitet i sundhedsvæsenet"
+  },
+  {
+    "course_number": "62575",
+    "course_name": "Sikkerhed i indlejrede systemer"
+  },
+  {
+    "course_number": "62581",
+    "course_name": "IT og kommunikation"
+  },
+  {
+    "course_number": "62582",
+    "course_name": "Komplekse systemer og Devops"
+  },
+  {
+    "course_number": "62589",
+    "course_name": "Business Intelligence"
+  },
+  {
+    "course_number": "62595",
+    "course_name": "Full stack udvikling, drift og distribuerede systemer"
+  },
+  {
+    "course_number": "62601",
+    "course_name": "Termodynamik og Mekanik for elektroingeniører"
+  },
+  {
+    "course_number": "62604",
+    "course_name": "Termodynamik og energiteknik"
+  },
+  {
+    "course_number": "62614",
+    "course_name": "Advanced Engineering Dynamics"
+  },
+  {
+    "course_number": "62616",
+    "course_name": "Plastteknologi"
+  },
+  {
+    "course_number": "62622",
+    "course_name": "Baneteknologi og drift: fra første idé til fuld fart"
+  },
+  {
+    "course_number": "62629",
+    "course_name": "Varmetransmission"
+  },
+  {
+    "course_number": "62637",
+    "course_name": "Videregående analytics i mobilitet og transport"
+  },
+  {
+    "course_number": "62640",
+    "course_name": "Godstransport og logistik"
+  },
+  {
+    "course_number": "62641",
+    "course_name": "Bæredygtighed, mobilitet og samfund"
+  },
+  {
+    "course_number": "62642",
+    "course_name": "Planlægning af infrastruktur"
+  },
+  {
+    "course_number": "62643",
+    "course_name": "Svingningslære"
+  },
+  {
+    "course_number": "62646",
+    "course_name": "Modellering og Programmering"
+  },
+  {
+    "course_number": "62657",
+    "course_name": "Fluid Mekanik"
+  },
+  {
+    "course_number": "62670",
+    "course_name": "Statistisk Analyse og Datavisualisering"
+  },
+  {
+    "course_number": "62675",
+    "course_name": "Mekanik"
+  },
+  {
+    "course_number": "62677",
+    "course_name": "Anvendt reguleringsteknik"
+  },
+  {
+    "course_number": "62683",
+    "course_name": "Maskinkonstruktion"
+  },
+  {
+    "course_number": "62694",
+    "course_name": "Dynamik"
+  },
+  {
+    "course_number": "62696",
+    "course_name": "Produktudvikling"
+  },
+  {
+    "course_number": "62704",
+    "course_name": "Elektriske maskiner"
+  },
+  {
+    "course_number": "62708",
+    "course_name": "Højspænding"
+  },
+  {
+    "course_number": "62711",
+    "course_name": "Digitale systemer, design af"
+  },
+  {
+    "course_number": "62712",
+    "course_name": "Grundlæggende C programmering"
+  },
+  {
+    "course_number": "62716",
+    "course_name": "Digitale reguleringssystemer"
+  },
+  {
+    "course_number": "62733",
+    "course_name": "Projektarbejde i elektroteknik"
+  },
+  {
+    "course_number": "62734",
+    "course_name": "Datateknik og programmering"
+  },
+  {
+    "course_number": "62735",
+    "course_name": "Videregående Matematik for Diplom Elektroteknologi"
+  },
+  {
+    "course_number": "62743",
+    "course_name": "Digital signalbehandling"
+  },
+  {
+    "course_number": "62748",
+    "course_name": "Almen- og Elektrokemi"
+  },
+  {
+    "course_number": "62752",
+    "course_name": "Måling og styring med mikroprocessorer"
+  },
+  {
+    "course_number": "62755",
+    "course_name": "Effektelektronik"
+  },
+  {
+    "course_number": "62756",
+    "course_name": "Effektelektronik i energisystemer"
+  },
+  {
+    "course_number": "62760",
+    "course_name": "Elforsyning 1"
+  },
+  {
+    "course_number": "62761",
+    "course_name": "Elforsyning 2"
+  },
+  {
+    "course_number": "62762",
+    "course_name": "Elektrisk Energiteknik"
+  },
+  {
+    "course_number": "62763",
+    "course_name": "Elektroteknik 1"
+  },
+  {
+    "course_number": "62764",
+    "course_name": "Elektroteknik 2"
+  },
+  {
+    "course_number": "62766",
+    "course_name": "Drift af elektriske energisystemer"
+  },
+  {
+    "course_number": "62768",
+    "course_name": "Elektriske energisystemer projekt"
+  },
+  {
+    "course_number": "62773",
+    "course_name": "Elektrofysik 1"
+  },
+  {
+    "course_number": "62774",
+    "course_name": "Elektrofysik 2"
+  },
+  {
+    "course_number": "62775",
+    "course_name": "Anvendt elteknik for Maskin"
+  },
+  {
+    "course_number": "62782",
+    "course_name": "Anvendt kredsløbsteknik"
+  },
+  {
+    "course_number": "62783",
+    "course_name": "Projektarbejde 3. semester"
+  },
+  {
+    "course_number": "62798",
+    "course_name": "Geometriske operationer i plan og rum"
+  },
+  {
+    "course_number": "62800",
+    "course_name": "Introduktion til mekatronik og robotteknik"
+  },
+  {
+    "course_number": "62801",
+    "course_name": "Semesterprojekt 1: Vindmølle-teknologi"
+  },
+  {
+    "course_number": "62802",
+    "course_name": "Semesterprojekt 2: bæredygtig produktudvikling"
+  },
+  {
+    "course_number": "62805",
+    "course_name": "Mekanisk design 1"
+  },
+  {
+    "course_number": "62806",
+    "course_name": "Mekanisk Design 2"
+  },
+  {
+    "course_number": "62807",
+    "course_name": "Fluid Mekanik"
+  },
+  {
+    "course_number": "62808",
+    "course_name": "Dynamik"
+  },
+  {
+    "course_number": "62809",
+    "course_name": "Modellering og Programmering"
+  },
+  {
+    "course_number": "62810",
+    "course_name": "Geometriske operationer i plan og rum"
+  },
+  {
+    "course_number": "62908",
+    "course_name": "Mennesker i samspil med teknologi"
+  },
+  {
+    "course_number": "62999",
+    "course_name": "Innovation Pilot"
+  },
+  {
+    "course_number": "63851",
+    "course_name": "Projektledelse"
+  },
+  {
+    "course_number": "63852",
+    "course_name": "Projektledelse"
+  },
+  {
+    "course_number": "63860",
+    "course_name": "System- og netværkssikkerhed"
+  },
+  {
+    "course_number": "63880",
+    "course_name": "Data analytics i transport med fokus på jernbaner"
+  },
+  {
+    "course_number": "63881",
+    "course_name": "Banetransport og bæredygtig logistik"
+  }
+]

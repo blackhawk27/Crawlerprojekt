@@ -1,11 +1,3 @@
-/*
-
-Venligst opdater class og metode navne, men test metoder og classes er inkluderet i src mappen :)
-
-*/
-
-
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -30,8 +22,8 @@ public class CourseAnalyzer {
         // Start crawler i en separat tråd
         new Thread(() -> {
             // Antag at din Crawler klasse hedder "DTUCrawler"
-            DTUCrawler crawler = new DTUCrawler(cookies);
-            crawler.startCrawling(); // Kald crawler-metoden
+            Crawler crawler = new Crawler(cookies);
+            crawler.crawl(); // Kald crawler-metoden
         }).start();
 
         // Udskriv værdierne fra HashMap
@@ -101,8 +93,8 @@ public class CourseAnalyzer {
                 if (dropdown.getSelectedItem().equals("Placering")) {
 
                     // Kald din Sort-klasse for at hente placeringer
-                    Sorter_Test sorter = new Sorter_Test();
-                    String[][] placements = sorter.getCoursesByPlacement();
+                    Sorter sorter = new Sorter();
+                    String[][] placements = sorter.getTable();
 
                     tableModel.setDataVector(placements, columnNames);
                 }
