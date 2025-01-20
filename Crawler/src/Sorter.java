@@ -8,6 +8,8 @@ import java.util.ArrayList;
 //import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Arrays;
+import java.util.Comparator;
 
 
 
@@ -18,10 +20,9 @@ public class Sorter {
     public static void main(String[] args) {
         Sorter sorter = new Sorter();
 
-        //String[][] allData = sorter.getTable();
-        //System.out.println(allData); 
+        String[][] allData = sorter.getTable();
+        System.out.println(allData); 
 
-        
         //String[][] results = sorter.searchCourses("10060");
         //System.out.println(results);
 
@@ -33,6 +34,10 @@ public class Sorter {
 
         //ArrayList<String> courseDetails = sorter.getAll("Matematik 1a (Polyteknisk grundlag)");
         //System.out.println(courseDetails);
+
+        String[][] table = sorter.getTable();
+        table = sorter.sortTable(table, 0, true); // Det burde stå i rækkefølge efter første del af arrayet
+        sorter.printMatrix(table);
     }
 
     ////////////////////////////////////////////////////////getDATA()/////////////////////////////////////////////////
@@ -114,7 +119,10 @@ public class Sorter {
                     HashMap<String, String> course = data.get(i);
                     Matrix[i + 1][0] = course.get("number"); //course_number
                     Matrix[i + 1][1] = course.get("name"); //course_name
-                    Matrix[i + 1][2] = course.get("placement").replace("-", ", "); //schedule_placement
+                    String placement = course.get("placement");
+                    if (placement.length() > 1) {
+                        Matrix[i + 1][2] = placement.substring(1).replace("-", ", "); //schedule_placement
+                    }
                     Matrix[i + 1][3] = course.get("ECTS"); // ECTS
                     Matrix[i + 1][4] = course.get("type"); // Type
                     Matrix[i + 1][5] = course.get("institute"); // Institute
@@ -128,6 +136,28 @@ public class Sorter {
             }
             return Matrix;
         }
+
+    //////////////////////////////////////////////////////////sortTable()///////////////////////////////////////////////////
+        
+        public String[][] sortTable(String[][] table, int columnIndex, boolean ascending) {
+            if (table == null || table.length <= 1 || columnIndex < 0 || columnIndex >= table[0].length) {
+                return table;
+            }
+            
+            Arrays.sort(table, 1, table.length, new Comparator<String[]>() {
+                @Override
+                public int compare(String[] row1, String[] row2) {
+                    if (ascending) {
+                        return row1[columnIndex].compareTo(row2[columnIndex]);
+                    }
+                    else {
+                        return row2[columnIndex].compareTo(row1[columnIndex]);
+                    }
+                }
+            });
+            return table;
+        }
+
 
         /////////////////////////////////////////////////////searchCourses(String searchTerm)///////////////////////////
 
@@ -184,7 +214,7 @@ public class Sorter {
 
         //////////////////////////////////////////////printMatrix(String[][] Matrix)/////////////////////////
 
-        public static void printMatrix(String[][] Matrix) {
+        public void printMatrix(String[][] Matrix) {
             for (String[] row : Matrix) {
                 System.out.println(String.join(", ", row));
             }
