@@ -20,13 +20,13 @@ public class Sorter {
     public static void main(String[] args) {
         Sorter sorter = new Sorter();
 
-        String[][] allData = sorter.getTable();
-        System.out.println(allData); 
+        //String[][] allData = sorter.getTable();
+        //System.out.println(allData); 
 
         //String[][] results = sorter.searchCourses("10060");
         //System.out.println(results);
 
-        //ArrayList<String> courseWithPlacement = sorter.search("-F3B");
+        //ArrayList<String> courseWithPlacement = sorter.search("F3B");
         //System.out.println(courseWithPlacement);
 
         //ArrayList<String> schedulePlacements = sorter.getSchedulePlacements();
@@ -35,9 +35,9 @@ public class Sorter {
         //ArrayList<String> courseDetails = sorter.getAll("Matematik 1a (Polyteknisk grundlag)");
         //System.out.println(courseDetails);
 
-        String[][] table = sorter.getTable();
-        table = sorter.sortTable(table, 0, true); // Det burde stå i rækkefølge efter første del af arrayet
-        sorter.printMatrix(table);
+        //String[][] table = sorter.getTable();
+        //table = sorter.sortTable(table, 0, true); // Den kan åbenbart ikke sortere ordenligt efter ECTS
+        //sorter.printMatrix(table);
     }
 
     ////////////////////////////////////////////////////////getDATA()/////////////////////////////////////////////////
@@ -46,7 +46,7 @@ public class Sorter {
         Gson gson = new Gson();
         List<HashMap<String, String>> data = null;
         
-        try (FileReader reader = new FileReader("courses.json")) {
+        try (FileReader reader = new FileReader("Fake_data.json")) {
             //PArse JSON til list of HashMaps
             Type listType = new TypeToken<List<HashMap<String, String>>>(){}.getType();
             data = gson.fromJson(reader, listType);
@@ -120,15 +120,18 @@ public class Sorter {
                     Matrix[i + 1][0] = course.get("number"); //course_number
                     Matrix[i + 1][1] = course.get("name"); //course_name
                     String placement = course.get("placement");
-                    if (placement.length() > 1) {
+                    if (placement != null && placement.startsWith("-")) {
                         Matrix[i + 1][2] = placement.substring(1).replace("-", ", "); //schedule_placement
+                    }
+                    else {
+                        Matrix[i + 1][2] = placement != null ? placement : ""; //schedule_placement
                     }
                     Matrix[i + 1][3] = course.get("ECTS"); // ECTS
                     Matrix[i + 1][4] = course.get("type"); // Type
                     Matrix[i + 1][5] = course.get("institute"); // Institute
                 }
 
-                printMatrix(Matrix); //noget med typerne er galt 
+                //printMatrix(Matrix); //Prints the table
                 
             }
             catch (Exception ed) {
@@ -141,6 +144,7 @@ public class Sorter {
         
         public String[][] sortTable(String[][] table, int columnIndex, boolean ascending) {
             if (table == null || table.length <= 1 || columnIndex < 0 || columnIndex >= table[0].length) {
+                System.out.println("Invalid input");
                 return table;
             }
             
@@ -191,7 +195,7 @@ public class Sorter {
             }
             else {
                 result = results.toArray(new String[0][0]);
-                printMatrix(result);
+                //printMatrix(result);
                 return result;
             }
         }
@@ -218,7 +222,6 @@ public class Sorter {
             for (String[] row : Matrix) {
                 System.out.println(String.join(", ", row));
             }
-
         }
 
         
