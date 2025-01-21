@@ -2,14 +2,14 @@ import org.jsoup.*;
 import org.jsoup.nodes.*;
 import org.jsoup.select.Elements;
 import com.google.gson.*;
-import com.google.gson.GsonBuilder;
+
 import java.io.*;
 import java.util.*;
 
 // Dette er en Threader klasse. Den får et link fra Crawleren. Hvis Crawleren 
 
 public class Threader implements Runnable {
-    private ArrayList<String> subPageReg;
+    private final List<String> batch;
     private String mainURL = "https://kurser.dtu.dk";
     private Crawler parent;
     private String subPage;
@@ -19,28 +19,34 @@ public class Threader implements Runnable {
     private String[] lglTypes = { "Bachelor", "Deltidsdiplom", "Diplom", "Deltidsmaster", "Ph.d.", "Kandidat" };
     private ArrayList<HashMap<String, String>> coursesList = new ArrayList<>();
 
-    public Threader(Crawler parent, ArrayList<String> subPageReg, Map<String, String> cookies) {
-        this.subPageReg = subPageReg;
+    public Threader(Crawler parent, List<String> batch, Map<String, String> cookies) {
+        this.batch = batch;
         this.parent = parent;
         this.cookies = cookies;
     }
 
     public void run() {
-        while (true) {
-            try {
-                synchronized (subPageReg) {
-                    System.out.println("Threads are running");
-                    if (subPageReg.isEmpty()) {
+            for (String page : batch){
+                try {
+                
+                    // System.out.println("Visiting " + page);
+                    if (batch.isEmpty()) {
                         break; // Exit if no links are left
                     }
-                    subPage = subPageReg.remove(0); // Retrieve and remove the first link
+                    // Connect til første link
 
-                    Document coursePageData = Jsoup.connect(mainURL + subPage)
+                    long fetchStartTime = System.currentTimeMillis();
+                    Document coursePageData = Jsoup.connect(mainURL + page)
                             .userAgent(
                                     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
                             .cookies(cookies)
                             .get();
+                    long fetchEndTime = System.currentTimeMillis();
+                    System.out.println("Network fetch time for " + page + ": " + (fetchEndTime - fetchStartTime) + " ms.");
 
+
+                    long fetchStartTimeParse = System.currentTimeMillis();
+                    // Håndter information fra side
                     HashMap<String, String> courseDetails = new HashMap<>();
                     String tdNameAndNumber = coursePageData.selectFirst("h2").text();
                     String courseNumber = tdNameAndNumber.substring(0, 5);
@@ -79,18 +85,48 @@ public class Threader implements Runnable {
 
                     synchronized (coursesList) {
                         coursesList.add(courseDetails);
-
                     }
 
-                }
-            } catch (Exception e) {
-                System.out.println(e.toString());
 
+                    long fetchEndTimeParse = System.currentTimeMillis();
+                    System.out.println("Parse time for  " + page + ": " + (fetchEndTimeParse - fetchStartTimeParse) + " ms.");
+
+                    long fetchStartTimeWrite = System.currentTimeMillis();
+                    
+                    appendJson(courseDetails);
+
+                    
+                    long fetchEndTimeWrite = System.currentTimeMillis();
+                    System.out.println("Write time for  " + page + ": " + (fetchEndTimeWrite - fetchStartTimeWrite) + " ms.");
+                    System.out.println(courseDetails);
+
+                
+                
+            } catch (Exception e) {
+                System.err.println("Error processing " + subPage + ": " + e.getMessage());
             }
         }
-    }
+        }
+    
 
     public synchronized ArrayList<HashMap<String, String>> getCoursesList() {
         return new ArrayList<>(coursesList);
+    }
+
+    // Hovedprogram skal slette filen efter at have taget informationen
+    public synchronized void appendJson(HashMap<String, String> courseDetails){
+        Gson gson = new GsonBuilder().setPrettyPrinting().create(); 
+
+        try (FileWriter writer = new FileWriter("courses.json", true)) {
+            
+            writer.write(gson.toJson(courseDetails) + "\n");
+            
+            } // Skriv data til JSON-fil
+            catch(IOException e){
+                e.printStackTrace();
+            }
+
+
+        
     }
 }
