@@ -5,10 +5,11 @@ import com.google.gson.*;
 import okhttp3.*;
 import java.io.*;
 import java.util.*;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
+
 import kotlin.*;
 import okio.Buffer;
-
-
 
 // Dette er en Threader klasse. Den får et link fra Crawleren. Hvis Crawleren 
 
@@ -18,17 +19,24 @@ public class Threader implements Runnable {
     private final OkHttpClient httpClient;
     private String subPage;
     private Map<String, String> cookies;
+    private CountDownLatch latch;
+    private Crawler crawler;
     private String[] lglPlacements = { "E1A", "E2A", "E3A", "E4A", "E5A", "E1B", "E2B", "E3B", "E4B", "E5B", "E7", "E1", "E2", "E3", "E4", "E5", "E6",
             "F1A", "F2A", "F3A", "F4A", "F5A", "F1B", "F2B", "F3B", "F4B", "F5B", "F7", "F1", "F2", "F3", "F4", "F5", "F6",
             "Januar", "August", "Juni", "Efterår", "Forår"};
     private String[] lglTypes = { "Bachelor", "Deltidsdiplom", "Diplom", "Deltidsmaster", "Ph.d.", "Kandidat" };
     private ArrayList<HashMap<String, String>> coursesList = new ArrayList<>();
-    
 
-    public Threader(List<String> batch, Map<String, String> cookies) {
+    public Threader(List<String> batch, Map<String, String> cookies, CountDownLatch latch, Crawler crawler) {
         this.batch = batch;
         this.cookies = cookies;
-        this.httpClient = new OkHttpClient();
+        this.latch = latch;
+        this.crawler = crawler;
+        this.httpClient = new OkHttpClient.Builder()
+                .connectTimeout(30, TimeUnit.SECONDS)
+                .readTimeout(30, TimeUnit.SECONDS)
+                .writeTimeout(30, TimeUnit.SECONDS)
+                .build();
     }
 
     public void run() {
@@ -38,13 +46,14 @@ public class Threader implements Runnable {
                 break; // Exit if no links are left
             }
 
-
             Request request = buildRequest(mainURL + page);
             
             httpClient.newCall(request).enqueue(new Callback() {
                 @Override
                 public void onFailure(Call call, IOException e) {
                     System.err.println("Failed to fetch " + page + ": " + e.getMessage());
+                    latch.countDown();
+                    e.printStackTrace();
                 }
                 
                 @Override
@@ -53,18 +62,27 @@ public class Threader implements Runnable {
                     
                     if (!response.isSuccessful()) {
                         System.err.println("Failed response for " + page + ": " + response.message());
+                        latch.countDown();
                         return;
                     }
+                    
                     String responseBody = response.body().string();
                     long fetchEndTime = System.currentTimeMillis();
                     System.out.println("Network fetch time for " + page + ": " + (fetchEndTime - fetchStartTime) + " ms.");
-                    parsePage(responseBody, page);
+
+                    try {
+                        parsePage(responseBody, page);
+                        crawler.percentageCalc();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    } finally {
+                        latch.countDown();
+                    }
                     batch.remove(page);
                 }
             });
         }
     }
-    
 
     public synchronized ArrayList<HashMap<String, String>> getCoursesList() {
         return new ArrayList<>(coursesList);
@@ -75,10 +93,10 @@ public class Threader implements Runnable {
         Gson gson = new GsonBuilder().setPrettyPrinting().create(); 
         try (FileWriter writer = new FileWriter("courses.json", true)) {
             writer.write(gson.toJson(courseDetails) + "\n");
-            } // Skriv data til JSON-fil
-            catch(IOException e){
-                e.printStackTrace();
-            }
+        } // Skriv data til JSON-fil
+        catch(IOException e){
+            e.printStackTrace();
+        }
     }
 
     private Request buildRequest(String url) {
@@ -119,9 +137,7 @@ public class Threader implements Runnable {
 
         String placements = "";
         for (String searchword : lglPlacements) {
-            // System.out.println("Checking" + searchword);
             if (tdPlacement.text().contains(searchword)) {
-                // System.out.println("Found" + searchword);
                 placements = placements + "-" + searchword.toString();
             }
         }
@@ -133,7 +149,6 @@ public class Threader implements Runnable {
                 break;
             }
         }
-
         courseDetails.put("ECTS", tdECTS.text());
         courseDetails.put("institute", tdInstitute.text());
 
@@ -147,6 +162,5 @@ public class Threader implements Runnable {
         appendJson(courseDetails);
         long fetchEndTimeWrite = System.currentTimeMillis();
         System.out.println("Write time for  " + page + ": " + (fetchEndTimeWrite - fetchStartTimeWrite) + " ms.");
-        
     }
 }
