@@ -2,6 +2,8 @@
 //                                                      IMPORTS                                                              //
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.FileReader;
@@ -13,16 +15,20 @@ import java.util.List;
 import java.util.Arrays;
 import java.util.Comparator;
 
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                      CLASS SORTER                                                         //
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
 public class Sorter {
 
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //                                                   MAIN FUNCTION                                                        //     
+    //                                                   MAIN FUNCTIONS                                                       //     
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
 
@@ -40,11 +46,8 @@ public class Sorter {
         //table = sorter.sortTable(table[1], 0, true); // Den kan åbenbart ikke sortere ordenligt efter ECTS
         //sorter.printMatrix(table);
 
-        //String[][][] courseWithPlacement = sorter.searchCourseWithPlacement("E1A");
-        //System.out.println(courseWithPlacement);
-
-        //String[][][] courseWithInstitute = sorter.searchCourseWithInstitute("01");
-        //System.out.println(courseWithInstitute);
+        String[][][] filteredSearch = sorter.filterSearch("E1A", "fysik");
+        System.out.println(filteredSearch);
     }
 
     ////////////////////////////////////////////////////getTable()/////////////////////////////////////////////
@@ -116,7 +119,7 @@ public class Sorter {
             return result;
         }
 
-    /////////////////////////////////////////////////////searchCourses(String)///////////////////////////
+    /////////////////////////////////////////////////////searchCourses(String)///////////////////////////////////////////////
 
         public String[][][] searchCourses(String searchTerm) {
             List<HashMap<String, String>> data = getData();
@@ -154,18 +157,22 @@ public class Sorter {
             }
         }
 
-    //////////////////////////////////searchCourseWithPlacement(String)////////////////////////////////////////////////
-        
-        public String[][][] searchCourseWithPlacement(String query) {
-            List<HashMap<String, String>> data = getData();
-            String[][][] result = new String[2][][];
-            String[][] coloumnnames = {{"Kursus nr."}, {"Kursusnavn"}, {"Skemaplacering"}, {"ECTS"}, {"Type"}, {"Institut"}};
-            List<String[]> resultList = new ArrayList<>();
-            
-            
+    ////////////////////////////////////////filterSearch(String, String)////////////////////////////////////////////////
+    
+    public String[][][] filterSearch(String placement, String institute) {
+        List<HashMap<String, String>> data = getData();
+        String[][][] result = new String[2][][];
+        String[][] coloumnnames = {{"Kursus nr."}, {"Kursusnavn"}, {"Skemaplacering"}, {"ECTS"}, {"Type"}, {"Institut"}};
+        List<String[]> resultsList = new ArrayList<>();
 
+        if (placement == null && institute == null) {
+            System.out.println("Invalid input");
+            return null;
+        }
+
+        else if (placement == null && institute != null) {
             for (HashMap<String, String> course : data) {
-                if (course.get("placement").toLowerCase().contains(query.toLowerCase())) {
+                if (course.get("institute").toLowerCase().contains(institute.toLowerCase())) {
                         String[] courseArray = {
                             course.get("number"), //course_number
                             course.get("name"), //course_name
@@ -174,29 +181,20 @@ public class Sorter {
                             course.get("type"), // Type
                             course.get("institute") // Institute
                         };
-                        resultList.add(courseArray);
+                        resultsList.add(courseArray);
                     }
             }
 
-            String[][] results = resultList.toArray(new String[0][0]); 
+            String[][] results = resultsList.toArray(new String[0][0]); 
             result[0] = coloumnnames;
             result[1] = results;
-            //printMatrix(result);
+            printMatrix(result);
             return result;
         }
 
-        //////////////////////////////////searchCourseWithInstitute(String)////////////////////////////////////////////////
-        
-        public String[][][] searchCourseWithInstitute(String query) {
-            List<HashMap<String, String>> data = getData();
-            String[][][] result = new String[2][][];
-            String[][] coloumnnames = {{"Kursus nr."}, {"Kursusnavn"}, {"Skemaplacering"}, {"ECTS"}, {"Type"}, {"Institut"}};
-            List<String[]> resultList = new ArrayList<>();
-            
-            
-
+        else if (placement != null && institute == null) {
             for (HashMap<String, String> course : data) {
-                if (course.get("institute").toLowerCase().contains(query.toLowerCase())) {
+                if (course.get("placement").toLowerCase().contains(placement.toLowerCase())) {
                         String[] courseArray = {
                             course.get("number"), //course_number
                             course.get("name"), //course_name
@@ -205,16 +203,39 @@ public class Sorter {
                             course.get("type"), // Type
                             course.get("institute") // Institute
                         };
-                        resultList.add(courseArray);
+                        resultsList.add(courseArray);
                     }
             }
 
-            String[][] results = resultList.toArray(new String[0][0]); 
+            String[][] results = resultsList.toArray(new String[0][0]); 
             result[0] = coloumnnames;
             result[1] = results;
-            //printMatrix(result);
+            printMatrix(result);
             return result;
         }
+
+        else {
+            for (HashMap<String, String> course : data) {
+                if (course.get("placement").toLowerCase().contains(placement.toLowerCase()) && course.get("institute").toLowerCase().contains(institute.toLowerCase())) {
+                        String[] courseArray = {
+                            course.get("number"), //course_number
+                            course.get("name"), //course_name
+                            placementHelper(course.get("placement")), //schedule_placement
+                            course.get("ECTS"), // ECTS
+                            course.get("type"), // Type
+                            course.get("institute") // Institute
+                        };
+                        resultsList.add(courseArray);
+                    }
+            }
+
+            String[][] results = resultsList.toArray(new String[0][0]); 
+            result[0] = coloumnnames;
+            result[1] = results;
+            printMatrix(result);
+            return result;
+        }
+    }
 
 
 
@@ -273,5 +294,69 @@ public class Sorter {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-//Removed from this version of the code
+//String[][][] courseWithPlacement = sorter.searchCourseWithPlacement("E1A");
+//System.out.println(courseWithPlacement);
 
+//String[][][] courseWithInstitute = sorter.searchCourseWithInstitute("01");
+//System.out.println(courseWithInstitute);
+
+
+/*/////////////////////////////////searchCourseWithPlacement(String)////////////////////////////////////////////////
+        
+public String[][][] searchCourseWithPlacement(String query) {
+    List<HashMap<String, String>> data = getData();
+    String[][][] result = new String[2][][];
+    String[][] coloumnnames = {{"Kursus nr."}, {"Kursusnavn"}, {"Skemaplacering"}, {"ECTS"}, {"Type"}, {"Institut"}};
+    List<String[]> resultList = new ArrayList<>();
+    
+    for (HashMap<String, String> course : data) {
+        if (course.get("placement").toLowerCase().contains(query.toLowerCase())) {
+                String[] courseArray = {
+                    course.get("number"), //course_number
+                    course.get("name"), //course_name
+                    placementHelper(course.get("placement")), //schedule_placement
+                    course.get("ECTS"), // ECTS
+                    course.get("type"), // Type
+                    course.get("institute") // Institute
+                };
+                resultList.add(courseArray);
+            }
+    }
+
+    String[][] results = resultList.toArray(new String[0][0]); 
+    result[0] = coloumnnames;
+    result[1] = results;
+    //printMatrix(result);
+    return result;
+}
+
+//////////////////////////////////searchCourseWithInstitute(String)////////////////////////////////////////////////
+
+public String[][][] searchCourseWithInstitute(String query) {
+    List<HashMap<String, String>> data = getData();
+    String[][][] result = new String[2][][];
+    String[][] coloumnnames = {{"Kursus nr."}, {"Kursusnavn"}, {"Skemaplacering"}, {"ECTS"}, {"Type"}, {"Institut"}};
+    List<String[]> resultList = new ArrayList<>();
+
+    for (HashMap<String, String> course : data) {
+        if (course.get("institute").toLowerCase().contains(query.toLowerCase())) {
+                String[] courseArray = {
+                    course.get("number"), //course_number
+                    course.get("name"), //course_name
+                    placementHelper(course.get("placement")), //schedule_placement
+                    course.get("ECTS"), // ECTS
+                    course.get("type"), // Type
+                    course.get("institute") // Institute
+                };
+                resultList.add(courseArray);
+            }
+    }
+
+    String[][] results = resultList.toArray(new String[0][0]); 
+    result[0] = coloumnnames;
+    result[1] = results;
+    //printMatrix(result);
+    return result;
+}
+
+*/
