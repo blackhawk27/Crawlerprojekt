@@ -15,6 +15,10 @@
 */
 
 
+// ╔══════════════════════════════════════════════════════════════════════════╗
+// ║                              IMPORTS                                     ║
+// ╚══════════════════════════════════════════════════════════════════════════╝
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -28,6 +32,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import javax.swing.*;
+import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 import javax.swing.table.TableCellRenderer;
@@ -121,49 +126,88 @@ public class CourseAnalyzer {
         // ║                           SIDEBAR PANEL                                  ║
         // ╚══════════════════════════════════════════════════════════════════════════╝
 
-        // Sidebar med dropdown-menu
-        JPanel sidebarPanel = new JPanel(new FlowLayout(FlowLayout.LEFT)); // Vandret layout
-        sidebarPanel.setPreferredSize(new Dimension(200, frame.getHeight())); // Fast bredde
-        sidebarPanel.setBorder(BorderFactory.createEmptyBorder(10, 30, 10, 10)); // Margen
-
-        JLabel inputLabel = new JLabel("Indtast søgetekst:");
-        inputLabel.setFont(new Font("SansSerif", Font.PLAIN, 14));
-
-        JTextField inputField = new JTextField(15); // Inputfelt med bredde
-        inputField.setMaximumSize(new Dimension(200, 30)); // Begræns bredde
-
-        JButton searchButton = new JButton("Søg");
-        searchButton.setFont(new Font("SansSerif", Font.PLAIN, 14));
-
-        JLabel dropdownLabel = new JLabel("Vælg placering:");
-        dropdownLabel.setFont(new Font("SansSerif", Font.PLAIN, 14));
-
-        JComboBox<String> dropdown = new JComboBox<>(new String[] { "Placering" });
-        dropdown.setFont(new Font("SansSerif", Font.PLAIN, 14));
-
-        // Tilføj inputfelt og søgeknap
-        sidebarPanel.add(inputLabel);
-        sidebarPanel.add(inputField);
-        sidebarPanel.add(searchButton);
-
-        // Tilføj dropdown-menuen og label til sidebar
-        sidebarPanel.add(dropdownLabel);
-        sidebarPanel.add(dropdown);
-
-        mainPanel.add(sidebarPanel, BorderLayout.WEST);
+        // Sidebar med vertikalt layout
+        JPanel sidebarPanel = new JPanel();
+        sidebarPanel.setLayout(new BoxLayout(sidebarPanel, BoxLayout.Y_AXIS));
+        sidebarPanel.setPreferredSize(new Dimension(220, frame.getHeight()));
+        sidebarPanel.setBorder(BorderFactory.createTitledBorder(
+        BorderFactory.createEtchedBorder(), "Søg og filtrér", 
+        TitledBorder.CENTER, TitledBorder.TOP, new Font("SansSerif", Font.BOLD, 16), Color.BLUE));
 
 
         // ╔══════════════════════════════════════════════════════════════════════════╗
         // ║                            PROGRESS BAR                                  ║
         // ╚══════════════════════════════════════════════════════════════════════════╝
 
-        // Opret og tilføj progressBar til sidebar
-        progressBar = new JProgressBar(0, 100); // Sørg for, at progressBar er en instansvariabel
+        // Progressbar tekst
+        JLabel progressLabel = new JLabel("Crawler database...");
+        progressLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        progressLabel.setFont(new Font("SansSerif", Font.BOLD, 12));
+        progressLabel.setForeground(Color.BLUE);
+
+        // Progress bar
+        progressBar = new JProgressBar(0, 100);
         progressBar.setValue(0);
         progressBar.setStringPainted(true);
-        progressBar.setAlignmentX(Component.LEFT_ALIGNMENT); // Juster til venstre
-        sidebarPanel.add(Box.createVerticalStrut(10)); // Tilføj lidt plads mellem dropdown og progressBar
+        progressBar.setAlignmentX(Component.CENTER_ALIGNMENT);
+        progressBar.setMaximumSize(new Dimension(200, 25)); // Juster størrelse
+
+        // Tilføj progressLabel og progressBar øverst
+        sidebarPanel.add(progressLabel);
+        sidebarPanel.add(Box.createVerticalStrut(10)); // Mellemrum
         sidebarPanel.add(progressBar);
+        sidebarPanel.add(Box.createVerticalStrut(20)); // Mellemrum
+
+
+        // ╔══════════════════════════════════════════════════════════════════════════╗
+        // ║                        INPUT OG SØG-KNAP                                 ║
+        // ╚══════════════════════════════════════════════════════════════════════════╝
+
+
+        // Inputlabel og tekstfelt
+        JLabel inputLabel = new JLabel("Indtast søgetekst:");
+        inputLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        inputLabel.setFont(new Font("SansSerif", Font.PLAIN, 14));
+
+        JTextField inputField = new JTextField(15);
+        inputField.setMaximumSize(new Dimension(200, 30)); // Fast bredde
+        inputField.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        // Søg-knap
+        JButton searchButton = new JButton("Søg");
+        searchButton.setFont(new Font("SansSerif", Font.PLAIN, 14));
+        searchButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        searchButton.setPreferredSize(new Dimension(100, 30));
+
+        // ╔══════════════════════════════════════════════════════════════════════════╗
+        // ║                           DROPDOWN-MENU                                  ║
+        // ╚══════════════════════════════════════════════════════════════════════════╝
+
+        // Dropdown label
+        JLabel dropdownLabel = new JLabel("Vælg placering:");
+        dropdownLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        dropdownLabel.setFont(new Font("SansSerif", Font.PLAIN, 14));
+
+        // Dropdown-menu
+        JComboBox<String> dropdown = new JComboBox<>(new String[]{"Placering"});
+        dropdown.setFont(new Font("SansSerif", Font.PLAIN, 14));
+        dropdown.setAlignmentX(Component.CENTER_ALIGNMENT);
+        dropdown.setMaximumSize(new Dimension(200, 30));
+
+
+        // ╔══════════════════════════════════════════════════════════════════════════╗
+        // ║                    TILFØJ KOMPONENTER TIL SIDEBAR                        ║
+        // ╚══════════════════════════════════════════════════════════════════════════╝
+
+        sidebarPanel.add(inputLabel);
+        sidebarPanel.add(Box.createVerticalStrut(10)); // Mellemrum
+        sidebarPanel.add(inputField);
+        sidebarPanel.add(Box.createVerticalStrut(10)); // Mellemrum
+        sidebarPanel.add(searchButton);
+        sidebarPanel.add(Box.createVerticalStrut(20)); // Mellemrum
+        sidebarPanel.add(dropdownLabel);
+        sidebarPanel.add(Box.createVerticalStrut(10)); // Mellemrum
+        sidebarPanel.add(dropdown);
 
         // Tilføj sidebar til mainPanel
         mainPanel.add(sidebarPanel, BorderLayout.WEST);
@@ -508,5 +552,6 @@ public class CourseAnalyzer {
             //statusLabel.setText(statusMessage);
         });
     }
+
 
 }

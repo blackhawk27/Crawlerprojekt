@@ -1,12 +1,9 @@
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                                                                                                                           //
-//                                                      IMPORTS                                                              //
-//                                                                                                                           //
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
+// ╔══════════════════════════════════════════════════════════════════════════╗
+// ║                              IMPORTS                                     ║
+// ╚══════════════════════════════════════════════════════════════════════════╝
 
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import java.io.FileReader;
 import java.io.IOException;
@@ -17,268 +14,263 @@ import java.util.List;
 import java.util.Arrays;
 import java.util.Comparator;
 
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                                                                                                                           //
-//                                                      CLASS SORTER                                                         //
-//                                                                                                                           //
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
+// ╔══════════════════════════════════════════════════════════════════════════╗
+// ║                              CLASS SORTER                                ║
+// ║ Håndterer sortering, søgning og behandling af kursusdata fra JSON-filer. ║
+// ╚══════════════════════════════════════════════════════════════════════════╝
 
 public class Sorter {
 
+    private static final Object fileLock = new Object();
 
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //                                                                                                                        //
-    //                                                   MAIN FUNCTIONS                                                       // 
-    //                                                                                                                        //    
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-
-    //Uncomment the main function to test the code. 
-    //Remember to uncomment the printMatrix() method in the "Helperfunctions" section, and in the method you want
-    //to test to see the output. 
+    // ╔══════════════════════════════════════════════════════════════════════════╗
+    // ║                           MAIN FUNCTION                                  ║
+    // ║ Testfunktion til at køre forskellige metoder i Sorter-klassen.           ║
+    // ╚══════════════════════════════════════════════════════════════════════════╝
 
     public static void main(String[] args) {
+        
         Sorter sorter = new Sorter();
 
-        //String[][][] allData = sorter.getTable();
-        //System.out.println(allData); 
-
-        //String[][][] results = sorter.searchCourses("10060");
-        //System.out.println(results);
-
-        //String[][][] table = sorter.getTable();
-        //table = sorter.sortTable(table[1], 0, true); // Den kan åbenbart ikke sortere ordenligt efter ECTS
-        //sorter.printMatrix(table);
-
-        //String[][][] filteredSearch = sorter.filterSearch("F4B", "matematik", "diplom");
-        //System.out.println(filteredSearch);
     }
 
-    ////////////////////////////////////////////////////getTable()/////////////////////////////////////////////
+    // ╔══════════════════════════════════════════════════════════════════════════╗
+    // ║                     GENERER TABEL FRA JSON-DATA                          ║
+    // ║ Returnerer en tabelstruktur med kolonnenavne og kursusdata.              ║
+    // ╚══════════════════════════════════════════════════════════════════════════╝
 
-        public String[][][] getTable() {
-            String [][][] table = new String[2][][];
+    public String[][][] getTable() {
+        String[][][] table = new String[2][][];
 
-            try{
-                List<HashMap<String, String>> data = getData();                                                 //Get the data from the json file
-                String[][] Matrix = new String[data.size()][6];
-                String[][] columnNames = {{"Kursus nr."}, {"Kursusnavn"}, {"Skemaplacering"}, {"ECTS"}, {"Type"}, {"Institut"}};
-                
-                for (int i = 0; i < data.size(); i++) {                                                         //Iterate through the data and add it to the matrix
-                    HashMap<String, String> course = data.get(i);                                               //Get the course
-                    Matrix[i][0] = course.get("number");                                                    //course_number
-                    Matrix[i][1] = course.get("name");                                                      //course_name
-                    String placement = course.get("placement");
-                    if (placement != null && placement.startsWith("-")) {
-                        Matrix[i][2] = placement.substring(1).replace("-", ", "); //schedule_placement
-                    }
-                    else {
-                        Matrix[i][2] = placement != null ? placement : "";                                      //schedule_placement
-                    }
-                    Matrix[i][3] = course.get("ECTS");                                                      // ECTS
-                    Matrix[i][4] = course.get("type");                                                      // Type
-                    Matrix[i][5] = course.get("institute");                                                 // Institute
+        try {
+            List<HashMap<String, String>> data = getData();
+            String[][] Matrix = new String[data.size()][6];
+            String[][] columnNames = { { "Kursus nr." }, { "Kursusnavn" }, { "Skemaplacering" }, { "ECTS" }, { "Type" },
+                    { "Institut" } };
+
+            for (int i = 0; i < data.size(); i++) {
+                HashMap<String, String> course = data.get(i);
+                Matrix[i][0] = course.get("number"); // course_number
+                Matrix[i][1] = course.get("name"); // course_name
+                String placement = course.get("placement");
+                if (placement != null && placement.startsWith("-")) {
+                    Matrix[i][2] = placement.substring(1).replace("-", ", "); // schedule_placement
+                } else {
+                    Matrix[i][2] = placement != null ? placement : ""; // schedule_placement
                 }
-                table[0] = columnNames;
-                table[1] = Matrix;
+                Matrix[i][3] = course.get("ECTS"); // ECTS
+                Matrix[i][4] = course.get("type"); // Type
+                Matrix[i][5] = course.get("institute"); // Institute
+            }
+            table[0] = columnNames;
+            table[1] = Matrix;
 
-                //printMatrix(table); 
-            }
-            catch (Exception ed) {                                                                              //Catch exceptions
-                ed.printStackTrace();
-            }
-            return table;
+            // printMatrix(table); //Prints the table
+
+        } catch (Exception ed) {
+            ed.printStackTrace();
         }
+        return table;
+    }
 
-    //////////////////////////////////////////////////////////sortTable()///////////////////////////////////////////////////
-        
-        public String[][][] sortTable(String[][] table, int columnIndex, boolean ascending) {
-            String[][][] result = new String[2][][];
-            String[][] coloumnnames = {{"Kursus nr."}, {"Kursusnavn"}, {"Skemaplacering"}, {"ECTS"}, {"Type"}, {"Institut"}};
+    // ╔══════════════════════════════════════════════════════════════════════════╗
+    // ║                           SORTER DATA                                    ║
+    // ║ Sorterer tabellen baseret på en kolonne og sorteringsrækkefølge.         ║
+    // ╚══════════════════════════════════════════════════════════════════════════╝
 
-            if (table == null || table.length <= 1 || columnIndex < 0 || columnIndex >= table[0].length) {       //Check if the input is valid
-                System.out.println("Invalid input");
-                return null;
-            }
-            
-            Arrays.sort(table, 0, table.length, new Comparator<String[]>() {                            //Sort the table
-                @Override                                                                                         //Override the compare method
-                public int compare(String[] row1, String[] row2) {                                                //Compare the rows
-                    if (columnIndex == 3) {
-                        Double value1 = Double.parseDouble(row1[columnIndex].replace(",","."));
-                        Double value2 = Double.parseDouble(row2[columnIndex].replace(",","."));
-                        return ascending ? value1.compareTo(value2) : value2.compareTo(value1); 
-                    }
-                    else {
-                        return ascending ? row1[columnIndex].compareTo(row2[columnIndex]) : row2[columnIndex].compareTo(row1[columnIndex]);
-                    }
-                }
-            });
-            result[0] = coloumnnames;                                                                             // Asemble the result
-            result[1] = table;
-            //printMatrix(result);
-            return result;
-        }   
-
-    /////////////////////////////////////////////////////searchCourses(String)///////////////////////////////////////////////
-
-        public String[][][] searchCourses(String searchTerm) {
-            List<HashMap<String, String>> data = getData();                         //Get the data from the json file
-            String[][][] result = new String[2][][];
-            String[][] coloumnnames = {{"Kursus nr."}, {"Kursusnavn"}, {"Skemaplacering"}, {"ECTS"}, {"Type"}, {"Institut"}};
-            List<String[]> resultsList = new ArrayList<>();
-
-            for (HashMap<String, String> course : data) {                           //Iterate through the data
-                for (String value : course.values()){
-                    if (value.toLowerCase().contains(searchTerm.toLowerCase())) {
-                        String[] courseArray = {
-                            course.get("number"),                               //course_number
-                            course.get("name"),                                 //course_name
-                            placementHelper(course.get("placement")),           //schedule_placement
-                            course.get("ECTS"),                                 // ECTS
-                            course.get("type"),                                 // Type
-                            course.get("institute")                             // Institute
-                        };
-                        resultsList.add(courseArray);
-                        break;
-                    }
-                }
-            }
-
-            if (resultsList.isEmpty()) {                                            //Check if the list is empty
-                System.out.println("No match found for searchterm");
-                return null;
-            }
-            else {
-                String[][] results = resultsList.toArray(new String[0][0]); 
-                result[0] = coloumnnames;                                           // Asemble the result
-                result[1] = results;
-                //printMatrix(result);
-                return result;
-            }
-        }
-
-    ////////////////////////////////////////filterSearch(String, String, String)////////////////////////////////////////////////
-    
-    public String[][][] filterSearch(String placement, String institute, String type) {
-        List<HashMap<String, String>> data = getData();                 // get the data from the json file
+    public String[][][] sortTable(String[][] table, int columnIndex, boolean ascending) {
         String[][][] result = new String[2][][];
-        String[][] coloumnnames = {{"Kursus nr."}, {"Kursusnavn"}, {"Skemaplacering"}, {"ECTS"}, {"Type"}, {"Institut"}};
-        List<String[]> resultsList = new ArrayList<>();
+        String[][] coloumnnames = { { "Kursus nr." }, { "Kursusnavn" }, { "Skemaplacering" }, { "ECTS" }, { "Type" },
+                { "Institut" } };
 
-        if (placement == null && institute == null && type == null) {   //Check if the input is valid
+        if (table == null || table.length <= 1 || columnIndex < 0 || columnIndex >= table[0].length) {
             System.out.println("Invalid input");
             return null;
         }
 
+        Arrays.sort(table, 0, table.length, new Comparator<String[]>() {
+            @Override
+            public int compare(String[] row1, String[] row2) {
+                if (columnIndex == 3) {
+                    Double value1 = Double.parseDouble(row1[columnIndex].replace(",", "."));
+                    Double value2 = Double.parseDouble(row2[columnIndex].replace(",", "."));
+                    return ascending ? value1.compareTo(value2) : value2.compareTo(value1);
+                } else {
+                    return ascending ? row1[columnIndex].compareTo(row2[columnIndex])
+                            : row2[columnIndex].compareTo(row1[columnIndex]);
+                }
+            }
+        });
+        result[0] = coloumnnames;
+        result[1] = table;
+        // printMatrix(result);
+        return result;
+    }
+
+    // ╔══════════════════════════════════════════════════════════════════════════╗
+    // ║                     SØG KURSER BASERET PÅ FORESPØRGSEL                   ║
+    // ║          Finder kurser, der matcher det angivne søgeterm.                ║
+    // ╚══════════════════════════════════════════════════════════════════════════╝
+
+    public String[][][] searchCourses(String searchTerm) {
+        List<HashMap<String, String>> data = getData();
+        String[][][] result = new String[2][][];
+        String[][] coloumnnames = { { "Kursus nr." }, { "Kursusnavn" }, { "Skemaplacering" }, { "ECTS" }, { "Type" },
+                { "Institut" } };
+        List<String[]> resultsList = new ArrayList<>();
+
         for (HashMap<String, String> course : data) {
-            if (matchesCriteria(course, placement, institute, type)) {  //Check if the course matches the criteria
+            for (String value : course.values()) {
+                if (value.toLowerCase().contains(searchTerm.toLowerCase())) {
                     String[] courseArray = {
-                        course.get("number"),                       //course_number
-                        course.get("name"),                         //course_name
-                        placementHelper(course.get("placement")),   //schedule_placement
-                        course.get("ECTS"),                         // ECTS
-                        course.get("type"),                         // Type
-                        course.get("institute")                     // Institute
+                            course.get("number"), // course_number
+                            course.get("name"), // course_name
+                            placementHelper(course.get("placement")), // schedule_placement
+                            course.get("ECTS"), // ECTS
+                            course.get("type"), // Type
+                            course.get("institute") // Institute
                     };
                     resultsList.add(courseArray);
+                    break;
                 }
+            }
         }
 
-        if (resultsList.isEmpty()) {                                    //Check if the list is empty
+        if (resultsList.isEmpty()) {
             System.out.println("No match found for searchterm");
             return null;
-        }
-        else {
-            String[][] results = resultsList.toArray(new String[0][0]); 
-            result[0] = coloumnnames;                                   // Asemble the result
+        } else {
+            String[][] results = resultsList.toArray(new String[0][0]);
+            result[0] = coloumnnames;
             result[1] = results;
-            //printMatrix(result);
+            // printMatrix(result);
             return result;
         }
     }
 
-
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //                                                                                                                //
-    //                                             HELPER FUNCTIONS                                                   //
-    //                                                                                                                //
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // ╔══════════════════════════════════════════════════════════════════════════╗
+    // ║                     SØG KURSER BASERET PÅ PLACERING                      ║
+    // ║ Finder kurser, hvor skemaplaceringen matcher søgetermen.                 ║
+    // ║ Returnerer en tabelstruktur opdelt i kolonnenavne og kursusdata.         ║
+    // ╚══════════════════════════════════════════════════════════════════════════╝
     
 
+    public String[][][] searchCourseWithPlacement(String query) {
+        List<HashMap<String, String>> data = getData();
+        String[][][] result = new String[2][][];
+        String[][] coloumnnames = { { "Kursus nr." }, { "Kursusnavn" }, { "Skemaplacering" }, { "ECTS" }, { "Type" },
+                { "Institut" } };
+        List<String[]> resultList = new ArrayList<>();
 
-    //////////////////////////////////////////////printMatrix(String[][] Matrix)/////////////////////////
-
-        /*
-        private void printMatrix(String[][][] Matrix) { //Helper function to print the matrix (internal use)
-            for (String[][] table : Matrix) {
-                for (String[] row : table) {
-                    System.out.println(String.join(", ", row));
-                }
+        for (HashMap<String, String> course : data) {
+            if (course.get("placement").toLowerCase().contains(query.toLowerCase())) {
+                String[] courseArray = {
+                        course.get("number"), // course_number
+                        course.get("name"), // course_name
+                        placementHelper(course.get("placement")), // schedule_placement
+                        course.get("ECTS"), // ECTS
+                        course.get("type"), // Type
+                        course.get("institute") // Institute
+                };
+                resultList.add(courseArray);
             }
         }
-        */
 
-    ////////////////////////////////////////////placementHelper(String placement)////////////////////////////////////
+        String[][] results = resultList.toArray(new String[0][0]);
+        result[0] = coloumnnames;
+        result[1] = results;
+        // printMatrix(result);
+        return result;
+    }
 
-        private String placementHelper(String placement) {                  //Helper function to format the placement 
-            if (placement != null && placement.startsWith("-")) {    //Check if the placement starts with a "-"
-                placement = placement.substring(1); 
-                placement = placement.replace("-", ", "); 
+    // ╔══════════════════════════════════════════════════════════════════════════╗
+    // ║                     SØG KURSER BASERET PÅ INSTITUT                       ║
+    // ║ Finder kurser, hvor instituttets navn matcher søgetermen.                ║
+    // ║ Returnerer en tabelstruktur opdelt i kolonnenavne og kursusdata.         ║
+    // ╚══════════════════════════════════════════════════════════════════════════╝
+
+    public String[][][] searchCourseWithInstitute(String query) {
+        List<HashMap<String, String>> data = getData();
+        String[][][] result = new String[2][][];
+        String[][] coloumnnames = { { "Kursus nr." }, { "Kursusnavn" }, { "Skemaplacering" }, { "ECTS" }, { "Type" },
+                { "Institut" } };
+        List<String[]> resultList = new ArrayList<>();
+
+        for (HashMap<String, String> course : data) {
+            if (course.get("institute").toLowerCase().contains(query.toLowerCase())) {
+                String[] courseArray = {
+                        course.get("number"), // course_number
+                        course.get("name"), // course_name
+                        placementHelper(course.get("placement")), // schedule_placement
+                        course.get("ECTS"), // ECTS
+                        course.get("type"), // Type
+                        course.get("institute") // Institute
+                };
+                resultList.add(courseArray);
             }
-            else {
-                placement = ""; 
-            }
-            return placement;
         }
 
-    ////////////////////////////////////////////////////////getDATA()/////////////////////////////////////////////////
-    
-    private static List<HashMap<String, String>> getData() {                             //Helper function to get the data from the json file
+        String[][] results = resultList.toArray(new String[0][0]);
+        result[0] = coloumnnames;
+        result[1] = results;
+        // printMatrix(result);
+        return result;
+    }
+
+    // ╔══════════════════════════════════════════════════════════════════════════╗
+    // ║                     UDPRINT TABEL MED KURSER                             ║
+    // ║  Printer en matrix af kursusdata til konsollen.                          ║
+    // ║  Bruges til debugging og visualisering af tabelstrukturer.               ║
+    // ╚══════════════════════════════════════════════════════════════════════════╝
+
+    public void printMatrix(String[][][] Matrix) {
+        for (String[][] table : Matrix) {
+            for (String[] row : table) {
+                System.out.println(String.join(", ", row));
+            }
+        }
+    }
+
+    // ╔══════════════════════════════════════════════════════════════════════════╗
+    // ║                     HJÆLPEFUNKTION TIL PLACERING                         ║
+    // ║ Formaterer og renser skemaplaceringsteksten for brug.                    ║
+    // ╚══════════════════════════════════════════════════════════════════════════╝
+
+    public String placementHelper(String placement) {
+        if (placement != null && placement.startsWith("-")) {
+            placement = placement.substring(1);
+            placement = placement.replace("-", ", ");
+        } else {
+            placement = ""; // schedule_placement
+        }
+        return placement;
+    }
+
+    // ╔══════════════════════════════════════════════════════════════════════════╗
+    // ║                     HENT LISTE OVER KURSER                               ║
+    // ║ Returnerer en kopi af listen over kursusdata (synkroniseret).            ║
+    // ╚══════════════════════════════════════════════════════════════════════════╝
+
+    public static List<HashMap<String, String>> getData() {
         Gson gson = new Gson();
         List<HashMap<String, String>> data = null;
-        
-        try (FileReader reader = new FileReader("courses.json")) {              //Read the json file
-            //PArse JSON til list of HashMaps
-            Type listType = new TypeToken<List<HashMap<String, String>>>(){}.getType();  //Create a list of hashmaps
-            data = gson.fromJson(reader, listType);                                      //Parse the data
-        }
-        catch (IOException ex) {
-            ex.printStackTrace();
+
+        synchronized (fileLock) { // Lås for at sikre korrekt adgang
+            try (FileReader reader = new FileReader("courses.json")) {
+                Type listType = new TypeToken<List<HashMap<String, String>>>() {}.getType();
+                data = gson.fromJson(reader, listType);
+            } catch (IOException e) {
+                System.err.println("Filen kunne ikke læses. Initialiserer tom liste.");
+                data = new ArrayList<>(); // Returner en tom liste, hvis der er I/O-fejl
+            } catch (JsonSyntaxException e) {
+                System.err.println("Ugyldig JSON-struktur. Initialiserer tom liste.");
+                data = new ArrayList<>(); // Returner en tom liste, hvis JSON er ugyldig
+            }
         }
         return data;
-    } 
-
-    ////////////////////////////////////////machtesCrieria(HashMap, String, String, String)/////////////////////////////////////
-    
-    private boolean matchesCriteria(HashMap<String, String> course, String placement, String institute, String type) { //Helper function to check if the course matches the criteria
-        boolean matches = true;
-        if (placement != null) {
-            matches = matches && course.get("placement").toLowerCase().contains(placement.toLowerCase());           //Check if the placement matches
-        } 
-        if (institute != null) {
-            matches = matches && course.get("institute").toLowerCase().contains(institute.toLowerCase());           //Check if the institute matches
-        }
-        if (type != null) {
-            matches = matches && course.get("type").toLowerCase().contains(type.toLowerCase());                     //Check if the type matches
-        }
-        return matches;
     }
+
+
 }
 
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                                                                                                                           //
-//                                                     OLD CODE AND NOTES                                                    //
-//                                                                                                                           //
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-//Removed from this version of the code

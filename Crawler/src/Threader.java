@@ -1,3 +1,8 @@
+
+// ╔══════════════════════════════════════════════════════════════════════════╗
+// ║                              IMPORTS                                     ║
+// ╚══════════════════════════════════════════════════════════════════════════╝
+
 import org.jsoup.*;
 import org.jsoup.nodes.*;
 import org.jsoup.select.Elements;
@@ -33,6 +38,7 @@ public class Threader implements Runnable {
     private Map<String, String> cookies;                // Cookies til forespørgsler
     private CountDownLatch latch;                       // Synkroniseringsmekanisme til tråde
     private Crawler crawler;                            // Reference til Crawler for progression
+    private final Object fileLock = new Object();
 
     // Gyldige værdier for skemaplacering og kursustyper
     private String[] lglPlacements = { "E1A", "E2A", "E3A", "E4A", "E5A", "E1B", "E2B", "E3B", 
@@ -140,14 +146,27 @@ public class Threader implements Runnable {
     // ║ Appender kursusdetaljer til en JSON-fil for vedvarende lagring.          ║
     // ╚══════════════════════════════════════════════════════════════════════════╝
 
-    // Hovedprogram skal slette filen efter at have taget informationen
     public synchronized void appendJson(HashMap<String, String> courseDetails) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        try (FileWriter writer = new FileWriter("courses.json", true)) {
-            writer.write(gson.toJson(courseDetails) + "\n");
-        } // Skriv data til JSON-fil
-        catch (IOException e) {
-            e.printStackTrace();
+    
+        synchronized (fileLock) { // Brug lås for trådsikkerhed
+            try {
+                // Læs eksisterende data
+                List<HashMap<String, String>> data = Sorter.getData();
+                if (data == null) {
+                    data = new ArrayList<>(); // Start med tom liste, hvis filen er tom
+                }
+    
+                // Tilføj det nye kursus
+                data.add(courseDetails);
+    
+                // Overskriv filen med hele den opdaterede liste
+                try (FileWriter writer = new FileWriter("courses.json")) {
+                    writer.write(gson.toJson(data)); // Gem som gyldigt JSON-array
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
