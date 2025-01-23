@@ -7,14 +7,13 @@ import org.jsoup.*;
 import org.jsoup.nodes.*;
 import org.jsoup.select.Elements;
 import com.google.gson.*;
-import okhttp3.*;
+import okhttp3.*; // Version okhttp-4.11.0
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
-
-import kotlin.*;
-import okio.Buffer;
+import kotlin.*; // Version kotlin-stdlib-1.6.20
+import okio.Buffer; // Version okio-3.5.0 og okio-jvm-3.5.0
 
 
 
