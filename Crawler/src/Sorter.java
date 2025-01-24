@@ -351,5 +351,68 @@ public class Sorter {
     }
 
 
+
+    // ╔══════════════════════════════════════════════════════════════════════════╗
+    // ║                     Ikke implementeret kode                              ║
+    // ║                       Filter søgefunktion:                               ║
+    // ╚══════════════════════════════════════════════════════════════════════════╝
+    // ╔══════════════════════════════════════════════════════════════════════════╗
+    // ║ Denne funktion er ikke implementeret. Den gør det muligit at søge efter  ║
+    // ║ kurser baseret på en kombination af skemaplacering, institut og type.    ║
+    // ╚══════════════════════════════════════════════════════════════════════════╝
+
+    public String[][][] filterSearch(String placement, String institute, String type) {
+        List<HashMap<String, String>> data = getData();                 // get the data from the json file
+        String[][][] result = new String[2][][];
+        String[][] coloumnnames = {{"Kursus nr."}, {"Kursusnavn"}, {"Skemaplacering"}, {"ECTS"}, {"Type"}, {"Institut"}};
+        List<String[]> resultsList = new ArrayList<>();
+
+        if (placement == null && institute == null && type == null) {   //Check if the input is valid
+            System.out.println("Invalid input");
+            return null;
+        }
+
+        for (HashMap<String, String> course : data) {
+            if (matchesCriteria(course, placement, institute, type)) {  //Check if the course matches the criteria
+                    String[] courseArray = {
+                        course.get("number"),                       //course_number
+                        course.get("name"),                         //course_name
+                        placementHelper(course.get("placement")),   //schedule_placement
+                        course.get("ECTS"),                         // ECTS
+                        course.get("type"),                         // Type
+                        course.get("institute")                     // Institute
+                    };
+                    resultsList.add(courseArray);
+                }
+        }
+
+        if (resultsList.isEmpty()) {                                    //Check if the list is empty
+            System.out.println("No match found for searchterm");
+            return null;
+        }
+        else {
+            String[][] results = resultsList.toArray(new String[0][0]); 
+            result[0] = coloumnnames;                                   // Asemble the result
+            result[1] = results;
+            //printMatrix(result);
+            return result;
+        }
+    }
+
+    private boolean matchesCriteria(HashMap<String, String> course, String placement, String institute, String type) { //Helper function to check if the course matches the criteria
+        boolean matches = true;
+        if (placement != null) {
+            matches = matches && course.get("placement").toLowerCase().contains(placement.toLowerCase());           //Check if the placement matches
+        } 
+        if (institute != null) {
+            matches = matches && course.get("institute").toLowerCase().contains(institute.toLowerCase());           //Check if the institute matches
+        }
+        if (type != null) {
+            matches = matches && course.get("type").toLowerCase().contains(type.toLowerCase());                     //Check if the type matches
+        }
+        return matches;
+    }
+
 }
 
+    
