@@ -54,9 +54,11 @@ public class CourseAnalyzer {
     /*───────────────────────────────────────────────────────────────────────────────*/
 
     private JProgressBar progressBar;
-    public static String[][] data;
-    public static String[] columnNames = { "Kursus nr. -", "Kursusnavn -", "Skemaplacering -", "ECTS -", "Type -",
-            "Institut -" };
+    public static String[][] data = {};
+    public static String[] columnNames = { "Kursus nr. -", "Kursusnavn -", "Skemaplacering -", "ECTS -", "Type -", "Institut -" };
+    private DefaultTableModel tableModel;
+    private JTable table; // For tabellen
+    private JFrame frame; // For hovedvinduet
 
 
 
@@ -93,7 +95,7 @@ public class CourseAnalyzer {
         // ╚══════════════════════════════════════════════════════════════════════════╝
 
         // Opret hovedrammen
-        JFrame frame = new JFrame("Crawl Kursusbasen");
+        frame = new JFrame("Crawl Kursusbasen");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Få skærmens dimensioner
@@ -180,19 +182,56 @@ public class CourseAnalyzer {
         searchButton.setPreferredSize(new Dimension(100, 30));
 
         // ╔══════════════════════════════════════════════════════════════════════════╗
-        // ║                           DROPDOWN-MENU                                  ║
+        // ║                           DROPDOWN-MENU Skema                            ║
         // ╚══════════════════════════════════════════════════════════════════════════╝
 
         // Dropdown label
-        JLabel dropdownLabel = new JLabel("Vælg placering:");
-        dropdownLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
-        dropdownLabel.setFont(new Font("SansSerif", Font.PLAIN, 14));
+        JLabel dropdownLabelSkema = new JLabel("Vælg placering:");
+        dropdownLabelSkema.setAlignmentX(Component.CENTER_ALIGNMENT);
+        dropdownLabelSkema.setFont(new Font("SansSerif", Font.PLAIN, 14));
 
         // Dropdown-menu
-        JComboBox<String> dropdown = new JComboBox<>(new String[]{"Placering"});
-        dropdown.setFont(new Font("SansSerif", Font.PLAIN, 14));
-        dropdown.setAlignmentX(Component.CENTER_ALIGNMENT);
-        dropdown.setMaximumSize(new Dimension(200, 30));
+        JComboBox<String> dropdownSkema = new JComboBox<>(new String[]{""});
+        dropdownSkema.setFont(new Font("SansSerif", Font.PLAIN, 14));
+        dropdownSkema.setAlignmentX(Component.CENTER_ALIGNMENT);
+        dropdownSkema.setMaximumSize(new Dimension(200, 30));
+
+        String[] Institutes = { "E1A", "E2A", "E3A", "E4A", "E5A", "E1B", "E2B", "E3B", 
+                                "E4B", "E5B", "E7", "E1", "E2", "E3", "E4", "E5", "E6", 
+                                "F1A", "F2A", "F3A", "F4A", "F5A", "F1B", "F2B", "F3B", 
+                                "F4B", "F5B", "F7", "F1", "F2", "F3", "F4", "F5", "F6",
+                                "Januar", "August", "Juni", "Efterår", "Forår" };
+
+        for (String Institute : Institutes) {
+
+            dropdownSkema.addItem(Institute);
+
+        }
+
+
+
+        // ╔══════════════════════════════════════════════════════════════════════════╗
+        // ║                           DROPDOWN-MENU INSTITUT                         ║
+        // ╚══════════════════════════════════════════════════════════════════════════╝
+
+        // Dropdown label
+        JLabel dropdownLabelInstitut = new JLabel("Vælg institut:");
+        dropdownLabelInstitut.setAlignmentX(Component.CENTER_ALIGNMENT);
+        dropdownLabelInstitut.setFont(new Font("SansSerif", Font.PLAIN, 14));
+
+        // Dropdown-menu
+        JComboBox<String> dropdownInstitut = new JComboBox<>(new String[]{""});
+        dropdownInstitut.setFont(new Font("SansSerif", Font.PLAIN, 14));
+        dropdownInstitut.setAlignmentX(Component.CENTER_ALIGNMENT);
+        dropdownInstitut.setMaximumSize(new Dimension(200, 30));
+
+        String[] institutes = {"01 Institut for Matematik og Computer Science", "10 Institut for Fysik"};
+
+        for (String instutute : institutes) {
+
+            dropdownInstitut.addItem(instutute);
+
+        }
 
 
         // ╔══════════════════════════════════════════════════════════════════════════╗
@@ -205,9 +244,13 @@ public class CourseAnalyzer {
         sidebarPanel.add(Box.createVerticalStrut(10)); // Mellemrum
         sidebarPanel.add(searchButton);
         sidebarPanel.add(Box.createVerticalStrut(20)); // Mellemrum
-        sidebarPanel.add(dropdownLabel);
+        sidebarPanel.add(dropdownLabelSkema);
         sidebarPanel.add(Box.createVerticalStrut(10)); // Mellemrum
-        sidebarPanel.add(dropdown);
+        sidebarPanel.add(dropdownSkema);
+        sidebarPanel.add(Box.createVerticalStrut(10)); // Mellemrum
+        sidebarPanel.add(dropdownLabelInstitut);
+        sidebarPanel.add(Box.createVerticalStrut(10)); // Mellemrum
+        sidebarPanel.add(dropdownInstitut);
 
         // Tilføj sidebar til mainPanel
         mainPanel.add(sidebarPanel, BorderLayout.WEST);
@@ -219,61 +262,141 @@ public class CourseAnalyzer {
         // ╚══════════════════════════════════════════════════════════════════════════╝
 
         // Opret ikke-redigerbar tabelmodel
-        DefaultTableModel tableModel = new DefaultTableModel(data, columnNames) {
+        tableModel = new DefaultTableModel(data, columnNames) {
+
             @Override
             public boolean isCellEditable(int row, int column) {
+
                 return false; // Gør alle celler ikke-redigerbare
+
             }
         };
 
-        JTable table = new JTable(tableModel);
+        table = new JTable(tableModel);
         table.getTableHeader().setReorderingAllowed(false); // Forhindre kolonneflytning
         table.getTableHeader().setFont(new Font("Arial", Font.BOLD, 16));
 
-        // Indstil autoResizeMode
-        table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-
-        // Beregn kolonnebredden baseret på indholdet
-        adjustColumnWidths(table);
-        createClickableColumnHeaders(table, new Sorter());
+        
+        
 
         JScrollPane scrollPane = new JScrollPane(table);
         mainPanel.add(scrollPane, BorderLayout.CENTER);
 
-        searchButton.addActionListener(e -> {
-            String input = inputField.getText().trim(); // Få tekst fra inputfelt
-            if (!input.isEmpty()) {
-                Sorter sorter = new Sorter();
-                String[][][] results = sorter.searchCourses(input); // Kald searchCourses med input
+        // Sørg for at justere kolonnebredden efter GUI'en er blevet vist
+        SwingUtilities.invokeLater(() -> adjustColumnWidths(table));
+        createClickableColumnHeaders(table, new Sorter());
 
-                if (results != null) {
-                    // Opdater tabelmodel med resultaterne
-                    tableModel.setDataVector(results[1], unpackColumnName(results[0]));
-                    adjustColumnWidths(table);
-                } else {
-                    JOptionPane.showMessageDialog(frame, "Ingen resultater fundet for søgetermen.", "Information",
-                            JOptionPane.INFORMATION_MESSAGE);
+
+        // ╔══════════════════════════════════════════════════════════════════════════╗
+        // ║                       ACTIONLISTER TIL SØGEFELT OG KNAP                 ║
+        // ╚══════════════════════════════════════════════════════════════════════════╝
+
+        // Tilføj ActionListener til søgeknappen
+        searchButton.addActionListener(e -> {
+            performSearch(inputField.getText().trim());
+        });
+
+        // Tilføj ActionListener til søgefeltet for at lytte efter Enter-tasten
+        inputField.addActionListener(e -> {
+            performSearch(inputField.getText().trim());
+        });
+
+        
+
+
+        // ╔══════════════════════════════════════════════════════════════════════════╗
+        // ║             ACTIONLISTENER TIL DROPDOWN FOR SKEMAPLACERING               ║
+        // ╚══════════════════════════════════════════════════════════════════════════╝
+
+        dropdownSkema.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                // Hent den valgte værdi fra dropdown-menuen
+                String selectedPlacement = (String) dropdownSkema.getSelectedItem();
+
+                dropdownSkema.removeItem(""); // Fjern den tomme værdi
+
+                // Tjek, om der er valgt en gyldig placering
+                if (selectedPlacement != null && !selectedPlacement.isEmpty()) {
+
+                    // Brug den valgte værdi som query
+                    Sorter sorter = new Sorter();
+                    String[][][] Placements = sorter.searchCourseWithPlacement(selectedPlacement); 
+
+                    if (Placements != null) {
+
+                        // Opdater tabelmodel med resultaterne
+                        tableModel.setDataVector(Placements[1], unpackColumnName(Placements[0]));
+                        adjustColumnWidths(table);
+
+                    } 
+                    
+                    else {
+
+                        JOptionPane.showMessageDialog(frame, "Ingen resultater fundet for søgetermen.", "Information", JOptionPane.INFORMATION_MESSAGE);
+                    }
+
                 }
-            } else {
-                JOptionPane.showMessageDialog(frame, "Indtast en søgetekst.", "Advarsel", JOptionPane.WARNING_MESSAGE);
+
             }
         });
 
-        // ActionListener til dropdown
-        dropdown.addActionListener(new ActionListener() {
+
+        // ╔══════════════════════════════════════════════════════════════════════════╗
+        // ║             ACTIONLISTENER TIL DROPDOWN FOR INSTITUT                     ║
+        // ║  Tilpasser visning af lange tekster og viser tooltip med fuld tekst.     ║
+        // ╚══════════════════════════════════════════════════════════════════════════╝
+
+        // Tilføj en custom renderer til dropdownInstitut for at håndtere lange tekster
+        dropdownInstitut.setRenderer(new DefaultListCellRenderer() {
+            @Override
+            public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+                JLabel label = (JLabel) super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+
+                // Sæt forkortet tekst, hvis den er for lang
+                String text = value != null ? value.toString() : "";
+                if (text.length() > 25) { // Hvis teksten er længere end 25 tegn
+                    label.setText(text.substring(0, 22) + "..."); // Forkort teksten og tilføj "..."
+                } else {
+                    label.setText(text); // Brug original tekst
+                }
+
+                // Sæt tooltip med fuld tekst
+                label.setToolTipText(text);
+                return label;
+            }
+        });
+
+        // Tilføj ActionListener til dropdownInstitut
+        dropdownInstitut.addActionListener(new ActionListener() {
+
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (dropdown.getSelectedItem().equals("Placering")) {
 
-                    // Kald din Sort-klasse for at hente placeringer
+                // Hent den valgte værdi fra dropdown-menuen
+                String selectedInstitute = (String) dropdownInstitut.getSelectedItem();
+
+                dropdownInstitut.removeItem(""); // Fjern den tomme værdi
+
+                // Tjek, om der er valgt et gyldigt institut
+                if (selectedInstitute != null && !selectedInstitute.isEmpty()) {
+
+                    // Brug den valgte værdi som query
                     Sorter sorter = new Sorter();
-                    String[][][] placements = sorter.getTable();
+                    String[][][] institutes = sorter.searchCourseWithInstitute(selectedInstitute); 
 
-                    columnNames = unpackColumnName(placements[0]);
-                    // System.out.println(columnNames);
+                    if (institutes != null) {
 
-                    tableModel.setDataVector(placements[1], columnNames);
-                    adjustColumnWidths(table);
+                        // Opdater tabelmodel med resultaterne
+                        tableModel.setDataVector(institutes[1], unpackColumnName(institutes[0]));
+                        adjustColumnWidths(table);
+
+                    } else {
+
+                        JOptionPane.showMessageDialog(frame, "Ingen resultater fundet for søgetermen.", "Information", JOptionPane.INFORMATION_MESSAGE);
+                    }
                 }
             }
         });
@@ -286,6 +409,41 @@ public class CourseAnalyzer {
 
         // Vis GUI
         frame.setVisible(true);
+    }
+
+
+    // ╔══════════════════════════════════════════════════════════════════════════╗
+    // ║                           SØGEFUNKTION                                   ║
+    // ║ Genbruger søgelogik for både knap og Enter-tast.                         ║
+    // ╚══════════════════════════════════════════════════════════════════════════╝
+
+    private void performSearch(String input) {
+
+        if (!input.isEmpty()) {
+
+            Sorter sorter = new Sorter();
+            String[][][] results = sorter.searchCourses(input); // Kald searchCourses med input
+
+            if (results != null) {
+
+                // Opdater tabelmodel med resultaterne
+                tableModel.setDataVector(results[1], unpackColumnName(results[0]));
+                adjustColumnWidths(table);
+
+            } 
+            
+            else {
+
+                JOptionPane.showMessageDialog(frame, "Ingen resultater fundet for søgetermen.", "Information", JOptionPane.INFORMATION_MESSAGE);
+            }
+
+        } 
+        
+        else {
+
+            JOptionPane.showMessageDialog(frame, "Indtast en søgetekst.", "Advarsel", JOptionPane.WARNING_MESSAGE);
+
+        }
     }
 
     /* ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -376,54 +534,88 @@ public class CourseAnalyzer {
 
     public void adjustColumnWidths(JTable table) {
 
+        // ╔══════════════════════════════════════════════════════════════════════════╗
+        // ║                VALIDER TABELLENS FORÆLDREELEMENT                         ║
+        // ║ Kontrollér, om tabellen har en gyldig forælder (JViewport)               ║
+        // ╚══════════════════════════════════════════════════════════════════════════╝
+
+        if (table.getParent() == null || !(table.getParent() instanceof JViewport)) {
+            System.err.println("Tabelens forælder er null eller ikke en JViewport.");
+            return; // Forlad metoden, hvis der ikke er et gyldigt forældreelement
+        }
 
         // ╔══════════════════════════════════════════════════════════════════════════╗
-        // ║                 GET COLUMN MODEL AND SCREEN SIZE                         ║
+        // ║                    INITIALISER VARIABLER                                 ║
+        // ║ Hent kolonnemodellen og scroll-pane bredden                              ║
         // ╚══════════════════════════════════════════════════════════════════════════╝
 
         TableColumnModel columnModel = table.getColumnModel();
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        int tableWidth = table.getParent().getWidth(); // Brug bredden af scroll-pane
+
+        // ╔══════════════════════════════════════════════════════════════════════════╗
+        // ║          HÅNDTER TABELLER UDEN DATA                                      ║
+        // ║ Hvis tabellen er tom, fordel kolonnebredden ligeligt                     ║
+        // ╚══════════════════════════════════════════════════════════════════════════╝
 
         if (table.getRowCount() == 0) {
-
-            // ╔══════════════════════════════════════════════════════════════════════╗
-            // ║                  SET EQUAL WIDTH FOR ALL COLUMNS                     ║
-            // ╚══════════════════════════════════════════════════════════════════════╝
-
-            int equalWidth = (int) ((screenSize.getWidth() - 200) / table.getColumnCount());
+            int equalWidth = tableWidth / table.getColumnCount();
 
             for (int col = 0; col < table.getColumnCount(); col++) {
-
                 columnModel.getColumn(col).setPreferredWidth(equalWidth);
-
             }
+            return; // Returnér, da der ikke er mere at justere
         }
 
-        else {
+        // ╔══════════════════════════════════════════════════════════════════════════╗
+        // ║          JUSTER KOLONNEBREDDE BASERET PÅ INDHOLD                         ║
+        // ║ Beregn den nødvendige bredde for hver kolonne baseret på cellernes indhold║
+        // ╚══════════════════════════════════════════════════════════════════════════╝
 
+        int totalContentWidth = 0;
+        int[] contentWidths = new int[table.getColumnCount()];
 
-            // ╔══════════════════════════════════════════════════════════════════════╗
-            // ║                  ADJUST WIDTH BASED ON CONTENT                       ║
-            // ╚══════════════════════════════════════════════════════════════════════╝
+        for (int col = 0; col < table.getColumnCount(); col++) {
+            int maxWidth = 75; // Minimum bredde for hver kolonne
+
+            for (int row = 0; row < table.getRowCount(); row++) {
+                TableCellRenderer renderer = table.getCellRenderer(row, col);
+                Component comp = table.prepareRenderer(renderer, row, col);
+                maxWidth = Math.max(comp.getPreferredSize().width, maxWidth);
+            }
+
+            contentWidths[col] = maxWidth + 10; // Tilføj padding
+            totalContentWidth += contentWidths[col];
+        }
+
+        // ╔══════════════════════════════════════════════════════════════════════════╗
+        // ║       FORDEL OVERSKYDENDE PLADS PROPORTIONALT MELLEM KOLONNERNE          ║
+        // ║ Hvis den samlede indholds-bredde er mindre end scroll-pane bredden       ║
+        // ╚══════════════════════════════════════════════════════════════════════════╝
+
+        if (totalContentWidth < tableWidth) {
+            int extraSpace = tableWidth - totalContentWidth;
+
             for (int col = 0; col < table.getColumnCount(); col++) {
-
-                int width = 75; // Minimum bredde
-
-
-
-                for (int row = 0; row < table.getRowCount(); row++) {
-
-                    TableCellRenderer renderer = table.getCellRenderer(row, col);
-                    Component comp = table.prepareRenderer(renderer, row, col);
-                    width = Math.max(comp.getPreferredSize().width, width);
-
-                }
-
-                columnModel.getColumn(col).setPreferredWidth(width + 10); // Tilføj evt. padding
-
+                int additionalWidth = (int) ((double) contentWidths[col] / totalContentWidth * extraSpace);
+                int finalWidth = contentWidths[col] + additionalWidth;
+                columnModel.getColumn(col).setPreferredWidth(finalWidth);
+            }
+        } else {
+            // Hvis indholdet fylder mere end scroll-pane bredden, brug standardbredder
+            for (int col = 0; col < table.getColumnCount(); col++) {
+                columnModel.getColumn(col).setPreferredWidth(contentWidths[col]);
             }
         }
+
+        // ╔══════════════════════════════════════════════════════════════════════════╗
+        // ║          OPDATER TABELLEN OG DEAKTIVÉR AUTORESIZE                        ║
+        // ║ Sørg for, at tabellen opdateres korrekt efter ændringer                  ║
+        // ╚══════════════════════════════════════════════════════════════════════════╝
+
+        table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
     }
+
+    
 
 
 
@@ -432,8 +624,11 @@ public class CourseAnalyzer {
     /*───────────────────────────────────────────────────────────────────────────────*/
 
     public void createClickableColumnHeaders(JTable table, Sorter sorter) {
+
         JTableHeader header = table.getTableHeader();
+
         header.addMouseListener(new MouseAdapter() {
+
             private boolean ascending = true; // Standard sorteringsretning
             private int lastSortedColumn = -1; // Holder styr på sidst sorterede kolonne
 
@@ -452,11 +647,12 @@ public class CourseAnalyzer {
                 DefaultTableModel model = (DefaultTableModel) table.getModel();
                 String[][] currentData = getTableDataFromModel(model);
 
-                // Hvis der klikkes på en ny kolonne, skal sorteringsretningen altid starte med
-                // pil ned
+                // Hvis der klikkes på en ny kolonne, skal sorteringsretningen altid starte med pil ned
                 if (colIndex != lastSortedColumn) {
-                    ascending = true;
-                    lastSortedColumn = colIndex; // Opdater sidst sorterede kolonne
+
+                    ascending = true;               // Start altid med stigende sortering for ny kolonne
+                    lastSortedColumn = colIndex;    // Opdater sidst sorterede kolonne
+
                 }
 
                 // Sortér data med `Sorter`-metoden
@@ -469,13 +665,13 @@ public class CourseAnalyzer {
 
                     if (i == colIndex) {
 
-                        tempColumnName[i] += ascending ? " ▼" : " ▲";
+                        tempColumnName[i] = ascending ? tempColumnName[i].replace(" -", " ▼") : tempColumnName[i].replace(" -", " ▲");
 
                     }
 
                     else {
 
-                        tempColumnName[i] += " -"; // Nulstil andre kolonner
+                        tempColumnName[i] = tempColumnName[i].substring(0, tempColumnName[i].length() - 2) + " -";
 
                     }
                 }
@@ -545,11 +741,17 @@ public class CourseAnalyzer {
 
     }
 
+    /*───────────────────────────────────────────────────────────────────────────────*/
+    /*                          UPDATE PROGRESSBAR VALUE                             */
+    /*───────────────────────────────────────────────────────────────────────────────*/
+
 
     public void updateProgress(int progress, String statusMessage) {
+
         SwingUtilities.invokeLater(() -> {
+
             progressBar.setValue(progress);
-            //statusLabel.setText(statusMessage);
+
         });
     }
 
