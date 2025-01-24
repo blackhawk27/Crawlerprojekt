@@ -143,7 +143,6 @@ class Crawler {
                     threaders.add(threader); // Gem Threader i listen
                     threads[i] = new Thread(threader); // Opret en ny tråd
                     threads[i].start(); // Start tråden
-                    percentageCalc(); // Opdater progressionen
                 }
             }
 
@@ -205,27 +204,6 @@ class Crawler {
 
         System.out.println("Progression: " + numerator + "/" + totalRequests);
         return progress;
-    }
-
-
-    /* ╔══════════════════════════════════════════════════════════════════════════╗
-       ║                             MAIN-METODE                                  ║
-       ║ Programindgangen. Sætter cookies op og starter crawling.                 ║
-       ╚══════════════════════════════════════════════════════════════════════════╝ */
-
-    public static void main(String[] args) {
-
-        Map<String, String> cookies = new HashMap<>();
-
-        // Skal instantieres for at ikke være tom
-        cookies.put("ASP.NET_SessionId", "your-session-id");
-        cookies.put("SRV_ID", "your-server-id");
-
-        // Opret en instans af Crawler med både cookies og progressBar
-        Crawler testCrawler = new Crawler(cookies, this);
-
-        // Start crawling
-        testCrawler.crawl();
     }
 
 }

@@ -1,3 +1,4 @@
+
 // ╔══════════════════════════════════════════════════════════════════════════╗
 // ║                              IMPORTS                                     ║
 // ╚══════════════════════════════════════════════════════════════════════════╝
@@ -32,9 +33,13 @@ public class Threader implements Runnable {
     private final List<String> batch;                   // Batch af links, der skal behandles
     private String mainURL = "https://kurser.dtu.dk";   // Hoved-URL til kurser
     private final OkHttpClient httpClient;              // HTTP-klient til netværksforbindelser
+    private String subPage;                             // Side, der skal behandles
     private Map<String, String> cookies;                // Cookies til forespørgsler
     private CountDownLatch latch;                       // Synkroniseringsmekanisme til tråde
     private Crawler crawler;                            // Reference til Crawler for progression
+    private final Object fileLock = new Object();
+
+    // Gyldige værdier for skemaplacering og kursustyper
     private String[] lglPlacements = { "E1A", "E2A", "E3A", "E4A", "E5A", "E1B", "E2B", "E3B", 
                                        "E4B", "E5B", "E7", "E1", "E2", "E3", "E4", "E5", "E6", 
                                        "F1A", "F2A", "F3A", "F4A", "F5A", "F1B", "F2B", "F3B", 
@@ -44,10 +49,6 @@ public class Threader implements Runnable {
     private String[] lglTypes = { "Bachelor", "Deltidsdiplom", "Diplom", "Deltidsmaster", "Ph.d.", "Kandidat" };
 
     private ArrayList<HashMap<String, String>> coursesList = new ArrayList<>(); // Liste over kursusdata
-
-    private ArrayList<String> failedList = new ArrayList<>(); // Liste over mislykkede forespørgsler
-    private final Object fileLock = new Object();
-    private final Set<String> processedPages = Collections.synchronizedSet(new HashSet<>());
 
 
 
@@ -70,6 +71,8 @@ public class Threader implements Runnable {
                 .writeTimeout(30, TimeUnit.SECONDS)
                 .build();
     }
+
+
     // ╔══════════════════════════════════════════════════════════════════════════╗
     // ║                           RUN-METODEN                                    ║
     // ║ Behandler alle links i batchen, henter data og analyserer siderne.       ║
@@ -82,69 +85,48 @@ public class Threader implements Runnable {
                 System.out.println("Batch er tom.");
                 break; // Afbryd, hvis der ikke er flere links
             }
-            fetchAndProcessPage(page);
-        }
-        // Forsøg at behandle de fejlede links igen
-        parseFailedLinks();
-    }
 
-    // Metode der henter og behandler en side
-    private void fetchAndProcessPage(String page) {
-        if (processedPages.contains(page)) {
-            return; // Skip already processed pages
-        }
-        processedPages.add(page);
+            // Byg en HTTP-forespørgsel for det nuværende link
+            Request request = buildRequest(mainURL + page);
 
-        // Byg en HTTP-forespørgsel for det nuværende link
-        Request request = buildRequest(mainURL + page);
+            // Send forespørgslen og håndter svar
+            httpClient.newCall(request).enqueue(new Callback() {
+                @Override
+                public void onFailure(Call call, IOException e) {
+                    // Log fejl og reducer latch-tælleren
+                    System.err.println("Kunne ikke hente " + page + ": " + e.getMessage());
+                    latch.countDown();
+                    e.printStackTrace();
+                }
 
-        // Send forespørgslen og håndter svar
-        httpClient.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                handleFailure(page, e);
-            }
+                @Override
+                public void onResponse(Call call, Response response) throws IOException {
+                    long fetchStartTime = System.currentTimeMillis();
 
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                try {
+                    // Tjek, om svaret er succesfuldt
                     if (!response.isSuccessful()) {
-                        handleFailure(page, new IOException("Fejl i svar for " + page + ": " + response.message()));
+                        System.err.println("Fejl i svar for " + page + ": " + response.message());
+                        latch.countDown();
                         return;
                     }
 
                     // Hent HTML-indhold fra svaret
                     String responseBody = response.body().string();
-                    // Analyser HTML og opdater progression
-                    parsePage(responseBody, page);
-                    crawler.percentageCalc();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                } finally {
-                    latch.countDown(); // Reducer latch-tælleren
+                    long fetchEndTime = System.currentTimeMillis();
+                    System.out.println(
+                            "Netværks hentetid for " + page + ": " + (fetchEndTime - fetchStartTime) + " ms.");
+
+                    try {
+                        // Analyser HTML og opdater progression
+                        parsePage(responseBody, page);
+                        crawler.percentageCalc();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    } finally {
+                        latch.countDown(); // Reducer latch-tælleren
+                    }
                 }
-            }
-        });
-    }
-
-    private void handleFailure(String page, IOException e) {
-        // Log fejl og reducer latch-tælleren
-        System.err.println("Kunne ikke hente " + page + ": " + e.getMessage());
-        synchronized (failedList) {
-            failedList.add(page);
-        }
-        latch.countDown();
-        e.printStackTrace();
-    }
-
-    // Metode der parser de fejlslagne links
-    public void parseFailedLinks() {
-        if (failedList.isEmpty()) {
-            System.out.println("Ingen links kunne hentes.");
-            return; // Afbryd, hvis der ikke er flere links
-        }
-        for (String page : failedList) {
-            fetchAndProcessPage(page);
+            });
         }
     }
 
@@ -156,6 +138,7 @@ public class Threader implements Runnable {
     public synchronized ArrayList<HashMap<String, String>> getCoursesList() {
         return new ArrayList<>(coursesList);
     }
+
 
     // ╔══════════════════════════════════════════════════════════════════════════╗
     // ║                   GEM DATA SOM JSON                                      ║
@@ -186,6 +169,7 @@ public class Threader implements Runnable {
         }
     }
 
+
     // ╔══════════════════════════════════════════════════════════════════════════╗
     // ║                     BYG HTTP-FORESPØRGSEL                                ║
     // ║ Opretter en GET-forespørgsel med cookies og nødvendige headers.          ║
@@ -213,6 +197,9 @@ public class Threader implements Runnable {
     // ╚══════════════════════════════════════════════════════════════════════════╝
 
     private void parsePage(String html, String page) {
+
+        long fetchStartTimeParse = System.currentTimeMillis();
+
 
         Document coursePageData = Jsoup.parse(html); // Parse HTML med JSoup
 
@@ -255,7 +242,19 @@ public class Threader implements Runnable {
             coursesList.add(courseDetails); 
         }
 
-        
-        appendJson(courseDetails);
+
+        long fetchEndTimeParse = System.currentTimeMillis();
+        System.out.println("Parse time for  " + page + ": " + (fetchEndTimeParse - fetchStartTimeParse) + " ms.");
+
+        long fetchStartTimeWrite = System.currentTimeMillis();
+
+
+
+        appendJson(courseDetails); // Gem data som JSON
+
+
+
+        long fetchEndTimeWrite = System.currentTimeMillis();
+        System.out.println("Write time for  " + page + ": " + (fetchEndTimeWrite - fetchStartTimeWrite) + " ms.");
     }
 }

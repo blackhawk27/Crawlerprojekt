@@ -20,8 +20,6 @@
 // ╚══════════════════════════════════════════════════════════════════════════╝
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.net.URI;
@@ -225,13 +223,24 @@ public class CourseAnalyzer {
         dropdownInstitut.setAlignmentX(Component.CENTER_ALIGNMENT);
         dropdownInstitut.setMaximumSize(new Dimension(200, 30));
 
-        String[] institutes = {"01 Institut for Matematik og Computer Science", "10 Institut for Fysik"};
+        String[] instituteList = {"01 Institut for Matematik og Computer Science", "10 Institut for Fysik"};
 
-        for (String instutute : institutes) {
+        for (String instutute : instituteList) {
 
             dropdownInstitut.addItem(instutute);
 
         }
+
+
+        // ╔══════════════════════════════════════════════════════════════════════════╗
+        // ║                       KNAP DER VISER AL DATA                             ║
+        // ╚══════════════════════════════════════════════════════════════════════════╝
+
+        // Søg-knap
+        JButton magicButton = new JButton("Vis Alle Kurser");
+        magicButton.setFont(new Font("SansSerif", Font.PLAIN, 14));
+        magicButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        magicButton.setPreferredSize(new Dimension(100, 30));
 
 
         // ╔══════════════════════════════════════════════════════════════════════════╗
@@ -251,6 +260,8 @@ public class CourseAnalyzer {
         sidebarPanel.add(dropdownLabelInstitut);
         sidebarPanel.add(Box.createVerticalStrut(10)); // Mellemrum
         sidebarPanel.add(dropdownInstitut);
+        sidebarPanel.add(Box.createVerticalStrut(20)); // Mellemrum
+        sidebarPanel.add(magicButton);
 
         // Tilføj sidebar til mainPanel
         mainPanel.add(sidebarPanel, BorderLayout.WEST);
@@ -288,7 +299,33 @@ public class CourseAnalyzer {
 
 
         // ╔══════════════════════════════════════════════════════════════════════════╗
-        // ║                       ACTIONLISTER TIL SØGEFELT OG KNAP                 ║
+        // ║               ACTIONLISTER TIL VISNING AF ALLE KURSER KNAP               ║
+        // ╚══════════════════════════════════════════════════════════════════════════╝
+
+        // Tilføj ActionListener til Vis alle kurser knappen
+        magicButton.addActionListener(e -> {
+
+            Sorter sorter = new Sorter();
+            String[][][] courses = sorter.getTable();
+
+            if (courses != null) {
+
+                // Opdater tabelmodel med kurserne
+                tableModel.setDataVector(courses[1], unpackColumnName(courses[0]));
+                adjustColumnWidths(table);
+
+            } 
+            
+            else {
+
+                JOptionPane.showMessageDialog(frame, "Ingen kurser at vise endnu", "Information", JOptionPane.INFORMATION_MESSAGE);
+            }
+
+        });
+
+
+        // ╔══════════════════════════════════════════════════════════════════════════╗
+        // ║                       ACTIONLISTER TIL SØGEFELT OG KNAP                  ║
         // ╚══════════════════════════════════════════════════════════════════════════╝
 
         // Tilføj ActionListener til søgeknappen
@@ -308,10 +345,9 @@ public class CourseAnalyzer {
         // ║             ACTIONLISTENER TIL DROPDOWN FOR SKEMAPLACERING               ║
         // ╚══════════════════════════════════════════════════════════════════════════╝
 
-        dropdownSkema.addActionListener(new ActionListener() {
+        dropdownSkema.addActionListener(e -> {
 
-            @Override
-            public void actionPerformed(ActionEvent e) {
+            
 
                 // Hent den valgte værdi fra dropdown-menuen
                 String selectedPlacement = (String) dropdownSkema.getSelectedItem();
@@ -340,7 +376,7 @@ public class CourseAnalyzer {
 
                 }
 
-            }
+            
         });
 
 
@@ -370,10 +406,8 @@ public class CourseAnalyzer {
         });
 
         // Tilføj ActionListener til dropdownInstitut
-        dropdownInstitut.addActionListener(new ActionListener() {
+        dropdownInstitut.addActionListener( e -> {
 
-            @Override
-            public void actionPerformed(ActionEvent e) {
 
                 // Hent den valgte værdi fra dropdown-menuen
                 String selectedInstitute = (String) dropdownInstitut.getSelectedItem();
@@ -398,7 +432,7 @@ public class CourseAnalyzer {
                         JOptionPane.showMessageDialog(frame, "Ingen resultater fundet for søgetermen.", "Information", JOptionPane.INFORMATION_MESSAGE);
                     }
                 }
-            }
+            
         });
 
 
