@@ -70,14 +70,14 @@ public class CourseAnalyzer {
         // Start GUI i en separat tråd
         SwingUtilities.invokeLater(() -> {
             analyzer.createAndShowGUI();
-    
-            // Start crawleren EFTER at GUI er fuldt initialiseret
-            new Thread(() -> {
-                HashMap<String, String> cookies = cookieHandler();
-                Crawler crawler = new Crawler(cookies, analyzer); // Passér CourseAnalyzer instansen
-                crawler.crawl(); // Kald crawler-metoden
-            }).start();
         });
+        // Start crawleren EFTER at GUI er fuldt initialiseret
+        new Thread(() -> {
+            HashMap<String, String> cookies = cookieHandler();
+            Crawler crawler = new Crawler(cookies, analyzer); // Passér CourseAnalyzer instansen
+            crawler.crawl(); // Kald crawler-metoden
+        }).start();
+        
     }
     
 
